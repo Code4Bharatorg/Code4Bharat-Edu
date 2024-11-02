@@ -8,6 +8,7 @@ import View from "@/components/aboutus/view/view";
 import OurMission from "@/components/aboutus/ourmission/ourmission"; 
 import OurVision from "@/components/aboutus/ourvision/ourvision";
 import ChooseUs from "@/components/aboutus/chooseus/chooseus";
+import Programs from "@/components/aboutus/ourprograms/programs";
 import Footer from "@/components/footer/Footer";
 
 const AboutUs = () => {
@@ -19,6 +20,7 @@ const AboutUs = () => {
       <OurMission />
       <OurVision/>
       <ChooseUs/> 
+      <Programs/>
       <Footer />
     </div>
   );

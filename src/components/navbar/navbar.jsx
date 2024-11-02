@@ -41,7 +41,7 @@ const Navbar = () => {
             isOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
           } md:flex-row md:items-center flex-col p-8 md:p-0 z-50 overflow-auto`} // Added max-height and overflow
         >
-          {['home', 'about', 'services', 'contact'].map((page) => (
+          {['home', 'about', 'services', 'contact-us'].map((page) => (
             <li
               key={page}
               className={`p-4 text-xl md:mx-4 hover:text-blue-600 ${
