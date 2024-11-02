@@ -5,7 +5,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 
 const Footer = () => {
   return (
-    <div className="bg-blue-300 text-white py-8"> {/* Adjusted padding for better spacing */}
+    <div className="bg-blue-200 text-white py-8"> {/* Adjusted padding for better spacing */}
       <div className="container mx-auto px-4"> {/* Container for centered content with horizontal padding */}
         <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* First Column: Contact Us */}
