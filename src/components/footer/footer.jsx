@@ -7,17 +7,17 @@ const Footer = () => {
   return (
     <div className="bg-blue-200 text-white py-8"> {/* Adjusted padding for better spacing */}
       <div className="container mx-auto px-4"> {/* Container for centered content with horizontal padding */}
-        <div className="flex flex-col md:flex-row justify-between items-start space-y-8 md:space-y-0 md:space-x-8">
+        <div className="flex flex-col md:flex-row justify-start items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* First Column: Contact Us */}
           <div className="flex-1">
-            <img src="/logoo.jpg" alt="Logo" className="mb-4 h-24 w-56 mx-auto md:mx-0" /> {/* Logo */}
+            <img src="/logoo.jpg" alt="Logo" className="mb-4 h-24 w-56 md:mx-0" /> {/* Logo */}
             <h3 className="font-semibold text-left text-black mb-2">Contact Us</h3>
             <p className="font-semibold text-left text-gray-500 mb-2">Call: +91 959 440 2916</p>
             <p className="font-semibold text-left text-black mb-2">Email: code4bharat@gmail.com</p>
             <p className="font-semibold text-left text-gray-500 mb-4">
               Office No. 1A & 2, Lower Ground Floor, Building No. 3 White House, New Buddha Colony, Kurla (west)
             </p>
-            <div className="flex justify-center md:justify-start space-x-4">
+            <div className="flex justify-start space-x-4"> {/* Align icons to the left */}
               {/* Social Media Icons */}
               <a
                 href="https://www.facebook.com/yourpage" // Replace with your Facebook URL
@@ -54,14 +54,14 @@ const Footer = () => {
             <h3 className="font-semibold text-left text-black mb-4">Explore</h3>
             <ul className="text-left space-y-2">
               <li>
-                <p href="/" className="text-gray-500 hover:underline">
+                <a href="/" className="text-gray-500 hover:underline">
                   Home
-                </p>
+                </a>
               </li>
               <li>
-                <p href="/about" className="text-gray-500 hover:underline">
+                <a href="/about" className="text-gray-500 hover:underline">
                   About
-                </p>
+                </a>
               </li>
               <li>
                 <a href="/courses" className="text-gray-500 hover:underline">
@@ -81,9 +81,9 @@ const Footer = () => {
             <h3 className="font-semibold text-left text-black mb-4">Category</h3>
             <ul className="text-left space-y-2">
               <li>
-                <p href="/" className="text-gray-500 hover:underline">
+                <a href="/" className="text-gray-500 hover:underline">
                   Pay After Placement
-                </p>
+                </a>
               </li>
               <li>
                 <a href="/about" className="text-gray-500 hover:underline">
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom: Copyright */}
-        <div className="mt-8 text-center">
+        <div className="mt-8 text-center"> {/* Align copyright text to the left */}
           <p className="text-sm text-gray-700">
             © {new Date().getFullYear()} Code4Bharat. All rights reserved.
           </p>
