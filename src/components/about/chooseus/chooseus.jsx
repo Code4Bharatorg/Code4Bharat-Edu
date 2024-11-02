@@ -1,14 +1,14 @@
 "use client";
 import React from 'react';
-import { FaRocket } from 'react-icons/fa'; // Using a sample icon, replace as needed
+import RocketIcon from '@mui/icons-material/Rocket'; // Importing Material UI icons
 
 const ChooseUs = () => {
   const features = [
-    { icon: <FaRocket />, title: "Career-Ready Curriculum" },
-    { icon: <FaRocket />, title: "100% Placement Assistance" },
-    { icon: <FaRocket />, title: "Flexible Learning Paths" },
-    { icon: <FaRocket />, title: "Real Industry Connections" },
-    { icon: <FaRocket />, title: "Accredited Certifications and Degrees" },
+    { icon: <RocketIcon />, title: "Career-Ready Curriculum" },
+    { icon: <RocketIcon />, title: "100% Placement Assistance" },
+    { icon: <RocketIcon />, title: "Flexible Learning Paths" },
+    { icon: <RocketIcon />, title: "Real Industry Connections" },
+    { icon: <RocketIcon />, title: "Accredited Certifications and Degrees" },
   ];
 
   return (

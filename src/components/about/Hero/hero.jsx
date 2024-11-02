@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 
-const HeroHome = () => {
+const HeroAbout = () => {
   return (
     <section className="bg-blue-500 text-white py-20">
       <div className="container mx-auto flex flex-col md:flex-row items-center px-4">
@@ -32,4 +32,4 @@ const HeroHome = () => {
   );
 };
 
-export default HeroHome;
+export default HeroAbout;

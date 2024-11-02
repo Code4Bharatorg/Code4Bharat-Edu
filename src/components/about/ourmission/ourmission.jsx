@@ -5,7 +5,7 @@ import React from 'react';
 // If you're importing an image from your project, uncomment the next line and adjust the path
 // import missionImage from '../assets/missionImage.jpg';
 
-const OurMission = () => {
+const OurMissionAbout = () => {
   return (
     <div className="max-w-[calc(100%-4rem)] mx-auto mb-12 mt-12 mr-0 ml-8 h-auto bg-blue-200 rounded-tl-none rounded-br-none rounded-tr-[3rem] rounded-bl-[3rem] flex flex-col md:flex-row items-center justify-between p-10 md:p-14">
       {/* Left Text */}
@@ -42,4 +42,4 @@ const OurMission = () => {
   );
 };
 
-export default OurMission;
+export default OurMissionAbout;

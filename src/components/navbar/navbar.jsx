@@ -1,19 +1,26 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activePage, setActivePage] = useState('home'); // Default active page
+  const [activePage, setActivePage] = useState('');
+
+  useEffect(() => {
+    // Set the active page based on the current URL path
+    const currentPath = window.location.pathname;
+    const page = currentPath === '/' ? 'home' : currentPath.slice(1);
+    setActivePage(page);
+  }, []);
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
   const handleMenuItemClick = (page) => {
-    setActivePage(page); // Set the active page
+    setActivePage(page);
     setIsOpen(false); // Close the menu on selection
   };
 
@@ -39,15 +46,15 @@ const Navbar = () => {
         <ul
           className={`fixed top-0 right-0 w-3/4 max-h-3/4 bg-white shadow-lg md:shadow-none md:static md:flex md:w-auto transition-transform transform ${
             isOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
-          } md:flex-row md:items-center flex-col p-8 md:p-0 z-50 overflow-auto`} // Added max-height and overflow
+          } md:flex-row md:items-center flex-col p-8 md:p-0 z-50 overflow-auto`}
         >
-          {['home', 'about', 'services', 'contact-us'].map((page) => (
+          {['home', 'about-us', 'courses', 'contact-us'].map((page) => (
             <li
               key={page}
-              className={`p-4 text-xl md:mx-4 hover:text-blue-600 ${
+              className={`p-4 text-xl font-semibold md:mx-4 hover:text-blue-600 ${
                 activePage === page ? 'text-blue-600' : 'text-gray-500'
               }`}
-              onClick={() => handleMenuItemClick(page)} // Handle click to set active page
+              onClick={() => handleMenuItemClick(page)}
             >
               <a href={page === 'home' ? '/' : `/${page}`}>
                 {page.charAt(0).toUpperCase() + page.slice(1)}
