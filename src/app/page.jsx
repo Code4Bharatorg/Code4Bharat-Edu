@@ -11,7 +11,6 @@ const page = () => {
       <Navbar/>
       <HeroHome/>
       <IntroCard/>
-      </hi>
       <Footer/>
     </div>
   )
