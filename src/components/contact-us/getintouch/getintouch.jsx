@@ -1,5 +1,5 @@
 import ContactForm from "../ContactForm"; // Make sure the path is correct
-import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from "react-icons/fa";
+import { LocationOn, Phone, Email } from "@mui/icons-material";
 
 const Getintouch = () => {
   return (
@@ -14,22 +14,22 @@ const Getintouch = () => {
           form below. Our team is ready to <br /> assist you on your journey to
           success!
         </p>
-        <div className="space-y-4 ">
+        <div className="space-y-4">
           <div className="flex items-start mt-12">
-            <FaMapMarkerAlt className="text-blue-600 mr-2" />
+            <LocationOn className="text-blue-600 mr-2" />
             <p className="font-roboto text-gray-700 font-bold">
               Cluster_mumbai Suburban, 381 White <br />House-2, SG Barve Marg, Netaji
               Nagar,<br /> Kurla West, Kurla, Mumbai, Maharashtra <br /> 400070, India
             </p>
           </div>
           <div className="flex items-center">
-            <FaPhoneAlt className="text-blue-600 mr-2" />
+            <Phone className="text-blue-600 mr-2" />
             <p className="font-montserrat text-gray-700 font-bold">
               Call us on: +91 959 440 2916
             </p>
           </div>
           <div className="flex items-center">
-            <FaEnvelope className="text-blue-600 mr-2" />
+            <Email className="text-blue-600 mr-2" />
             <p className="font-montserrat text-gray-700 font-bold">
               Email us on: code4bharat@gmail.com
             </p>
