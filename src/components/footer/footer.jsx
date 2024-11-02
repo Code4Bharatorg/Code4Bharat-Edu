@@ -1,26 +1,34 @@
+// Footer.jsx
 import React from 'react';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
+import Image from 'next/image';
 
 const Footer = () => {
   return (
-    <div className="bg-blue-200 text-white py-8"> {/* Adjusted padding for better spacing */}
-      <div className="container mx-auto px-4"> {/* Container for centered content with horizontal padding */}
+    <div className="bg-blue-200 text-white py-8">
+      <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-start items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* First Column: Contact Us */}
           <div className="flex-1">
-            <img src="/logoo.jpg" alt="Logo" className="mb-4 h-24 w-56 md:mx-0" /> {/* Logo */}
+            <Image
+              src="/logoo.jpg"
+              alt="Logo"
+              width={224} // Adjust width according to your image
+              height={96} // Adjust height according to your image
+              className="mb-4 h-24 w-56 md:mx-0"
+            />
             <h3 className="font-semibold text-left text-black mb-2">Contact Us</h3>
             <p className="font-semibold text-left text-gray-500 mb-2">Call: +91 959 440 2916</p>
             <p className="font-semibold text-left text-black mb-2">Email: code4bharat@gmail.com</p>
             <p className="font-semibold text-left text-gray-500 mb-4">
               Office No. 1A & 2, Lower Ground Floor, Building No. 3 White House, New Buddha Colony, Kurla (west)
             </p>
-            <div className="flex justify-start space-x-4"> {/* Align icons to the left */}
+            <div className="flex justify-start space-x-4">
               {/* Social Media Icons */}
               <a
-                href="https://www.facebook.com/yourpage" // Replace with your Facebook URL
+                href="https://www.facebook.com/yourpage"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Facebook"
@@ -29,7 +37,7 @@ const Footer = () => {
                 <FacebookIcon />
               </a>
               <a
-                href="https://www.linkedin.com/in/yourprofile" // Replace with your LinkedIn URL
+                href="https://www.linkedin.com/in/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LinkedIn"
@@ -38,7 +46,7 @@ const Footer = () => {
                 <LinkedInIcon />
               </a>
               <a
-                href="https://www.instagram.com/yourprofile" // Replace with your Instagram URL
+                href="https://www.instagram.com/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -54,24 +62,24 @@ const Footer = () => {
             <h3 className="font-semibold text-left text-black mb-4">Explore</h3>
             <ul className="text-left space-y-2">
               <li>
-                <a href="/" className="text-gray-500 hover:underline">
-                  Home
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <p href="/">Home</p>
+                </p>
               </li>
               <li>
-                <a href="/about" className="text-gray-500 hover:underline">
-                  About
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <a href="/about">About</a>
+                </p>
               </li>
               <li>
-                <a href="/courses" className="text-gray-500 hover:underline">
-                  Courses
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <a href="/courses">Courses</a>
+                </p>
               </li>
               <li>
-                <a href="/contact" className="text-gray-500 hover:underline">
-                  Contact
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <a href="/contact">Contact</a>
+                </p>
               </li>
             </ul>
           </div>
@@ -81,24 +89,24 @@ const Footer = () => {
             <h3 className="font-semibold text-left text-black mb-4">Category</h3>
             <ul className="text-left space-y-2">
               <li>
-                <a href="/" className="text-gray-500 hover:underline">
-                  Pay After Placement
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <p href="/">Pay After Placement</p>
+                </p>
               </li>
               <li>
-                <a href="/about" className="text-gray-500 hover:underline">
-                  Student Experience and Support
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <a href="/about">Student Experience and Support</a>
+                </p>
               </li>
               <li>
-                <a href="/courses" className="text-gray-500 hover:underline">
-                  Career Pathways
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <a href="/courses">Career Pathways</a>
+                </p>
               </li>
               <li>
-                <a href="/contact" className="text-gray-500 hover:underline">
-                  Join Education.Code4Bharat
-                </a>
+                <p className="text-gray-500 hover:underline">
+                  <a href="/contact">Join Education.Code4Bharat</a>
+                </p>
               </li>
             </ul>
           </div>
@@ -124,7 +132,7 @@ const Footer = () => {
         </div>
 
         {/* Footer Bottom: Copyright */}
-        <div className="mt-8 text-center"> {/* Align copyright text to the left */}
+        <div className="mt-8 text-center">
           <p className="text-sm text-gray-700">
             © {new Date().getFullYear()} Code4Bharat. All rights reserved.
           </p>
