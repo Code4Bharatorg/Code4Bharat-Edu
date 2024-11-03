@@ -27,7 +27,7 @@ const Footer = () => {
             </p>
             <div className="flex justify-start space-x-4">
               {/* Social Media Icons */}
-              <a
+              <p
                 href="https://www.facebook.com/yourpage"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -35,8 +35,8 @@ const Footer = () => {
                 className="bg-white text-blue-600 rounded-full p-2 hover:bg-blue-600 hover:text-white transition-colors duration-300"
               >
                 <FacebookIcon />
-              </a>
-              <a
+              </p>
+              <p
                 href="https://www.linkedin.com/in/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -44,8 +44,8 @@ const Footer = () => {
                 className="bg-white text-blue-700 rounded-full p-2 hover:bg-blue-700 hover:text-white transition-colors duration-300"
               >
                 <LinkedInIcon />
-              </a>
-              <a
+              </p>
+              <p
                 href="https://www.instagram.com/yourprofile"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -53,7 +53,7 @@ const Footer = () => {
                 className="bg-white text-pink-500 rounded-full p-2 hover:bg-pink-500 hover:text-white transition-colors duration-300"
               >
                 <InstagramIcon />
-              </a>
+              </p>
             </div>
           </div>
 
@@ -62,24 +62,24 @@ const Footer = () => {
             <h3 className="font-semibold text-left text-black mb-4">Explore</h3>
             <ul className="text-left space-y-2">
               <li>
-                <p className="text-gray-500 hover:underline">
+                <a className="text-gray-500 hover:underline">
                   <p href="/">Home</p>
-                </p>
+                </a>
               </li>
               <li>
-                <p className="text-gray-500 hover:underline">
-                  <a href="/about">About</a>
-                </p>
+                <a className="text-gray-500 hover:underline">
+                  <p href="/about">About</p>
+                </a>
               </li>
               <li>
-                <p className="text-gray-500 hover:underline">
-                  <a href="/courses">Courses</a>
-                </p>
+                <a className="text-gray-500 hover:underline">
+                  <p href="/courses">Courses</p>
+                </a>
               </li>
               <li>
-                <p className="text-gray-500 hover:underline">
-                  <a href="/contact">Contact</a>
-                </p>
+                <a className="text-gray-500 hover:underline">
+                  <p href="/contact">Contact</p>
+                </a>
               </li>
             </ul>
           </div>
@@ -89,24 +89,24 @@ const Footer = () => {
             <h3 className="font-semibold text-left text-black mb-4">Category</h3>
             <ul className="text-left space-y-2">
               <li>
-                <p className="text-gray-500 hover:underline">
+                <a className="text-gray-500 hover:underline">
                   <p href="/">Pay After Placement</p>
-                </p>
+                </a>
               </li>
               <li>
-                <p className="text-gray-500 hover:underline">
-                  <a href="/about">Student Experience and Support</a>
-                </p>
+                <a className="text-gray-500 hover:underline">
+                  <p href="/about">Student Experience and Support</p>
+                </a>
               </li>
               <li>
-                <p className="text-gray-500 hover:underline">
-                  <a href="/courses">Career Pathways</a>
-                </p>
+                <a className="text-gray-500 hover:underline">
+                  <p href="/courses">Career Pathways</p>
+                </a>
               </li>
               <li>
-                <p className="text-gray-500 hover:underline">
-                  <a href="/contact">Join Education.Code4Bharat</a>
-                </p>
+                <a className="text-gray-500 hover:underline">
+                  <p href="/contact">Join Education.Code4Bharat</p>
+                </a>
               </li>
             </ul>
           </div>
