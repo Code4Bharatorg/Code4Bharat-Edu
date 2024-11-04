@@ -121,7 +121,7 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
-                src="/4.svg" // Ensure this path is correct
+                src="/img04.svg" // Ensure this path is correct
                 alt="Icon 1"
                 fill
                 className="object-cover"
@@ -139,7 +139,7 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
-                src="/5.svg" // Ensure this path is correct
+                src="/img05.svg" // Ensure this path is correct
                 alt="Icon 2"
                 fill
                 className="object-cover"
@@ -157,7 +157,7 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/3.svg" // Ensure this path is correct
+                src="/img01.svg" // Ensure this path is correct
                 alt="Icon 3"
                 fill
                 className="object-cover"
@@ -177,7 +177,7 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/2.svg" // Ensure this path is correct
+                  src="/img02.svg" // Ensure this path is correct
                   alt="Icon 4"
                   fill
                   className="object-cover"
@@ -195,7 +195,7 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/3.svg" // Ensure this path is correct
+                  src="/img03.svg" // Ensure this path is correct
                   alt="Icon 5"
                   fill
                   className="object-cover"
