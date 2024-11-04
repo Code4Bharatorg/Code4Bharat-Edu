@@ -121,7 +121,11 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
+<<<<<<< HEAD
                 src="/4.svg" // Ensure this path is correct
+=======
+                src="img04.svg" // Replace with your SVG path
+>>>>>>> c32abe55ff86b8d2eff8baea26007263be389521
                 alt="Icon 1"
                 fill
                 className="object-cover"
@@ -139,7 +143,11 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
+<<<<<<< HEAD
                 src="/5.svg" // Ensure this path is correct
+=======
+                src="img05.svg" // Replace with your SVG path
+>>>>>>> c32abe55ff86b8d2eff8baea26007263be389521
                 alt="Icon 2"
                 fill
                 className="object-cover"
@@ -157,7 +165,11 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
               <Image
+<<<<<<< HEAD
                 src="/3.svg" // Ensure this path is correct
+=======
+                src="img01.svg" // Replace with your SVG path
+>>>>>>> c32abe55ff86b8d2eff8baea26007263be389521
                 alt="Icon 3"
                 fill
                 className="object-cover"
@@ -177,7 +189,11 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
+<<<<<<< HEAD
                   src="/2.svg" // Ensure this path is correct
+=======
+                  src="img02.svg" // Replace with your SVG path
+>>>>>>> c32abe55ff86b8d2eff8baea26007263be389521
                   alt="Icon 4"
                   fill
                   className="object-cover"
@@ -195,7 +211,11 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
+<<<<<<< HEAD
                   src="/3.svg" // Ensure this path is correct
+=======
+                  src="img03.svg" // Replace with your SVG path
+>>>>>>> c32abe55ff86b8d2eff8baea26007263be389521
                   alt="Icon 5"
                   fill
                   className="object-cover"
