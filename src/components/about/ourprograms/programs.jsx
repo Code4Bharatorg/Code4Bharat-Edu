@@ -7,7 +7,7 @@ import FormatQuoteIcon from '@mui/icons-material/FormatQuote'; // Importing Mate
 
 const Programs = () => {
   return (
-    <section className="bg-[#B2D5ED] py-16 px-4 md:px-8 mb-8">
+    <section className="bg-[#B2D5ED] py-16 px-4 md:px-8 mb-8 mt-2">
       <div className="container mx-auto">
         {/* Section Title */}
         <h2 className="text-xl md:text-4xl font-semibold text-blue-700 mb-4 ml-2 md:ml-20 font-publicSans text-left">

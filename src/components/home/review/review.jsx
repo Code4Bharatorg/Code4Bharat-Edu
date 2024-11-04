@@ -1,3 +1,4 @@
+"use client";
 import React, { useState } from 'react';
 import { ArrowBack, ArrowForward } from '@mui/icons-material'; // Importing Material UI icons for navigation
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const PayAfterPlacementAbout = () => {
   return (
-    <div className="max-w-full mx-4 md:mx-8 mb-16 bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between">
+    <div className="max-w-full mx-4 mt-2 md:mx-8 mb-16 bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between">
       {/* Left Section - Image */}
       <div className="w-full md:w-1/3 mb-4 md:mb-0">
         <img
