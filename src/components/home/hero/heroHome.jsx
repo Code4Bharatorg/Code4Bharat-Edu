@@ -85,7 +85,7 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
-                src="/4.svg" // Replace with your SVG path
+                src="img04.svg" // Replace with your SVG path
                 alt="Icon 1"
                 fill
                 className="absolute top-0 left-0 object-cover" // Make it cover the entire div
@@ -103,7 +103,7 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
-                src="/5.svg" // Replace with your SVG path
+                src="img05.svg" // Replace with your SVG path
                 alt="Icon 2"
                 fill
                 className="absolute top-0 left-0 object-cover" // Make it cover the entire div
@@ -121,7 +121,7 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/3.svg" // Replace with your SVG path
+                src="img03.svg" // Replace with your SVG path
                 alt="Icon 3"
                 fill
                 className="absolute top-0 left-0 object-cover" // Make it cover the entire div
@@ -141,7 +141,7 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/2.svg" // Replace with your SVG path
+                  src="img02.svg" // Replace with your SVG path
                   alt="Icon 4"
                   fill
                   className="absolute top-0 left-0 object-cover" // Make it cover the entire div
@@ -159,7 +159,7 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/3.svg" // Replace with your SVG path
+                  src="img03.svg" // Replace with your SVG path
                   alt="Icon 5"
                   fill
                   className="absolute top-0 left-0 object-cover" // Make it cover the entire div
