@@ -29,6 +29,11 @@ const Navbar = () => {
     window.location.href = '/'; // Update this path to your homepage URL
   };
 
+  const handleWhatsAppRedirect = () => {
+    // Redirect to WhatsApp
+    window.open('https://wa.me/+919594402916', '_blank'); // Replace with your WhatsApp number
+  };
+
   return (
     <nav className="bg-white text-gray-800 p-4 shadow-md">
       <div className="container mx-auto flex justify-between items-center">
@@ -64,7 +69,10 @@ const Navbar = () => {
         </ul>
 
         {/* Let's Talk Button */}
-        <button className="hidden md:flex items-center bg-blue-600 text-white px-8 py-3 rounded-2xl hover:bg-blue-700 mr-24">
+        <button
+          onClick={handleWhatsAppRedirect}
+          className="hidden md:flex items-center bg-blue-600 text-white px-8 py-3 rounded-2xl hover:bg-blue-700 mr-24"
+        >
           Let’s Talk
           <ArrowForwardIcon fontSize="small" className="ml-2" />
         </button>
