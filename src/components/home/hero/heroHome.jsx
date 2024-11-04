@@ -86,17 +86,13 @@ const HeroHome = () => {
               Education.Code4Bharat
             </p>
             <h1
-              className="mb-5 text-4xl font-semibold leading-tight  text-[#434D58]
-                           sm:text-4xl sm:leading-tight md:text-6xl md:leading-tight -mt-12 relative"
+              className="mb-5 text-4xl font-semibold leading-tight  text-[#434D58] font-publicSans
+                           sm:text-4xl sm:leading-tight md:text-[4vw] md:leading-tight -mt-12 relative"
             >
               Empowering the <br /> Future of Tech{" "}
-              <span className="text-blue-500">Talent</span>
+              <span className="text-[#116EB3]">Talent</span>
             </h1>
-            <img
-              src="/linecourses.png"
-              alt="line"
-              className="w-[10vw] absolute top-2"
-            />
+            <div className="hidden md:block w-[10%] h-2 bg-yellow-400 absolute bottom-[50%] left-0 md:left-[37%] transform rotate-3 "></div>
 
             <div
               className="flex flex-col items-center md:items-start justify-start space-y-4 sm:flex-row 
@@ -105,8 +101,8 @@ const HeroHome = () => {
               <Link
                 href="/"
                 className="inline-block rounded-2xl bg-blue-600 px-12 py-3 text-base font-semibold 
-                           text-white duration-300 ease-in-out hover:bg-black/90 
-                           dark:bg-white/10 dark:text-white dark:hover:bg-white/5 
+                           duration-300 ease-in-out hover:bg-black/90 
+                           text-white 
                            mx-auto md:mx-0 mt-12"
               >
                 Explore
