@@ -2,7 +2,7 @@
 import React from 'react';
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image"; // Import Image for SVGs
+import Image from "next/image"; // Import Image for optimized image handling
 
 const HeroHome = () => {
   // Variants for the entire right section
@@ -41,16 +41,52 @@ const HeroHome = () => {
                  md:pb-[120px] md:pt-[150px] xl:pb-[160px] xl:pt-[180px] 
                  2xl:pb-[200px] 2xl:pt-[210px]"
     >
+      {/* SVG Background Top-Right */}
+      <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100" aria-hidden="true">
+        <svg
+          width="450"
+          height="556"
+          viewBox="0 0 450 556"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+        >
+          {/* Example Circle */}
+          <circle
+            cx="277"
+            cy="63"
+            r="225"
+            fill="url(#paint0_linear_25:217)"
+          />
+          {/* ... rest of your SVG content */}
+          <defs>
+            {/* Your SVG gradients and other definitions */}
+            <linearGradient
+              id="paint0_linear_25:217"
+              x1="-54.5003"
+              y1="-178"
+              x2="222"
+              y2="288"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#4A6CF7" />
+              <stop offset="1" stopColor="#4A6CF7" stopOpacity="0" />
+            </linearGradient>
+            {/* ... other gradient definitions */}
+          </defs>
+        </svg>
+      </div>
+
       <div className="-mx-4 flex flex-wrap">
         {/* Left Column */}
         <div className="w-full md:w-1/2 px-4 -mt-2">
           <div className="mx-auto max-w-[800px] text-center md:text-left ml-0 md:ml-24">
             <p className="mb-12 text-base !leading-relaxed text-blue-600 dark:text-body-color-dark 
-                          sm:text-lg md:text-xl">
+                          sm:text-xl md:text-3xl">
               Education.Code4Bharat
             </p>
-            <h1 className="mb-5 text-3xl font-semibold leading-tight text-black dark:text-white 
-                           sm:text-4xl sm:leading-tight md:text-5xl md:leading-tight -mt-12">
+            <h1 className="mb-5 text-4xl font-semibold leading-tight text-black dark:text-white 
+                           sm:text-4xl sm:leading-tight md:text-6xl md:leading-tight -mt-12">
               Empowering the <br /> Future of Tech <span className="text-blue-500">Talent</span>
             </h1>
 
@@ -85,10 +121,10 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
-                src="/4.svg" // Replace with your SVG path
+                src="/4.svg" // Ensure this path is correct
                 alt="Icon 1"
                 fill
-                className="absolute top-0 left-0 object-cover" // Make it cover the entire div
+                className="object-cover"
                 priority
               />
             </div>
@@ -103,10 +139,10 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-full bg-gray-200 dark:bg-gray-800 rounded-lg overflow-hidden">
               <Image
-                src="/5.svg" // Replace with your SVG path
+                src="/5.svg" // Ensure this path is correct
                 alt="Icon 2"
                 fill
-                className="absolute top-0 left-0 object-cover" // Make it cover the entire div
+                className="object-cover"
                 priority
               />
             </div>
@@ -121,10 +157,10 @@ const HeroHome = () => {
           >
             <div className="relative w-full h-64 bg-gray-300 dark:bg-gray-700 rounded-lg overflow-hidden shadow-lg">
               <Image
-                src="/3.svg" // Replace with your SVG path
+                src="/3.svg" // Ensure this path is correct
                 alt="Icon 3"
                 fill
-                className="absolute top-0 left-0 object-cover" // Make it cover the entire div
+                className="object-cover"
                 priority
               />
             </div>
@@ -141,10 +177,10 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/2.svg" // Replace with your SVG path
+                  src="/2.svg" // Ensure this path is correct
                   alt="Icon 4"
                   fill
-                  className="absolute top-0 left-0 object-cover" // Make it cover the entire div
+                  className="object-cover"
                   priority
                 />
               </div>
@@ -159,16 +195,50 @@ const HeroHome = () => {
             >
               <div className="relative w-full h-full bg-gray-300 dark:bg-blue-700 rounded-lg overflow-hidden shadow-xl">
                 <Image
-                  src="/3.svg" // Replace with your SVG path
+                  src="/3.svg" // Ensure this path is correct
                   alt="Icon 5"
                   fill
-                  className="absolute top-0 left-0 object-cover" // Make it cover the entire div
+                  className="object-cover"
                   priority
                 />
               </div>
             </motion.div>
           </div>
         </motion.div>
+      </div>
+
+      {/* SVG Background Bottom-Left */}
+      <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100" aria-hidden="true">
+        <svg
+          width="364"
+          height="201"
+          viewBox="0 0 364 201"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          className="w-full h-auto"
+        >
+          {/* Example Path */}
+          <path
+            d="M5.88928 72.3303C33.6599 66.4798 101.397 64.9086 150.178 105.427C211.155 156.076 229.59 162.093 264.333 166.607C299.076 171.12 337.718 183.657 362.889 212.24"
+            stroke="url(#paint0_linear_25:218)"
+          />
+          {/* ... rest of your SVG content */}
+          <defs>
+            {/* Your SVG gradients and other definitions */}
+            <linearGradient
+              id="paint0_linear_25:218"
+              x1="184.389"
+              y1="69.2405"
+              x2="184.389"
+              y2="212.24"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop stopColor="#4A6CF7" stopOpacity="0" />
+              <stop offset="1" stopColor="#4A6CF7" />
+            </linearGradient>
+            {/* ... other gradient definitions */}
+          </defs>
+        </svg>
       </div>
     </section>
   );

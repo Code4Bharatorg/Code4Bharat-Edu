@@ -82,8 +82,10 @@ const WhyChooseUsCards = () => {
         setCardsPerPage(1); // Mobile devices
       } else if (window.innerWidth < 1024) {
         setCardsPerPage(2); // Tablets
+      } else if (window.innerWidth < 1280) {
+        setCardsPerPage(3); // Large desktops
       } else {
-        setCardsPerPage(4); // Desktops
+        setCardsPerPage(4); // Extra-large desktops
       }
     };
 
@@ -113,7 +115,7 @@ const WhyChooseUsCards = () => {
   };
 
   return (
-    <div className="p-6 mb-12 w-full max-w-8xl bg-white shadow-xl rounded-lg mx-auto"> {/* Increased max-w to 8xl */}
+    <div className="p-6 mb-12 w-full max-w-8xl bg-white shadow-xl rounded-lg mx-auto">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
         Why <span className="text-blue-500">Choose </span> Us <br />
@@ -121,7 +123,7 @@ const WhyChooseUsCards = () => {
       </h2>
 
       {/* Navigation and Cards Container */}
-      <div className="flex items-center justify-center w-full flex-col md:flex-row gap-6"> {/* Increased gap */}
+      <div className="flex items-center justify-center w-full flex-col md:flex-row gap-6">
         {/* Previous Button */}
         <button
           onClick={handlePrevious}
@@ -138,7 +140,7 @@ const WhyChooseUsCards = () => {
 
         {/* Cards Grid */}
         <div className="flex flex-col items-center flex-1 mx-4">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8"> {/* Increased grid gap */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
             {currentCards.map((card) => (
               <div
                 key={card.id}
@@ -148,7 +150,7 @@ const WhyChooseUsCards = () => {
                   src={card.image}
                   alt={card.title}
                   className="w-full h-48 object-cover mb-4 rounded-md"
-                  loading="lazy" // Optimize image loading
+                  loading="lazy"
                 />
                 <h2 className="text-xl text-center font-semibold text-blue-500">
                   {card.title}

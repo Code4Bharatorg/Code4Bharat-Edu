@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 const IntroCard = () => {
   return (
     <motion.div
-      className="relative bg-white border border-blue-300 rounded-lg px-4 py-6 shadow-lg w-[90%] sm:w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-4xl mx-auto mb-16 md:mb-24"
+      className="hidden sm:block relative bg-white border border-blue-300 rounded-lg px-4 py-6 shadow-lg w-[90%] sm:w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-4xl mx-auto mb-16 md:mb-24"
       animate={{ scale: [1, 1.05, 1] }} // Pulsing animation for all devices
       transition={{
         duration: 2, // Duration of the pulsing effect
