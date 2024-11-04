@@ -1,5 +1,5 @@
-'use client';
-import React from 'react';
+"use client";
+import React from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image"; // Import Image for optimized image handling
@@ -42,7 +42,10 @@ const HeroHome = () => {
                  2xl:pb-[200px] 2xl:pt-[210px]"
     >
       {/* SVG Background Top-Right */}
-      <div className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100" aria-hidden="true">
+      <div
+        className="absolute right-0 top-0 z-[-1] opacity-30 lg:opacity-100"
+        aria-hidden="true"
+      >
         <svg
           width="450"
           height="556"
@@ -52,12 +55,7 @@ const HeroHome = () => {
           className="w-full h-auto"
         >
           {/* Example Circle */}
-          <circle
-            cx="277"
-            cy="63"
-            r="225"
-            fill="url(#paint0_linear_25:217)"
-          />
+          <circle cx="277" cy="63" r="225" fill="url(#paint0_linear_25:217)" />
           {/* ... rest of your SVG content */}
           <defs>
             {/* Your SVG gradients and other definitions */}
@@ -81,17 +79,29 @@ const HeroHome = () => {
         {/* Left Column */}
         <div className="w-full md:w-1/2 px-4 -mt-2">
           <div className="mx-auto max-w-[800px] text-center md:text-left ml-0 md:ml-24">
-            <p className="mb-12 text-base !leading-relaxed text-blue-600 dark:text-body-color-dark 
-                          sm:text-xl md:text-3xl">
+            <p
+              className="mb-12 text-base !leading-relaxed text-blue-600 dark:text-body-color-dark 
+                          sm:text-xl md:text-3xl"
+            >
               Education.Code4Bharat
             </p>
-            <h1 className="mb-5 text-4xl font-semibold leading-tight text-black dark:text-white 
-                           sm:text-4xl sm:leading-tight md:text-6xl md:leading-tight -mt-12">
-              Empowering the <br /> Future of Tech <span className="text-blue-500">Talent</span>
+            <h1
+              className="mb-5 text-4xl font-semibold leading-tight  text-[#434D58]
+                           sm:text-4xl sm:leading-tight md:text-6xl md:leading-tight -mt-12 relative"
+            >
+              Empowering the <br /> Future of Tech{" "}
+              <span className="text-blue-500">Talent</span>
             </h1>
+            <img
+              src="/linecourses.png"
+              alt="line"
+              className="w-[10vw] absolute top-2"
+            />
 
-            <div className="flex flex-col items-center md:items-start justify-start space-y-4 sm:flex-row 
-                            sm:space-x-4 sm:space-y-0">
+            <div
+              className="flex flex-col items-center md:items-start justify-start space-y-4 sm:flex-row 
+                            sm:space-x-4 sm:space-y-0"
+            >
               <Link
                 href="/"
                 className="inline-block rounded-2xl bg-blue-600 px-12 py-3 text-base font-semibold 
@@ -208,7 +218,10 @@ const HeroHome = () => {
       </div>
 
       {/* SVG Background Bottom-Left */}
-      <div className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100" aria-hidden="true">
+      <div
+        className="absolute bottom-0 left-0 z-[-1] opacity-30 lg:opacity-100"
+        aria-hidden="true"
+      >
         <svg
           width="364"
           height="201"

@@ -1,5 +1,5 @@
 import React from "react";
-import { FaCalendarAlt } from "react-icons/fa";
+import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 
 const HeroSection = () => {
   return (
@@ -48,7 +48,7 @@ const HeroSection = () => {
           <div className="w-[80%] md:w-[30%] lg:w-[40%] xl:w-[40%] flex items-center h-14 md:h-[20%] lg:h-[20%] xl:h-[20%] rounded-md bg-white bg-opacity-80 absolute bottom-5 md:bottom-32 left-5 md:-left-[10%]">
             <div className="w-full h-full flex items-center px-3 justify-around">
               <div className="w-10 h-10 md:w-[16%] md:h-[60%] lg:w-[18%] lg:h-[70%] xl:w-[20%] xl:h-[60%] bg-[#23BDEE] flex items-center justify-center rounded-md">
-                <FaCalendarAlt className="text-[5vw] md:text-[1.5vw] lg:text-[1.2vw] xl:text-[1vw] text-white" />
+                <CalendarTodayIcon className="text-[5vw] md:text-[1.5vw] lg:text-[1.2vw] xl:text-[1vw] text-white" />
               </div>
               <div className="leading-tight">
                 <p className="text-[4vw] md:text-[1.2vw] lg:text-[1vw] xl:text-[1vw] font-medium">
