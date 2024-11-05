@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import Image from "next/image"; // Import Next.js Image component
 
 const WhyChooseUsCards = () => {
   const [cardsPerPage, setCardsPerPage] = useState(4); // Responsive cards per page
@@ -118,12 +119,15 @@ const WhyChooseUsCards = () => {
                 key={`${card.id}-${index}`}
                 className="bg-white shadow-md rounded-lg p-6 transition-transform transform hover:scale-105 hover:bg-blue-200 min-h-[400px] w-full sm:w-64 lg:w-72 flex flex-col"
               >
-                <img
-                  src={card.image}
-                  alt={card.title}
-                  className="w-full h-48 object-cover mb-4 rounded-md"
-                  loading="lazy"
-                />
+                <div className="relative w-full h-48 mb-4">
+                  <Image
+                    src={card.image}
+                    alt={card.title}
+                    layout="fill" // Makes the image fill the container
+                    objectFit="cover" // Ensures the image covers the container without distortion
+                    className="rounded-md"
+                  />
+                </div>
                 <h2 className="text-xl text-center font-semibold text-blue-500">
                   {card.title}
                 </h2>

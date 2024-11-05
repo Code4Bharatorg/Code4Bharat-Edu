@@ -1,11 +1,19 @@
+"use client";
 import React from "react";
+import Image from "next/image"; // Import Next.js Image component
 
 const CourseCard = ({ title, description, mainImage, miniImages, rightText }) => {
   return (
     <div className="w-[20%] h-[80%] rounded-xl bg-[#FAFAFA] overflow-hidden relative">
       {/* Main Image */}
-      <div className="w-full h-[40%]">
-        <img src={mainImage} alt="Main Course" className="w-full h-full object-cover" />
+      <div className="w-full h-[40%] relative">
+        <Image
+          src={mainImage}
+          alt="Main Course"
+          layout="fill" // Makes the image fill the container
+          objectFit="cover" // Ensures the image covers the container without distortion
+          className="w-full h-full"
+        />
       </div>
 
       {/* Mini Images and Right Text */}
@@ -15,11 +23,14 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
           {miniImages.map((image, index) => (
             <div
               key={index}
-              className={`w-7 h-7 bg-white rounded-full overflow-hidden ${ 
-                index > 0 ? "-ml-3" : ""
-              }`}
+              className={`w-7 h-7 bg-white rounded-full overflow-hidden relative ${index > 0 ? "-ml-3" : ""}`}
             >
-              <img src={image} alt={`Image ${index + 1}`} className="w-full h-full object-cover" />
+              <Image
+                src={image}
+                alt={`Image ${index + 1}`}
+                layout="fill" // Makes the image fill the container
+                objectFit="cover" // Ensures the image covers the container without distortion
+              />
             </div>
           ))}
         </div>
