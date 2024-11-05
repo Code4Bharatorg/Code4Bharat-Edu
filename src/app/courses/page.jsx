@@ -1,3 +1,4 @@
+import Courses from '@/components/courses/approach/Course'
 import { CourseComparison } from '@/components/courses/comparison/CourseComparison'
 import HeroSection from '@/components/courses/herosection/HeroSection'
 import Journey from '@/components/courses/journey/Journey'
@@ -14,6 +15,7 @@ const page = () => {
         <HeroSection/>
         <PopularCourse/>
         <Placement/>
+        <Courses/>
         <CourseComparison/>
         <Journey/>
         <Footer/>
