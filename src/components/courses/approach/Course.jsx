@@ -20,7 +20,7 @@ const Courses = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* Course Card 1 */}
           <CourseCard
-            imageUrl="https://picsum.photos/seed/pic1/200/200"
+            imageUrl="/courses/hero.png"
             title="Hands-On Learning"
             description="Every course includes real-world projects, giving you practical experience with challenges faced by industry professionals."
             customMargin="mt-4 md:mt-0 md:ml-36"
@@ -28,7 +28,7 @@ const Courses = () => {
 
           {/* Course Card 2 */}
           <CourseCard
-            imageUrl="https://picsum.photos/seed/pic2/200/200"
+            imageUrl="/courses/hero.png"
             title="Personalized Mentorship"
             description="Our instructors and mentors provide one-on-one guidance, helping you progress through your learning journey with confidence."
             customMargin="mt-4 md:mt-0 md:ml-4"
@@ -36,7 +36,7 @@ const Courses = () => {
 
           {/* Course Card 3 */}
           <CourseCard
-            imageUrl="https://picsum.photos/seed/pic3/200/200"
+            imageUrl="/courses/hero.png"
             title="Placement Preparation"
             description="Beyond technical skills, our courses include interview preparation, resume building, and soft skills training to ensure you’re fully prepared for the job market."
             customMargin="mt-8 md:mt-0 md:ml-56"
@@ -44,7 +44,7 @@ const Courses = () => {
 
           {/* Course Card 4 */}
           <CourseCard
-            imageUrl="https://picsum.photos/seed/pic4/200/200"
+            imageUrl="/courses/hero.png"
             title="Networking Opportunities"
             description="Connect with industry leaders, attend workshops, and participate in exclusive events to build a strong professional network."
             customMargin="mt-8 md:mt-0 md:ml-24"

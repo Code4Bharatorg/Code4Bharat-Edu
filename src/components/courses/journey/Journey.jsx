@@ -24,7 +24,7 @@ const Journey = () => {
       {/* Image Section */}
       <div className="w-full md:w-2/5 flex justify-center items-center">
         <Image
-          src="/journey.jpg" // Ensure the image path is correct
+          src="/courses/hero.png" // Ensure the image path is correct
           alt="Journey Image"
           className="w-4/5 h-auto object-contain rounded-md"
           width={400} // Adjust as needed
