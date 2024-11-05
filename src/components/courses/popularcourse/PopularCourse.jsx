@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import CourseCard from "@/components/cards/coursecard";
+import CourseCard from "@/components/cards/CourseCard";
 
 const PopularCourse = () => {
   // Sample data for multiple courses
