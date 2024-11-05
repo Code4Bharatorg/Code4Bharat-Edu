@@ -17,11 +17,13 @@ const HeroSection = () => {
           <h1 className="text-[7vw] md:text-[3.1vw] leading-tight font-bold z-10">
             Grow your skills with online courses from Code4Bharat
           </h1>
-          {/* Decorative Bars - Hidden on Mobile */}
-          <div className="hidden md:block w-[30%] h-2 bg-yellow-400 absolute bottom-4 left-0 md:left-10 "></div>
-          <div className="hidden md:block w-[30%] h-2 bg-yellow-400 absolute top-7 right-0 md:right-20 "></div>
-          <div className="hidden md:block w-[30%] h-2 bg-yellow-400 absolute top-[100%] right-10 md:right-32 transform rotate-3"></div>
+
+          {/* Decorative Bars - Responsive Design */}
+          <div className="hidden md:block w-[10vw] h-2 bg-yellow-400 absolute top-[78%] left-0 md:left-20"></div>
+          <div className="hidden md:block w-[10vw] h-2 bg-yellow-400 absolute top-[30%] right-0 md:right-[20%]"></div>
+          <div className="hidden md:block w-[18vw] h-2 bg-yellow-400 absolute top-[100%]  md:right-[16%] transform rotate-3"></div>
         </div>
+
         {/* Button */}
         <button className="w-[50%] md:w-[24%] h-10 md:h-[12%] rounded-md bg-white text-black font-semibold">
           Explore Path

@@ -74,18 +74,14 @@ const PopularCourse = () => {
 
   return (
     <div className="w-full h-screen mt-14">
-      <div className="w-full h-[20%] flex items-center justify-center">
-        <h1 className="text-[5vw] md:text-[2.5vw] font-bold text-[#116EB3]">
+      <div className="w-full h-[20%] flex items-center justify-center relative">
+        <h1 className="text-[5vw] md:text-[2.5vw] font-bold text-[#116EB3] ">
           Popular Courses
         </h1>
-        <img
-          src="/linecourses.png"
-          alt=""
-          className="hidden md:block transform rotate-45 w-24 absolute -bottom-14 left-[52%]"
-        />
+        <div className="hidden md:block w-[10vw] h-2 bg-yellow-400 absolute bottom-[30%] left-[50%] "></div>
       </div>
 
-      <div className="flex items-center gap-5 w-[60%] h-[10%] mx-auto">
+      <div className="flex items-center gap-5 w-[60%] h-[10%] mx-auto justify-center">
         <button
           className={`px-4 text-[1.2vw] py-2 rounded-md font-medium ${
             selectedFilter === "All Programme"

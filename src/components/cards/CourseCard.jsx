@@ -9,13 +9,13 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
       </div>
 
       {/* Mini Images and Right Text */}
-      <div className="w-[90%] flex items-center px-1 rounded-3xl h-[12%] bg-[#dadada] absolute left-[5%] bottom-48">
+      <div className="w-[90%] flex items-center px-1 rounded-3xl h-[12%] bg-[#dadada] absolute left-[5%] top-[33%]">
         {/* Mini Images */}
         <div className="w-[50%] h-full flex items-center">
           {miniImages.map((image, index) => (
             <div
               key={index}
-              className={`w-7 h-7 bg-white rounded-full overflow-hidden ${
+              className={`w-7 h-7 bg-white rounded-full overflow-hidden ${ 
                 index > 0 ? "-ml-3" : ""
               }`}
             >
