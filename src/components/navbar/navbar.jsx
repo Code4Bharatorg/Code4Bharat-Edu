@@ -1,17 +1,18 @@
-'use client';
-import React, { useState, useEffect } from 'react';
-import MenuIcon from '@mui/icons-material/Menu';
-import CloseIcon from '@mui/icons-material/Close';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+"use client";
+import React, { useState, useEffect } from "react";
+import Image from "next/image"; // Import Next.js Image component
+import MenuIcon from "@mui/icons-material/Menu";
+import CloseIcon from "@mui/icons-material/Close";
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [activePage, setActivePage] = useState('');
+  const [activePage, setActivePage] = useState("");
 
   useEffect(() => {
     // Set the active page based on the current URL path
     const currentPath = window.location.pathname;
-    const page = currentPath === '/' ? 'home' : currentPath.slice(1);
+    const page = currentPath === "/" ? "home" : currentPath.slice(1);
     setActivePage(page);
   }, []);
 
@@ -26,12 +27,12 @@ const Navbar = () => {
 
   const handleLogoClick = () => {
     // Redirect to the homepage
-    window.location.href = '/'; // Update this path to your homepage URL
+    window.location.href = "/"; // Update this path to your homepage URL
   };
 
   const handleWhatsAppRedirect = () => {
     // Redirect to WhatsApp
-    window.open('https://wa.me/+919594402916', '_blank'); // Replace with your WhatsApp number
+    window.open("https://wa.me/+919594402916", "_blank"); // Replace with your WhatsApp number
   };
 
   return (
@@ -39,7 +40,14 @@ const Navbar = () => {
       <div className="container mx-auto flex justify-between items-center">
         {/* Logo */}
         <button className="focus:outline-none flex-shrink-0" onClick={handleLogoClick}>
-          <img src="/logoo.jpg" alt="MyLogo" className="h-24 w-48 -mt-6" />
+          <div className="relative h-24 w-48 -mt-6">
+            <Image
+              src="/logoo.jpg" // Ensure this image exists in your public folder
+              alt="MyLogo"
+              layout="fill" // Makes the image fill the container
+              objectFit="contain" // Adjust objectFit as needed
+            />
+          </div>
         </button>
 
         {/* Menu Icon for Mobile */}
@@ -50,18 +58,18 @@ const Navbar = () => {
         {/* Menu Items */}
         <ul
           className={`fixed top-0 right-0 w-3/4 max-h-3/4 bg-white shadow-lg md:shadow-none md:static md:flex md:w-auto transition-transform transform ${
-            isOpen ? 'translate-x-0' : 'translate-x-full md:translate-x-0'
+            isOpen ? "translate-x-0" : "translate-x-full md:translate-x-0"
           } md:flex-row md:items-center flex-col p-8 md:p-0 z-50 overflow-auto`}
         >
-          {['home', 'about-us', 'courses', 'contact-us'].map((page) => (
+          {["home", "about-us", "courses", "contact-us"].map((page) => (
             <li
               key={page}
               className={`p-4 text-xl font-semibold md:mx-4 hover:text-blue-600 ${
-                activePage === page ? 'text-blue-600' : 'text-gray-500'
+                activePage === page ? "text-blue-600" : "text-gray-500"
               }`}
               onClick={() => handleMenuItemClick(page)}
             >
-              <a href={page === 'home' ? '/' : `/${page}`}>
+              <a href={page === "home" ? "/" : `/${page}`}>
                 {page.charAt(0).toUpperCase() + page.slice(1)}
               </a>
             </li>

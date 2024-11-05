@@ -1,18 +1,45 @@
-// src/components/ChooseUs.jsx
-
 "use client";
-import React, { useState } from 'react';
-import RocketIcon from '@mui/icons-material/Rocket'; // Importing Material UI icons
+import React, { useState } from "react";
+import RocketIcon from "@mui/icons-material/Rocket"; // Importing Material UI icons
+import Image from "next/image"; // Import Next.js Image component
 
 const ChooseUs = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
 
   const features = [
-    { icon: <RocketIcon fontSize="large" />, title: "Career-Ready Curriculum", description: "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.", image: "/card4.png" },
-    { icon: <RocketIcon fontSize="large" />, title: "100% Placement Assistance", description: "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.", image: "/card2.png" },
-    { icon: <RocketIcon fontSize="large" />, title: "Flexible Learning Paths", description: "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.", image: "/card3.png" },
-    { icon: <RocketIcon fontSize="large" />, title: "Real Industry Connections", description: "Gain access to industry leaders and real-world opportunities.", image: "/card4.png" },
-    { icon: <RocketIcon fontSize="large" />, title: "Accredited Certifications", description: "Earn certifications from top universities and industry bodies.", image: "/card4.png" },
+    {
+      icon: <RocketIcon fontSize="large" />,
+      title: "Career-Ready Curriculum",
+      description:
+        "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
+      image: "/card4.png",
+    },
+    {
+      icon: <RocketIcon fontSize="large" />,
+      title: "100% Placement Assistance",
+      description:
+        "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
+      image: "/card2.png",
+    },
+    {
+      icon: <RocketIcon fontSize="large" />,
+      title: "Flexible Learning Paths",
+      description:
+        "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
+      image: "/card3.png",
+    },
+    {
+      icon: <RocketIcon fontSize="large" />,
+      title: "Real Industry Connections",
+      description: "Gain access to industry leaders and real-world opportunities.",
+      image: "/card4.png",
+    },
+    {
+      icon: <RocketIcon fontSize="large" />,
+      title: "Accredited Certifications",
+      description: "Earn certifications from top universities and industry bodies.",
+      image: "/card4.png",
+    },
   ];
 
   const handleCardClick = (index) => {
@@ -36,8 +63,12 @@ const ChooseUs = () => {
               className="flex flex-col items-center bg-blue-200 rounded-lg p-4 md:p-6 hover:shadow-lg transform transition duration-300 hover:-translate-y-2 cursor-pointer"
               onClick={() => handleCardClick(index)}
             >
-              <div className="text-blue-600 text-4xl md:text-5xl mb-4">{feature.icon}</div>
-              <p className="text-sm md:text-md font-medium text-blue-600">{feature.title}</p>
+              <div className="text-blue-600 text-4xl md:text-5xl mb-4">
+                {feature.icon}
+              </div>
+              <p className="text-sm md:text-md font-medium text-blue-600">
+                {feature.title}
+              </p>
             </div>
 
             {/* Conditionally render the detail div below the clicked card on mobile */}
@@ -45,16 +76,22 @@ const ChooseUs = () => {
               <div className="mt-4 bg-white rounded-lg shadow-lg p-4 md:hidden flex flex-col items-center transition-all duration-300">
                 {/* Left Side Texts */}
                 <div className="text-left">
-                  <h3 className="text-lg text-black font-semibold mb-2">{feature.title}</h3>
+                  <h3 className="text-lg text-black font-semibold mb-2">
+                    {feature.title}
+                  </h3>
                   <p className="text-black text-sm">{feature.description}</p>
                 </div>
                 {/* Right Side Image */}
                 <div className="flex justify-center mt-4">
-                  <img
-                    src={feature.image}
-                    alt={feature.title}
-                    className="w-40 h-auto rounded-md"
-                  />
+                  <div className="relative w-40 h-40">
+                    <Image
+                      src={feature.image}
+                      alt={feature.title}
+                      layout="fill"
+                      objectFit="cover"
+                      className="rounded-md"
+                    />
+                  </div>
                 </div>
               </div>
             )}
@@ -67,16 +104,24 @@ const ChooseUs = () => {
         <div className="mt-8 mx-auto w-full max-w-4xl bg-white rounded-lg shadow-lg p-6 md:p-8 hidden md:flex flex-col md:flex-row items-center transition-all duration-300">
           {/* Left Side Texts */}
           <div className="flex-1 text-left">
-            <h3 className="text-2xl font-semibold mb-4">{features[selectedFeature].title}</h3>
-            <p className="text-black text-base">{features[selectedFeature].description}</p>
+            <h3 className="text-2xl font-semibold mb-4">
+              {features[selectedFeature].title}
+            </h3>
+            <p className="text-black text-base">
+              {features[selectedFeature].description}
+            </p>
           </div>
           {/* Right Side Image */}
           <div className="flex-1 flex justify-center mt-4 md:mt-0 md:ml-6">
-            <img
-              src={features[selectedFeature].image}
-              alt={features[selectedFeature].title}
-              className="w-60 h-auto rounded-md"
-            />
+            <div className="relative w-60 h-60">
+              <Image
+                src={features[selectedFeature].image}
+                alt={features[selectedFeature].title}
+                layout="fill"
+                objectFit="cover"
+                className="rounded-md"
+              />
+            </div>
           </div>
         </div>
       )}

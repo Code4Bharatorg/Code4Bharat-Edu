@@ -1,15 +1,21 @@
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image"; // Import Next.js Image component
 
 const PayAfterPlacementAbout = () => {
   return (
     <div className="max-w-full mx-4 mt-2 md:mx-8 mb-16 bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between">
       {/* Left Section - Image */}
       <div className="w-full md:w-1/3 mb-4 md:mb-0">
-        <img
-          src="/payafterplacement.png" // Replace with the correct image path
-          alt="Pay After Placement"
-          className="w-full h-auto object-cover rounded-lg"
-        />
+        <div className="relative w-full h-64 md:h-80"> {/* Set the height for the image container */}
+          <Image
+            src="/payafterplacement.png" // Replace with the correct image path
+            alt="Pay After Placement"
+            layout="fill" // Use 'fill' to make the image cover the container
+            objectFit="cover" // Ensure the image covers the container without distortion
+            className="rounded-lg"
+          />
+        </div>
       </div>
 
       {/* Right Section - Text */}
@@ -21,7 +27,8 @@ const PayAfterPlacementAbout = () => {
           We’re committed to student success and offer a pay-after-placement
           option to remove financial barriers. With this model, students can
           focus on their learning journey and start paying after securing a job.
-          <br /><br />
+          <br />
+          <br />
           That’s why we’re proud to offer a pay-after-placement option, designed
           to eliminate upfront financial burdens and give students the freedom
           to focus entirely on their learning journey. With this model, students

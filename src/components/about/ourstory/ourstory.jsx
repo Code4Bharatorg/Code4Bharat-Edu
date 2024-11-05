@@ -1,9 +1,10 @@
-import React from 'react';
+"use client";
+import React from "react";
+import Image from "next/image"; // Import Next.js Image component
 
 const OurStory = () => {
   return (
     <div className="max-w-[calc(100%-2rem)] mx-auto mb-12 mt-12 bg-blue-300 rounded-tl-[4rem] rounded-bl-none rounded-br-[2rem] rounded-tr-none flex flex-col md:flex-row items-center justify-between p-4 md:p-6 lg:p-10">
-      
       {/* Right Text */}
       <div className="text-black ml-0 md:ml-12 text-center md:text-left text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold font-syne flex-1 px-4 md:px-0">
         <p>Our Story</p>
@@ -15,11 +16,15 @@ const OurStory = () => {
 
       {/* Right Image */}
       <div className="flex-1 mt-6 md:mt-0 ml-0 md:ml-8 mb-6 md:mb-0 flex justify-center">
-        <img
-          src="/5.jpg" // Ensure this image exists in your public folder
-          alt="Our Story"
-          className="w-48 sm:w-56 md:w-64 lg:w-[28rem] h-auto object-cover rounded-tl-[4rem] rounded-br-[2rem] shadow-lg"
-        />
+        <div className="relative w-48 sm:w-56 md:w-64 lg:w-[28rem] h-64 sm:h-72 md:h-80 lg:h-[28rem]"> {/* Set the height for the image container */}
+          <Image
+            src="/5.jpg" // Ensure this image exists in your public folder
+            alt="Our Story"
+            layout="fill" // Use 'fill' to make the image cover the container
+            objectFit="cover" // Ensure the image covers the container without distortion
+            className="rounded-tl-[4rem] rounded-br-[2rem] shadow-lg"
+          />
+        </div>
       </div>
     </div>
   );

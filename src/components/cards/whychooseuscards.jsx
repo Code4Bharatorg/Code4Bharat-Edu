@@ -1,10 +1,10 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { ArrowBack, ArrowForward } from "@mui/icons-material"; // Import Material UI icons
+import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 const WhyChooseUsCards = () => {
   const [cardsPerPage, setCardsPerPage] = useState(4); // Responsive cards per page
-  const [currentPage, setCurrentPage] = useState(0); // Current page index
+  const [currentStartIndex, setCurrentStartIndex] = useState(0); // Starting index of the displayed cards
 
   // Define card data manually
   const cards = [
@@ -13,7 +13,7 @@ const WhyChooseUsCards = () => {
       title: "Career-Ready Curriculum",
       content:
         "Our courses are designed by industry experts to ensure job-readiness from day one.",
-      image: "/card1.png", // Image path from public folder
+      image: "/card1.png",
     },
     {
       id: 2,
@@ -38,42 +38,15 @@ const WhyChooseUsCards = () => {
     },
     {
       id: 5,
-      title: "Card 5",
-      content: "Content for card 5.",
-      image: "/card4.png",
-    },
-    {
-      id: 6,
-      title: "Card 6",
-      content: "Content for card 6.",
-      image: "/card3.png",
-    },
-    {
-      id: 7,
-      title: "Card 7",
-      content: "Content for card 7.",
+      title: "Real Industry Connections",
+      content:
+        "Closely aligned with Code4Bharat, our students gain exposure to real-world tech challenges and insights from industry professionals.",
       image: "/card2.png",
     },
-    {
-      id: 8,
-      title: "Card 8",
-      content: "Content for card 8.",
-      image: "/card1.png",
-    },
-    {
-      id: 9,
-      title: "Card 9",
-      content: "Content for card 9.",
-      image: "/card3.png",
-    },
-    {
-      id: 10,
-      title: "Card 10",
-      content: "Content for card 10.",
-      image: "/card2.png",
-    },
-    // Add more cards as needed
   ];
+
+  // Duplicate cards to make scrolling continuous
+  const extendedCards = [...cards, ...cards];
 
   // Update cardsPerPage based on screen size
   useEffect(() => {
@@ -94,31 +67,35 @@ const WhyChooseUsCards = () => {
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
-  // Calculate total pages using Math.ceil
-  const totalPages = Math.ceil(cards.length / cardsPerPage);
+  // Calculate the cards to display based on the current start index
+  const currentCards = extendedCards.slice(
+    currentStartIndex,
+    currentStartIndex + cardsPerPage
+  );
 
-  // Calculate the starting index of the cards to display
-  const startIndex = currentPage * cardsPerPage;
-  const currentCards = cards.slice(startIndex, startIndex + cardsPerPage);
-
-  // Handlers for next and previous buttons
+  // Handle "Next" button click
   const handleNext = () => {
-    if (currentPage < totalPages - 1) {
-      setCurrentPage(currentPage + 1);
-    }
+    setCurrentStartIndex((prevIndex) => {
+      // Move to the next card, wrapping around if necessary
+      const nextIndex = (prevIndex + 1) % cards.length;
+      return nextIndex;
+    });
   };
 
+  // Handle "Previous" button click
   const handlePrevious = () => {
-    if (currentPage > 0) {
-      setCurrentPage(currentPage - 1);
-    }
+    setCurrentStartIndex((prevIndex) => {
+      // Move to the previous card, wrapping around if necessary
+      const previousIndex = (prevIndex - 1 + cards.length) % cards.length;
+      return previousIndex;
+    });
   };
 
   return (
     <div className="p-6 mb-12 w-full max-w-8xl bg-white shadow-xl rounded-lg mx-auto">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
-        Why <span className="text-blue-500">Choose </span> Us <br />
+        Why <span className="text-blue-500">Choose</span> Us <br />
         Education.Code4Bharat?
       </h2>
 
@@ -127,13 +104,8 @@ const WhyChooseUsCards = () => {
         {/* Previous Button */}
         <button
           onClick={handlePrevious}
-          disabled={currentPage === 0}
           aria-label="Previous Page"
-          className={`flex items-center justify-center w-10 h-10 bg-white text-black rounded-full shadow-xl ${
-            currentPage === 0
-              ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-gray-200 transition"
-          } focus:outline-none focus:ring-2 focus:ring-blue-500`}
+          className="flex items-center justify-center w-10 h-10 bg-white text-black rounded-full shadow-xl hover:bg-gray-200 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <ArrowBack />
         </button>
@@ -141,9 +113,9 @@ const WhyChooseUsCards = () => {
         {/* Cards Grid */}
         <div className="flex flex-col items-center flex-1 mx-4">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-            {currentCards.map((card) => (
+            {currentCards.map((card, index) => (
               <div
-                key={card.id}
+                key={`${card.id}-${index}`}
                 className="bg-white shadow-md rounded-lg p-6 transition-transform transform hover:scale-105 hover:bg-blue-200 min-h-[400px] w-full sm:w-64 lg:w-72 flex flex-col"
               >
                 <img
@@ -161,34 +133,13 @@ const WhyChooseUsCards = () => {
               </div>
             ))}
           </div>
-
-          {/* Pagination Dots */}
-          <div className="flex justify-center items-center mt-6">
-            {Array.from({ length: totalPages }, (_, index) => (
-              <button
-                key={index}
-                onClick={() => setCurrentPage(index)}
-                aria-label={`Go to page ${index + 1}`}
-                className={`mx-1 w-3 h-3 rounded-full ${
-                  currentPage === index
-                    ? "bg-blue-500"
-                    : "bg-gray-300 hover:bg-gray-400 transition"
-                } focus:outline-none focus:ring-2 focus:ring-blue-500`}
-              />
-            ))}
-          </div>
         </div>
 
         {/* Next Button */}
         <button
           onClick={handleNext}
-          disabled={currentPage >= totalPages - 1}
           aria-label="Next Page"
-          className={`flex items-center justify-center w-10 h-10 bg-blue-400 text-white rounded-full shadow-xl ${
-            currentPage >= totalPages - 1
-              ? "opacity-50 cursor-not-allowed"
-              : "hover:bg-blue-500 transition"
-          } focus:outline-none focus:ring-2 focus:ring-blue-500`}
+          className="flex items-center justify-center w-10 h-10 bg-blue-400 text-white rounded-full shadow-xl hover:bg-blue-500 transition focus:outline-none focus:ring-2 focus:ring-blue-500"
         >
           <ArrowForward />
         </button>
