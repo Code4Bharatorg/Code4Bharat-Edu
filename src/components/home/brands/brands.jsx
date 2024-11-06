@@ -1,4 +1,4 @@
-'use client';
+"use client";
 import { useState, useEffect } from "react";
 import Image from "next/image";
 import { motion } from "framer-motion";
@@ -81,14 +81,14 @@ const Brands = () => {
       <div className="container mx-auto px-4 mb-16">
         {/* Heading Section */}
         <div className="mb-6 text-center">
-          <h2 className="text-2xl md:text-3xl font-semibold text-black dark:text-gray-200">
+          <h2 className="text-2xl md:text-3xl font-semibold text-black">
             Our <span className="text-blue-500">Partners</span> and <span className="text-blue-500">Collaborations</span>
           </h2>
         </div>
         <div className="flex justify-center">
           <div className="w-full px-4">
             {/* Carousel Container */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-6 bg-white dark:bg-black rounded-md">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 p-6 bg-white rounded-md">
               {visibleBrands.map((index, idx) => (
                 <SingleBrand
                   key={`${brandsData[index].id}-${idx}`}
@@ -112,7 +112,7 @@ const SingleBrand = ({ brand, animationIndex }) => {
   const isPng = image.toLowerCase().endsWith('.png') || imageLight.toLowerCase().endsWith('.png');
 
   const containerClasses = `relative aspect-square w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100 ${
-    isPng ? 'bg-white dark:bg-black' : 'bg-transparent'
+    isPng ? 'bg-white' : 'bg-transparent'
   } flex items-center justify-center rounded-lg`;
 
   return (
