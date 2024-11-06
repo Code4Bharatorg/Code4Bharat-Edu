@@ -55,8 +55,8 @@ const Brands = () => {
     };
 
     updateImagesPerView();
-    window.addEventListener('resize', updateImagesPerView);
-    return () => window.removeEventListener('resize', updateImagesPerView);
+    window.addEventListener("resize", updateImagesPerView);
+    return () => window.removeEventListener("resize", updateImagesPerView);
   }, []);
 
   const [visibleBrands, setVisibleBrands] = useState([]);
@@ -109,11 +109,12 @@ export default Brands;
 const SingleBrand = ({ brand, animationIndex }) => {
   const { image, imageLight, name } = brand;
 
-  const isPng = image.toLowerCase().endsWith('.png') || imageLight.toLowerCase().endsWith('.png');
+  // Check if the image is a JPEG to apply a white background
+  const isJpg = image.toLowerCase().endsWith(".jpg") || imageLight.toLowerCase().endsWith(".jpg");
 
-  const containerClasses = `relative aspect-square w-full opacity-70 transition hover:opacity-100 dark:opacity-60 dark:hover:opacity-100 ${
-    isPng ? 'bg-white' : 'bg-transparent'
-  } flex items-center justify-center rounded-lg`;
+  const containerClasses = `relative aspect-square w-full flex items-center justify-center rounded-lg ${
+    isJpg ? "bg-white" : "bg-transparent"
+  }`;
 
   return (
     <motion.div
@@ -123,8 +124,20 @@ const SingleBrand = ({ brand, animationIndex }) => {
       transition={{ duration: 0.8, ease: "easeInOut" }}
     >
       <div className={containerClasses}>
-        <Image src={imageLight} alt={`${name} Logo Light`} fill className="object-contain hidden dark:block" />
-        <Image src={image} alt={`${name} Logo`} fill className="object-contain block dark:hidden" />
+        <Image
+          src={imageLight}
+          alt={`${name} Logo Light`}
+          fill
+          quality={100}
+          className="object-contain hidden dark:block opacity-90"
+        />
+        <Image
+          src={image}
+          alt={`${name} Logo`}
+          fill
+          quality={100}
+          className="object-contain block dark:hidden opacity-90"
+        />
       </div>
     </motion.div>
   );
