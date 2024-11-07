@@ -15,7 +15,7 @@ const Footer = () => {
           {/* First Column: Contact Us */}
           <div className="flex-1">
             <Image
-              src="/logo.png.png"
+              src="/logo.png"
               alt="Logo"
               width={224}
               height={96}
