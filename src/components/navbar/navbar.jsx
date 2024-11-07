@@ -42,7 +42,7 @@ const Navbar = () => {
         <button className="focus:outline-none flex-shrink-0" onClick={handleLogoClick}>
           <div className="relative h-24 w-48 -mt-6">
             <Image
-              src="/logoo.jpg" // Ensure this image exists in your public folder
+              src="/logo.png.png" // Ensure this image exists in your public folder
               alt="MyLogo"
               layout="fill" // Makes the image fill the container
               objectFit="contain" // Adjust objectFit as needed

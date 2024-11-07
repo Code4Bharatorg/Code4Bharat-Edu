@@ -5,19 +5,19 @@ const ContactPage = () => {
       <section className="flex flex-col md:flex-row items-center justify-between bg-[#116EB3] mt-12 text-white p-6 md:p-12">
         <div className="w-full md:w-1/2 space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold font-syne">Contact Us</h2>
-          <p className="text-base md:text-lg font-montserrat">
+          <p className="text-base md:text-lg font-montserrat ">
             We&apos;re here to help you elevate your business! Reach out to us
             today for personalized support and to learn more about our digital
             marketing solutions.
           </p>
         </div>
-        <div className="w-full md:w-1/2 flex justify-center md:justify-end">
+        <div className="w-full mt-4 md:w-1/2 flex justify-center md:justify-end">
           <Image
-            src="/logoo.jpg"
+            src="/log.jpg"
             alt="Contact Illustration"
             width={400}
-            height={300}
-            className="object-contain max-w-full h-auto"
+            height={400}
+            className="object-contain max-w-full h-auto rounded-xl"
           />
         </div>
       </section>
