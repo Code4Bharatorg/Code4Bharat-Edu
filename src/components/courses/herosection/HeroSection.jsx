@@ -13,7 +13,7 @@ const HeroSection = () => {
   }, []);
 
   return (
-    <section className="w-full h-auto md:h-[60vh] flex flex-col md:flex-row bg-[#116EB3] rounded-bl-2xl rounded-br-2xl overflow-hidden relative">
+    <section className="w-full h-auto md:h-[60vh] flex flex-col md:flex-row bg-[#116EB3] rounded-bl-2xl rounded-br-2xl overflow-hidden relative mt-2">
       {/* Left Section */}
       <div className="w-full md:w-1/2 h-auto md:h-full flex flex-col p-5 md:p-10 justify-center">
         {/* Tagline */}
