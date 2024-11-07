@@ -6,7 +6,7 @@ const Placement = () => {
       {/* Left Column (Text) */}
       <div className="w-full md:w-1/2 h-auto md:h-full">
         <div className="w-full h-auto md:h-[20%] flex items-center justify-center py-4 md:py-0">
-          <h1 className="text-[6vw] md:text-[4vw] lg:text-[3.5vw] font-bold text-[#06241B] text-center md:text-left px-6 md:px-0">
+          <h1 className="text-[6vw] md:text-[4vw] lg:text-[3.5vw] font-bold text-[#06241B] text-center md:text-left px-6 md:px-0 mt-20">
             Pay After <span className="text-[#116EB3]">Placement</span>
           </h1>
         </div>
