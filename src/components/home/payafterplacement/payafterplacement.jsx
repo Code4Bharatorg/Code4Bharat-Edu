@@ -27,7 +27,7 @@ const PayAfterPlacement = () => {
       <div className="w-full md:w-1/3">
         <div className="relative w-full h-64 md:h-80"> {/* Set image container dimensions */}
           <Image
-            src="/payafterplacement.png" // Replace with your actual image path
+            src="/payafter.jpg" // Replace with your actual image path
             alt="Pay After Placement"
             layout="fill" // Makes the image fill the container
             objectFit="cover" // Ensures the image covers the container without distortion

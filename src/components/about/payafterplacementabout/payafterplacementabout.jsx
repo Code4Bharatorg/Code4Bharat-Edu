@@ -9,7 +9,7 @@ const PayAfterPlacementAbout = () => {
       <div className="w-full md:w-1/3 mb-4 md:mb-0">
         <div className="relative w-full h-64 md:h-80"> {/* Set the height for the image container */}
           <Image
-            src="/payafterplacement.png" // Replace with the correct image path
+            src="/payafter2.jpg" // Replace with the correct image path
             alt="Pay After Placement"
             layout="fill" // Use 'fill' to make the image cover the container
             objectFit="cover" // Ensure the image covers the container without distortion
@@ -19,7 +19,7 @@ const PayAfterPlacementAbout = () => {
       </div>
 
       {/* Right Section - Text */}
-      <div className="text-gray-700 w-full md:w-2/3 text-left">
+      <div className="text-gray-700 w-full md:w-2/3 text-left ml-6">
         <h2 className="text-2xl md:text-5xl font-semibold mb-4">
           Pay After <span className="text-blue-500">Placement</span>
         </h2>

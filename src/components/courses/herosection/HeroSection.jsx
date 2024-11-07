@@ -41,7 +41,7 @@ const HeroSection = () => {
         <div className="block md:hidden w-full h-auto mt-5">
           <div className="relative w-full h-64">
             <Image
-              src="/courses/hero.png"
+              src="/coursehome.png"
               alt="Hero Image"
               layout="fill"
               objectFit="contain"
@@ -55,7 +55,7 @@ const HeroSection = () => {
           {/* Main Image */}
           <div className="relative w-full h-full">
             <Image
-              src="/courses/hero.png"
+              src="/coursehome.png"
               alt="Hero Image"
               layout="fill"
               objectFit="contain"

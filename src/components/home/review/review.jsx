@@ -5,14 +5,14 @@ import { ArrowBack, ArrowForward } from '@mui/icons-material'; // Importing Mate
 const Review = () => {
   // Array to hold card data
   const cards = [
-    { id: 1, title: "Individualized Mentorship", description: "Our mentors and instructors provide guidance at every stage of your learning journey.", image: "/sanad.jpg" },
-    { id: 2, title: "Real-World Projects", description: "Each course includes hands-on projects, mirroring real industry challenges and solutions.", image: "/juned.jpg" },
-    { id: 3, title: "Flexible Learning", description: "Learn at your own pace with flexible learning options that fit your schedule.", image: "/sanad.jpg" },
-    { id: 4, title: "Career Support", description: "Get access to career support services, including resume reviews and mock interviews.", image: "/juned.jpg" },
-    { id: 5, title: "Industry Certifications", description: "Earn industry-recognized certifications that enhance your resume and skillset.", image: "/juned.jpg" },
+    { id: 1, title: "Individualized Mentorship", description: "Our mentors and instructors provide guidance at every stage of your learning journey.", image: "/dp4.jpg" },
+    { id: 2, title: "Real-World Projects", description: "Each course includes hands-on projects, mirroring real industry challenges and solutions.", image: "/dp2.jpg" },
+    { id: 3, title: "Flexible Learning", description: "Learn at your own pace with flexible learning options that fit your schedule.", image: "/harsh.jpg" },
+    { id: 4, title: "Career Support", description: "Get access to career support services, including resume reviews and mock interviews.", image: "/dp3.jpg" },
+    { id: 5, title: "Industry Certifications", description: "Earn industry-recognized certifications that enhance your resume and skillset.", image: "/dp1.jpg" },
     { id: 6, title: "Global Community", description: "Join a global community of learners and professionals from diverse backgrounds.", image: "/sanad.jpg" },
     { id: 7, title: "Expert Instructors", description: "Learn from experienced instructors who bring real-world knowledge to the classroom.", image: "/juned.jpg" },
-    { id: 8, title: "Cutting-Edge Curriculum", description: "Stay updated with the latest industry trends through our cutting-edge curriculum.", image: "/sanad.jpg" },
+    { id: 8, title: "Cutting-Edge Curriculum", description: "Stay updated with the latest industry trends through our cutting-edge curriculum.", image: "/dp5.jpg" }, 
   ];
 
   const [currentPage, setCurrentPage] = useState(0); // Current page index
