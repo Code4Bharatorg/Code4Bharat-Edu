@@ -3,7 +3,7 @@ import Image from "next/image"; // If you're using Next.js
 
 const Journey = () => {
   return (
-    <div className="w-full h-auto min-h-[60vh] bg-[#116EB3] flex flex-col md:flex-row items-center md:items-start px-8 md:px-24 py-8 gap-6 md:gap-12">
+    <div className="w-full h-auto min-h-[60vh] bg-[#116EB3] flex flex-col md:flex-row items-center md:items-start px-8 mb-8 md:px-24 py-8 gap-6 md:gap-12">
       {/* Text Section */}
       <div className="w-full md:w-3/5 flex flex-col gap-6 text-white">
         <h1 className="text-[5vw] md:text-[2.5vw] font-bold leading-tight md:leading-none text-center md:text-left text-black">
@@ -22,11 +22,11 @@ const Journey = () => {
       </div>
 
       {/* Image Section */}
-      <div className="w-full md:w-2/5 flex justify-center items-center">
+      <div className="w-full md:w-2/5 flex justify-end items-center">
         <Image
-          src="/courses/hero.png" // Ensure the image path is correct
+          src="/herocourses.jpg" // Ensure the image path is correct
           alt="Journey Image"
-          className="w-4/5 h-auto object-contain rounded-md"
+          className="w-4/5 h-auto mr-12 object-contain rounded-md"
           width={400} // Adjust as needed
           height={300} // Adjust as needed
         />

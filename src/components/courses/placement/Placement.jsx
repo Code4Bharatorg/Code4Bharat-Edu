@@ -21,7 +21,7 @@ const Placement = () => {
       <div className="w-full md:w-1/2 h-auto md:h-full flex justify-center items-center py-4 md:py-0">
         <div className="w-[90%] md:w-[70%] h-[60vw] md:h-[70%]">
           <img
-            src="https://i.pinimg.com/564x/31/04/27/310427dabbea277df5103b24bc84e6a7.jpg"
+            src="/payafter3.jpg"
             alt="Placement"
             className="w-full h-full object-cover"
           />
