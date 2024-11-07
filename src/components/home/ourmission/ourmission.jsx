@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image"; // Import Next.js Image component
+import Link from "next/link";
 
 const OurMission = () => {
   return (
@@ -21,7 +22,8 @@ const OurMission = () => {
 
         {/* Learn More Button */}
         <button className="mt-4 sm:mt-6 px-3 sm:px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-black transition duration-200 text-base sm:text-lg md:text-xl">
-          Learn More
+          <Link href="/mission">Learn More</Link>
+          
         </button>
       </div>
 
