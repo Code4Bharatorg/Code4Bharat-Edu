@@ -28,9 +28,18 @@ const Footer = () => {
             <p className="font-semibold text-left text-black mb-2 text-sm md:text-base">
               Email: <a href="mailto:code4bharat@gmail.com" className="hover:underline">code4bharat@gmail.com</a>
             </p>
-            <p className="font-semibold text-left text-gray-500 mb-4 text-sm md:text-base">
-              Office No. 1A & 2, Lower Ground Floor, Building No. 3 White House, New Buddha Colony, Kurla (west)
-            </p>
+            <p className="font-semibold text-left text-black mb-4 text-sm md:text-base">
+  Address: <br />
+  <a 
+    href="https://www.google.com/maps?q=Off+BKC,+Mumbai,+India+400070" 
+    target="_blank" 
+    rel="noopener noreferrer" 
+    className="text-gray-600 hover:text-blue-500"
+  >
+     Off BKC, Mumbai, India 400070
+  </a>
+</p>
+
             <div className="flex justify-start space-x-4">
               <a
                 href="https://www.facebook.com/people/Code4Bharat/61552341000278/?locale=fr_FR"
@@ -120,12 +129,14 @@ const Footer = () => {
           <div className="flex-1">
             <h3 className="font-semibold text-left text-black mb-4">Get In Touch</h3>
             <form className="flex flex-col">
-              <input
-                type="email"
-                placeholder="Email Here"
-                className="p-2 rounded-md text-gray-700 mb-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
+            <input
+  type="tel"
+  placeholder="Mobile Number"
+  pattern="[0-9]{10}" // Ensures only numbers with 10 digits (adjust as needed)
+  className="p-2 rounded-md text-gray-700 mb-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+  required
+/>
+
               <button
                 type="submit"
                 className="bg-blue-500 text-white rounded-md p-2 text-sm md:text-base w-full hover:bg-blue-700 transition-colors duration-300"

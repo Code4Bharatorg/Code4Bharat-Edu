@@ -36,10 +36,12 @@ const JoinUs = () => {
               className="w-full mt-2 p-3 sm:p-4 font-syne border rounded-lg"
             />
             <input
-              type="email"
-              placeholder="E-Mail"
+              type="tel"
+              placeholder="Mobile Number"
+              pattern="[0-9]{10}"
               className="w-full mb-4 sm:mb-6 p-3 sm:p-4 font-syne border rounded-lg mt-4"
             />
+           
             <button className="w-full py-2 bg-black text-white font-syne rounded-lg">Next</button>
           </form>
         </div>

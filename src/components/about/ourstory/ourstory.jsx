@@ -18,7 +18,7 @@ const OurStory = () => {
       <div className="flex-1 mt-6 md:mt-0 ml-0 md:ml-8 mb-6 md:mb-0 flex justify-center">
         <div className="relative w-52 sm:w-64 md:w-64 lg:w-[28rem] h-64 sm:h-72 md:h-80 lg:h-[28rem]"> {/* Set the height for the image container */}
           <Image
-            src="/logo.png.png" // Ensure this image exists in your public folder
+            src="/logo.jpg" // Ensure this image exists in your public folder
             alt="Our Story"
             layout="fill" // Use 'fill' to make the image cover the container
             objectFit="" // Ensure the image covers the container without distortion

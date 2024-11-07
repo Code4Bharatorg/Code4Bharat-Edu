@@ -15,24 +15,39 @@ const Getintouch = () => {
           success!
         </p>
         <div className="space-y-4">
+          {/* Address Link */}
           <div className="flex items-start mt-12">
             <LocationOn className="text-blue-600 mr-2" />
-            <p className="font-roboto text-gray-700 font-bold">
-              Cluster_mumbai Suburban, 381 White <br />House-2, SG Barve Marg, Netaji
-              Nagar,<br /> Kurla West, Kurla, Mumbai, Maharashtra <br /> 400070, India
-            </p>
+            <a
+              href="https://www.google.com/maps?q=Off+BKC,+Mumbai,+India+400070"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="font-roboto text-gray-700 font-bold hover:text-blue-600"
+            >
+              Off BKC, Mumbai, India 400070
+            </a>
           </div>
+          
+          {/* Phone Link */}
           <div className="flex items-center">
             <Phone className="text-blue-600 mr-2" />
-            <p className="font-montserrat text-gray-700 font-bold">
+            <a
+              href="tel:+919594402916"
+              className="font-montserrat text-gray-700 font-bold hover:text-blue-600"
+            >
               Call us on: +91 959 440 2916
-            </p>
+            </a>
           </div>
+          
+          {/* Email Link */}
           <div className="flex items-center">
             <Email className="text-blue-600 mr-2" />
-            <p className="font-montserrat text-gray-700 font-bold">
+            <a
+              href="mailto:code4bharat@gmail.com"
+              className="font-montserrat text-gray-700 font-bold hover:text-blue-600"
+            >
               Email us on: code4bharat@gmail.com
-            </p>
+            </a>
           </div>
         </div>
       </div>

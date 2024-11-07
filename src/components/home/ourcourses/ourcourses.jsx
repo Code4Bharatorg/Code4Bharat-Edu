@@ -1,8 +1,15 @@
 "use client";
 import React from "react";
-import Image from "next/image"; // Import Next.js Image component
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const OurCourses = () => {
+  const router = useRouter();
+
+  const handleCardClick = (coursePath) => {
+    router.push(coursePath);
+  };
+
   return (
     <div className="max-w-full mx-4 md:mx-8 mb-12 bg-[#116EB3] rounded-tl-none rounded-br-none rounded-tr-[4rem] rounded-bl-[4rem] flex flex-col p-6 md:p-8">
       {/* Header Section */}
@@ -18,10 +25,13 @@ const OurCourses = () => {
       {/* Cards Section */}
       <div className="flex flex-wrap justify-center gap-12 mt-8 mb-4">
         {/* Card 1 */}
-        <div className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200">
+        <div
+          onClick={() => handleCardClick("/courses")}
+          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
+        >
           <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
             <Image
-              src="/6MONTHS.png" // Replace with the correct image path for Card 1
+              src="/6MONTHS.png"
               alt="6-Month Course"
               layout="fill"
               objectFit="cover"
@@ -38,10 +48,13 @@ const OurCourses = () => {
         </div>
 
         {/* Card 2 */}
-        <div className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200">
+        <div
+          onClick={() => handleCardClick("/courses")}
+          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
+        >
           <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
             <Image
-              src="/1YEAR.png" // Replace with the correct image path for Card 2
+              src="/1YEAR.png"
               alt="1-Year Course"
               layout="fill"
               objectFit="cover"
@@ -58,10 +71,13 @@ const OurCourses = () => {
         </div>
 
         {/* Card 3 */}
-        <div className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200">
+        <div
+          onClick={() => handleCardClick("/courses")}
+          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
+        >
           <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
             <Image
-              src="/2YEARS.png" // Replace with the correct image path for Card 3
+              src="/2YEARS.png"
               alt="2-Year Course"
               layout="fill"
               objectFit="cover"
@@ -72,16 +88,18 @@ const OurCourses = () => {
             2-Year Course
           </h3>
           <p className="text-gray-600 mt-2">
-            Deepen your web development knowledge with advanced skills and
-            tools.
+            Deepen your web development knowledge with advanced skills and tools.
           </p>
         </div>
 
         {/* Card 4 */}
-        <div className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200">
+        <div
+          onClick={() => handleCardClick("/courses")}
+          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
+        >
           <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
             <Image
-              src="/13.png" // Replace with the correct image path for Card 4
+              src="/13.png"
               alt="3-Year Course"
               layout="fill"
               objectFit="cover"
@@ -92,8 +110,7 @@ const OurCourses = () => {
             3-Year Course
           </h3>
           <p className="text-gray-600 mt-2">
-            A comprehensive program that fully prepares you for a career in web
-            development.
+            A comprehensive program that fully prepares you for a career in web development.
           </p>
         </div>
       </div>

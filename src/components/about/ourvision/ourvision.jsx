@@ -9,7 +9,7 @@ const OurVision = () => {
       <div className="flex-1 mb-6 md:mb-0 md:mr-6 flex justify-center">
         <div className="relative w-64 sm:w-80 md:w-100 lg:w-[28rem] h-full">
           <Image
-            src="/visioon.png" // Ensure this image exists in your public folder
+            src="/vison.png" // Ensure this image exists in your public folder
             alt="Our Vision"
             layout="responsive" // Use responsive layout
             width={500} // Set a suitable width in pixels

@@ -1,8 +1,14 @@
 "use client";
 import React from "react";
-import Image from "next/image"; // Import Next.js Image component
+import Image from "next/image";
+import { useRouter } from "next/navigation";
 
 const PayAfterPlacementAbout = () => {
+  const router = useRouter();
+
+  const handleLearnMoreClick = () => {
+    router.push("/contact-us"); // Redirect to the contact-us page
+  };
   return (
     <div className="max-w-full mx-4 mt-2 md:mx-8 mb-16 bg-white rounded-lg p-4 md:p-8 flex flex-col md:flex-row items-start md:items-center justify-between">
       {/* Left Section - Image */}
@@ -35,6 +41,12 @@ const PayAfterPlacementAbout = () => {
           can immerse themselves in developing their skills without the worry of
           immediate fees.
         </p>
+        <button
+          onClick={handleLearnMoreClick}
+          className="mt-6 px-6 py-2 bg-blue-500 text-white rounded-full font-semibold hover:bg-blue-600 transition"
+        >
+          Learn More
+        </button>
       </div>
     </div>
   );

@@ -1,7 +1,11 @@
 "use client";
 import React, { useState } from "react";
-import RocketIcon from "@mui/icons-material/Rocket"; // Importing Material UI icons
-import Image from "next/image"; // Import Next.js Image component
+import RocketIcon from "@mui/icons-material/Rocket";
+import WorkIcon from "@mui/icons-material/Work";
+import SchoolIcon from "@mui/icons-material/School";
+import PeopleIcon from "@mui/icons-material/People";
+import VerifiedIcon from "@mui/icons-material/Verified";
+import Image from "next/image";
 
 const ChooseUs = () => {
   const [selectedFeature, setSelectedFeature] = useState(null);
@@ -11,31 +15,31 @@ const ChooseUs = () => {
       icon: <RocketIcon fontSize="large" />,
       title: "Career-Ready Curriculum",
       description:
-        "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
+        "Our mission is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
       image: "/careeer.jpg",
     },
     {
-      icon: <RocketIcon fontSize="large" />,
+      icon: <WorkIcon fontSize="large" />,
       title: "100% Placement Assistance",
       description:
-        "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
+        "Our mission is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
       image: "/placement.avif",
     },
     {
-      icon: <RocketIcon fontSize="large" />,
+      icon: <SchoolIcon fontSize="large" />,
       title: "Flexible Learning Paths",
       description:
-        "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
+        "Our mission is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
       image: "/learning.jpg",
     },
     {
-      icon: <RocketIcon fontSize="large" />,
+      icon: <PeopleIcon fontSize="large" />,
       title: "Real Industry Connections",
       description: "Gain access to industry leaders and real-world opportunities.",
       image: "/industry.jpg",
     },
     {
-      icon: <RocketIcon fontSize="large" />,
+      icon: <VerifiedIcon fontSize="large" />,
       title: "Accredited Certifications",
       description: "Earn certifications from top universities and industry bodies.",
       image: "/certification.jpg",
