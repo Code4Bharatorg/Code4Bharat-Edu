@@ -14,35 +14,35 @@ const WhyChooseUsCards = () => {
       title: "Career-Ready Curriculum",
       content:
         "Our courses are designed by industry experts to ensure job-readiness from day one.",
-      image: "/card1.png",
+      image: "/careeer.jpg",
     },
     {
       id: 2,
       title: "100% Placement Assistance",
       content:
         "We support students through every stage of their job search, with pay-after-placement options for all.",
-      image: "/card2.png",
+      image: "/placement.avif",
     },
     {
       id: 3,
       title: "Flexible Learning Paths",
       content:
         "Choose from 6 months, 1-year, 2-year, or 3-year courses tailored to fit different career objectives.",
-      image: "/card3.png",
+      image: "/learning.jpg",
     },
     {
       id: 4,
       title: "Accredited Certifications and Degrees",
       content:
         "Our programs offer diplomas, advanced diplomas, and full degrees in partnership with top NAAC A++ certified universities.",
-      image: "/card4.png",
+      image: "/certification.jpg",
     },
     {
       id: 5,
       title: "Real Industry Connections",
       content:
         "Closely aligned with Code4Bharat, our students gain exposure to real-world tech challenges and insights from industry professionals.",
-      image: "/card2.png",
+      image: "/industry.jpg",
     },
   ];
 
