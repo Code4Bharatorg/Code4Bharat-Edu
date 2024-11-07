@@ -7,14 +7,14 @@ const OurVision = () => {
     <div className="max-w-[calc(100%-2rem)] mx-auto mb-12 mt-12 bg-blue-600 rounded-tl-[4rem] rounded-bl-none rounded-br-[2rem] rounded-tr-none flex flex-col md:flex-row items-center justify-between p-6 md:p-10 lg:p-14">
       {/* Left Image */}
       <div className="flex-1 mb-6 md:mb-0 md:mr-6 flex justify-center">
-        <div className="relative w-64 sm:w-80 md:w-96 lg:w-[28rem] h-auto">
+        <div className="relative w-64 sm:w-80 md:w-100 lg:w-[28rem] h-full">
           <Image
-            src="/vision.png" // Ensure this image exists in your public folder
+            src="/visioon.png" // Ensure this image exists in your public folder
             alt="Our Vision"
             layout="responsive" // Use responsive layout
-            width={448} // Set a suitable width in pixels
-            height={280} // Set a suitable height in pixels
-            className="object-cover rounded-tl-[4rem] rounded-br-[2rem] shadow-lg"
+            width={500} // Set a suitable width in pixels
+            height={300} // Set a suitable height in pixels
+            className="object-cover rounded-tl-[4rem] rounded-br-[2rem]"
           />
         </div>
       </div>

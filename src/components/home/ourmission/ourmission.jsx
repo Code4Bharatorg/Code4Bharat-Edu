@@ -29,7 +29,7 @@ const OurMission = () => {
       <div className="w-full md:w-1/3 h-auto flex items-center mt-4 md:mt-0 md:mr-10">
         <div className="relative w-full h-60 sm:h-72 md:h-[24rem]"> {/* Adjusted height for better responsiveness */}
           <Image
-            src="/ourmission.png" // Replace with your actual image path
+            src="/misson.jpg" // Replace with your actual image path
             alt="Our Mission"
             layout="fill" // Makes the image fill the container
             objectFit="cover" // Ensures the image covers the container without distortion

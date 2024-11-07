@@ -24,9 +24,9 @@ const OurMissionAbout = () => {
 
       {/* Right Image */}
       <div className="flex-1 mt-6 md:mt-0 flex justify-center">
-        <div className="relative w-52 sm:w-60 md:w-80 lg:w-[28rem] h-auto">
+        <div className="relative w-52 sm:w-60 md:w-80 lg:w-[28rem] h-full">
           <Image
-            src="/ourmission.png" // Replace with your image path
+            src="/missioon.jpg" // Replace with your image path
             alt="Our Mission"
             layout="responsive" // Use responsive layout
             width={448} // Set a suitable width in pixels

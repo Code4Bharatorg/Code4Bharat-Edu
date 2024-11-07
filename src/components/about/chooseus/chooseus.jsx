@@ -12,33 +12,33 @@ const ChooseUs = () => {
       title: "Career-Ready Curriculum",
       description:
         "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
-      image: "/card4.png",
+      image: "/careeer.jpg",
     },
     {
       icon: <RocketIcon fontSize="large" />,
       title: "100% Placement Assistance",
       description:
         "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
-      image: "/card2.png",
+      image: "/placement.avif",
     },
     {
       icon: <RocketIcon fontSize="large" />,
       title: "Flexible Learning Paths",
       description:
         "is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
-      image: "/card3.png",
+      image: "/learning.jpg",
     },
     {
       icon: <RocketIcon fontSize="large" />,
       title: "Real Industry Connections",
       description: "Gain access to industry leaders and real-world opportunities.",
-      image: "/card4.png",
+      image: "/industry.jpg",
     },
     {
       icon: <RocketIcon fontSize="large" />,
       title: "Accredited Certifications",
       description: "Earn certifications from top universities and industry bodies.",
-      image: "/card4.png",
+      image: "/certification.jpg",
     },
   ];
 
