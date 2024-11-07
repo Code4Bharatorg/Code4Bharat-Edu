@@ -6,7 +6,7 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
   return (
     <div className="w-full md:w-72 bg-[#FAFAFA] rounded-xl overflow-hidden relative flex flex-col shadow-md">
       {/* Main Image */}
-      <div className="relative w-full h-48">
+      <div className="relative w-full h-56">
         <Image
           src={mainImage}
           alt="Main Course"
@@ -16,7 +16,7 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
       </div>
 
       {/* Mini Images and Right Text */}
-      <div className="absolute left-1/2 top-40 transform -translate-x-1/2 w-[85%] flex items-center justify-between px-3 py-2 rounded-3xl bg-[#dadada] shadow">
+      <div className="absolute mt-16 left-1/2 top-40 transform -translate-x-1/2 w-[85%] flex items-center justify-between px-3 py-2 rounded-3xl bg-[#dadada] shadow">
         {/* Mini Images */}
         <div className="flex items-center">
           {miniImages.map((image, index) => (
