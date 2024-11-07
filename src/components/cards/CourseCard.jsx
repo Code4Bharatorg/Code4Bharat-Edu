@@ -4,55 +4,51 @@ import Image from "next/image"; // Import Next.js Image component
 
 const CourseCard = ({ title, description, mainImage, miniImages, rightText }) => {
   return (
-    <div className="w-[20%] h-[80%] rounded-xl bg-[#FAFAFA] overflow-hidden relative">
+    <div className="w-full md:w-72 bg-[#FAFAFA] rounded-xl overflow-hidden relative flex flex-col shadow-md">
       {/* Main Image */}
-      <div className="w-full h-[40%] relative">
+      <div className="relative w-full h-48">
         <Image
           src={mainImage}
           alt="Main Course"
-          layout="fill" // Makes the image fill the container
-          objectFit="cover" // Ensures the image covers the container without distortion
-          className="w-full h-full"
+          fill // Makes the image fill the container
+          className="object-cover"
         />
       </div>
 
       {/* Mini Images and Right Text */}
-      <div className="w-[90%] flex items-center px-1 rounded-3xl h-[12%] bg-[#dadada] absolute left-[5%] top-[33%]">
+      <div className="absolute left-1/2 top-40 transform -translate-x-1/2 w-[85%] flex items-center justify-between px-3 py-2 rounded-3xl bg-[#dadada] shadow">
         {/* Mini Images */}
-        <div className="w-[50%] h-full flex items-center">
+        <div className="flex items-center">
           {miniImages.map((image, index) => (
             <div
               key={index}
-              className={`w-7 h-7 bg-white rounded-full overflow-hidden relative ${index > 0 ? "-ml-3" : ""}`}
+              className={`w-8 h-8 bg-white rounded-full overflow-hidden relative ${index !== 0 ? "-ml-2" : ""}`}
             >
               <Image
                 src={image}
                 alt={`Image ${index + 1}`}
-                layout="fill" // Makes the image fill the container
-                objectFit="cover" // Ensures the image covers the container without distortion
+                fill
+                className="object-cover"
               />
             </div>
           ))}
         </div>
         {/* Right Text */}
-        <div className="w-[50%] h-full flex items-center">
-          <span className="text-[1vw] font-medium">{rightText}</span>
+        <div className="text-right">
+          <span className="text-sm font-medium">{rightText}</span>
         </div>
       </div>
 
-      {/* Title */}
-      <div className="mt-5 w-full h-[10%] flex items-center px-5">
-        <h4 className="text-[1.5vw] font-bold text-[#116EB3]">{title}</h4>
-      </div>
+      {/* Content */}
+      <div className="flex flex-col flex-1 mt-12 px-4 pb-4">
+        {/* Title */}
+        <h4 className="text-lg md:text-xl font-bold text-[#116EB3] mt-4">{title}</h4>
 
-      {/* Description */}
-      <div className="w-full h-[30%] px-5">
-        <p className="text-[1vw] font-medium text-[#4D4D4D]">{description}</p>
-      </div>
+        {/* Description */}
+        <p className="text-sm md:text-base text-[#4D4D4D] mt-2 flex-grow">{description}</p>
 
-      {/* Enroll Button */}
-      <div className="w-full h-[15%] flex items-center px-5">
-        <button className="text-[1.2vw] rounded-md text-white px-5 py-1 bg-[#116EB3]">
+        {/* Enroll Button */}
+        <button className="mt-4 text-sm md:text-base rounded-md text-white px-4 py-2 bg-[#116EB3]">
           Enroll Now
         </button>
       </div>
