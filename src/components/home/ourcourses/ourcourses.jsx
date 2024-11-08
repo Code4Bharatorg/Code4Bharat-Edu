@@ -1,13 +1,71 @@
 "use client";
-import React from "react";
+
+import React, { useState } from "react";
 import Image from "next/image";
 import { useRouter } from "next/navigation";
+import { motion, AnimatePresence } from "framer-motion";
 
 const OurCourses = () => {
   const router = useRouter();
 
   const handleCardClick = (coursePath) => {
     router.push(coursePath);
+  };
+
+  // Updated courses data with only 2-Month and 4-Month MERN Stack courses
+  const courses = [
+    {
+      title: "MERN Stack",
+      duration: "2-Month",
+      description:
+        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
+      imageSrc: "/2MONTH.png", // Ensure this image exists in the public directory
+      altText: "2-Month MERN Stack Course",
+      path: "/courses/2-month",
+      syllabus: [
+        "SQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "Express",
+        "MongoDB",
+        "Git",
+        "Web Development Capstone Project",
+      ],
+    },
+    {
+      title: "MERN Stack",
+      duration: "4-Month",
+      description:
+        "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
+      imageSrc: "/4MONTH.png", // Ensure this image exists in the public directory
+      altText: "4-Month MERN Stack Course",
+      path: "/courses/4-month",
+      syllabus: [
+        "SQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "Express",
+        "MongoDB",
+        "Git",
+        "Web Development Capstone Project",
+      ],
+    },
+  ];
+
+  // State to manage which card's syllabus is expanded
+  const [expandedCard, setExpandedCard] = useState(null);
+
+  // Function to toggle syllabus expansion
+  const toggleSyllabus = (index) => {
+    setExpandedCard((prev) => (prev === index ? null : index));
   };
 
   return (
@@ -24,95 +82,58 @@ const OurCourses = () => {
 
       {/* Cards Section */}
       <div className="flex flex-wrap justify-center gap-12 mt-8 mb-4">
-        {/* Card 1 */}
-        <div
-          onClick={() => handleCardClick("/courses")}
-          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
-        >
-          <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
-            <Image
-              src="/6MONTHS.png"
-              alt="6-Month Course"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-tr-[2rem] rounded-bl-md"
-            />
-          </div>
-          <h3 className="text-blue-500 mt-4 text-xl font-semibold">
-            6-Month Course
-          </h3>
-          <p className="text-gray-600 mt-2">
-            Gain core web development <br /> skills and industry-ready <br />
-            expertise.
-          </p>
-        </div>
+        {courses.map((course, index) => (
+          <div
+            key={index}
+            className="bg-white shadow-lg rounded-tr-[2rem] rounded-bl-[2rem] p-6 w-full sm:w-[48%] md:w-[35%] lg:w-[35%] xl:w-[28%] 2xl:w-[25%] text-center transition-shadow duration-300 hover:shadow-2xl"
+          >
+            <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
+              <Image
+                src={course.imageSrc}
+                alt={course.altText}
+                fill
+                className="object-cover rounded-tr-[2rem] rounded-bl-md"
+                priority
+              />
+            </div>
+            <h3 className="text-blue-500 mt-4 text-2xl font-semibold">
+              {course.title} - {course.duration}
+            </h3>
+            <p className="text-gray-600 mt-2">
+              {course.description}
+            </p>
 
-        {/* Card 2 */}
-        <div
-          onClick={() => handleCardClick("/courses")}
-          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
-        >
-          <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
-            <Image
-              src="/1YEAR.png"
-              alt="1-Year Course"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-tr-[2rem] rounded-bl-md"
-            />
-          </div>
-          <h3 className="text-blue-500 mt-4 text-xl font-semibold">
-            1-Year Course
-          </h3>
-          <p className="text-gray-600 mt-2">
-            Gain core web development <br /> skills and industry-ready <br />
-            expertise.
-          </p>
-        </div>
+            {/* Read More Button */}
+            <button
+              onClick={() => toggleSyllabus(index)}
+              className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
+            >
+              {expandedCard === index ? "Hide Syllabus" : "Read More"}
+            </button>
 
-        {/* Card 3 */}
-        <div
-          onClick={() => handleCardClick("/courses")}
-          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
-        >
-          <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
-            <Image
-              src="/2YEARS.png"
-              alt="2-Year Course"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-tr-[2rem] rounded-bl-md"
-            />
+            {/* Syllabus Section */}
+            <AnimatePresence>
+              {expandedCard === index && (
+                <motion.div
+                  initial={{ opacity: 0, height: 0 }}
+                  animate={{ opacity: 1, height: "auto" }}
+                  exit={{ opacity: 0, height: 0 }}
+                  transition={{ duration: 0.5 }}
+                  className="mt-4 overflow-hidden"
+                >
+                  <h4 className="text-xl text-blue-500 mb-2">Syllabus:</h4>
+                  <ul className="text-gray-700 list-disc list-inside text-left">
+                    {course.syllabus.map((skill, idx) => (
+                      <li key={idx} className="mb-1">
+                        {skill}
+                      </li>
+                    ))}
+                  </ul>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </div>
-          <h3 className="text-blue-500 mt-4 text-xl font-semibold">
-            2-Year Course
-          </h3>
-          <p className="text-gray-600 mt-2">
-            Deepen your web development knowledge with advanced skills and tools.
-          </p>
-        </div>
-
-        {/* Card 4 */}
-        <div
-          onClick={() => handleCardClick("/courses")}
-          className="bg-white shadow-md rounded-tr-[2rem] rounded-bl-[2rem] p-4 w-full sm:w-[48%] md:w-[30%] lg:w-[22%] xl:w-[18%] 2xl:w-[16%] text-center transition-colors duration-300 hover:bg-blue-200 cursor-pointer"
-        >
-          <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
-            <Image
-              src="/13.png"
-              alt="3-Year Course"
-              layout="fill"
-              objectFit="cover"
-              className="rounded-tr-[2rem] rounded-bl-md"
-            />
-          </div>
-          <h3 className="text-blue-500 mt-4 text-xl font-semibold">
-            3-Year Course
-          </h3>
-          <p className="text-gray-600 mt-2">
-            A comprehensive program that fully prepares you for a career in web development.
-          </p>
-        </div>
+        ))}
       </div>
     </div>
   );

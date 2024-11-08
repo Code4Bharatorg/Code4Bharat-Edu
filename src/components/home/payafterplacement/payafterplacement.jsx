@@ -15,19 +15,13 @@ const PayAfterPlacement = () => {
       {/* Left Section - Text */}
       <div className="text-gray-700 w-full md:w-2/3 mb-6 md:mb-0">
         <h2 className="text-3xl text-black md:text-5xl font-semibold mb-8">
-          Pay After <span className="text-blue-500">Placement</span>
+          100% <span className="text-blue-500">Placement</span> Assistance for Every Student
         </h2>
         <p className="text-base md:text-lg text-black mt-4">
-          We’re committed to student success and offer a pay-after-placement
-          option to remove financial barriers. With this model, students can
-          focus on their learning journey and start paying after securing a job.
-          <br />
-          <br />
-          That’s why we’re proud to offer a pay-after-placement option, designed
-          to eliminate upfront financial burdens and give students the freedom
-          to focus entirely on their learning journey. With this model, students
-          can immerse themselves in developing their skills without the worry of
-          immediate fees.
+        Our commitment to your success doesn’t end with the course. With our 100% placement assistance, we’re here to support you every step of the way:<br/>
+•	Personalized Career Support: From refining your resume to preparing for interviews, we provide tailored guidance to enhance your job prospects.<br/>
+•	Interview Preparation: Participate in mock interviews and workshops to build confidence and polish your skills.<br/>
+•	Industry Connections: We connect you with a network of companies actively seeking skilled web developers, giving you access to real job opportunities.<br/>
         </p>
         
         {/* Learn More Button */}

@@ -9,7 +9,7 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
       <div className="relative w-full h-56">
         <Image
           src={mainImage}
-          alt="Main Course"
+          alt={`${title} Main`}
           fill // Makes the image fill the container
           className="object-cover"
         />
@@ -22,11 +22,13 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
           {miniImages.map((image, index) => (
             <div
               key={index}
-              className={`w-8 h-8 bg-white rounded-full overflow-hidden relative ${index !== 0 ? "-ml-2" : ""}`}
+              className={`w-8 h-8 bg-white rounded-full overflow-hidden relative ${
+                index !== 0 ? "-ml-2" : ""
+              }`}
             >
               <Image
                 src={image}
-                alt={`Image ${index + 1}`}
+                alt={`Student ${index + 1}`}
                 fill
                 className="object-cover"
               />
@@ -45,10 +47,12 @@ const CourseCard = ({ title, description, mainImage, miniImages, rightText }) =>
         <h4 className="text-lg md:text-xl font-bold text-[#116EB3] mt-4">{title}</h4>
 
         {/* Description */}
-        <p className="text-sm md:text-base text-[#4D4D4D] mt-2 flex-grow">{description}</p>
+        <p className="text-sm md:text-base text-[#4D4D4D] mt-2 flex-grow">
+          {description}
+        </p>
 
         {/* Enroll Button */}
-        <button className="mt-4 text-sm md:text-base rounded-md text-white px-4 py-2 bg-[#116EB3]">
+        <button className="mt-4 text-sm md:text-base rounded-md text-white px-4 py-2 bg-[#116EB3] hover:bg-[#0f5a99] transition-colors duration-300">
           Enroll Now
         </button>
       </div>

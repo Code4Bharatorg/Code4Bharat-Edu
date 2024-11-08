@@ -4,13 +4,13 @@ import CourseCard from "@/components/cards/CourseCard";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
 
 const PopularCourse = () => {
-  // Sample data for multiple courses with updated image URLs
+  // Updated data for the 2-Month and 4-Month courses
   const courses = [
     {
-      title: "6-Month Course",
+      title: "2-Month Course",
       description:
-        "Gain core web development skills and industry-ready expertise. Completion certificate recognized by industry leaders.",
-      mainImage: "/6MONTHS.png",
+        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
+      mainImage: "/2MONTH.png", // Ensure this image exists in the public directory
       miniImages: [
         "/harsh.jpg",
         "/dp4.jpg",
@@ -20,52 +20,25 @@ const PopularCourse = () => {
       rightText: "+40 Students",
     },
     {
-      title: "1-Year Course",
+      title: "4-Month Course",
       description:
-        "Build a solid foundation in web development, preparing you for specialized roles.",
-      mainImage: "/1YEAR.png",
+        "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
+      mainImage: "/4MONTH.png", // Ensure this image exists in the public directory
       miniImages: [
         "/dp1.jpg",
         "/dp2.jpg",
         "/dp3.jpg",
         "/dp4.jpg",
       ],
-      rightText: "+11 Students",
-    },
-    {
-      title: "2-Year Course",
-      description:
-        "Deepen your web development knowledge with advanced skills and tools.",
-      mainImage: "/2YEARS.png",
-      miniImages: [
-        "/juned.jpg",
-        "/sanad.jpg",
-        "/harsh.jpg",
-        "/dp3.jpg",
-      ],
       rightText: "+234 Students",
-    },
-    {
-      title: "3-Year Course",
-      description:
-        "A comprehensive program that fully prepares you for a career in web development.",
-      mainImage: "/13.png",
-      miniImages: [
-        "/dp1.jpg",
-        "/dp5.jpg",
-        "/sanad.jpg",
-        "/juned.jpg",
-      ],
-      rightText: "+342 Students",
     },
   ];
 
+  // Updated filter options
   const courseFilters = [
     "All Programme",
-    "6-Month Course",
-    "1-Year Course",
-    "2-Year Course",
-    "3-Year Course",
+    "2-Month Course",
+    "4-Month Course",
   ];
 
   const [selectedFilter, setSelectedFilter] = useState("All Programme");
@@ -144,6 +117,7 @@ const PopularCourse = () => {
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-300"
             }`}
+            aria-label="Previous Course"
           >
             <ArrowBack />
           </button>
@@ -188,6 +162,7 @@ const PopularCourse = () => {
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-300"
             }`}
+            aria-label="Next Course"
           >
             <ArrowForward />
           </button>
@@ -201,6 +176,7 @@ const PopularCourse = () => {
               className={`w-2 h-2 rounded-full ${
                 currentPage === index ? "bg-[#116EB3]" : "bg-gray-300"
               } transition-all duration-300`}
+              aria-label={`Page ${index + 1}`}
             />
           ))}
         </div>
