@@ -10,7 +10,7 @@ const PopularCourse = () => {
       title: "2-Month Course",
       description:
         "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
-      mainImage: "/2MONTH.png", // Ensure this image exists in the public directory
+      mainImage: "/2months.jpg",
       miniImages: [
         "/harsh.jpg",
         "/dp4.jpg",
@@ -18,12 +18,25 @@ const PopularCourse = () => {
         "/dp5.jpg",
       ],
       rightText: "+40 Students",
+      syllabus: [
+        "SQL",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Redux",
+        "Node",
+        "Express",
+        "MongoDB",
+        "Git",
+        "Web Development Capstone Project",
+      ],
     },
     {
       title: "4-Month Course",
       description:
         "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
-      mainImage: "/4MONTH.png", // Ensure this image exists in the public directory
+      mainImage: "/4months.jpg",
       miniImages: [
         "/dp1.jpg",
         "/dp2.jpg",
@@ -31,6 +44,19 @@ const PopularCourse = () => {
         "/dp4.jpg",
       ],
       rightText: "+234 Students",
+      syllabus: [
+        "Advanced SQL",
+        "HTML5",
+        "CSS3",
+        "JavaScript ES6+",
+        "React Advanced",
+        "Redux Thunk/Saga",
+        "Node Advanced",
+        "Express Middleware",
+        "MongoDB Aggregations",
+        "Git and GitHub",
+        "Full-stack Development Capstone Project",
+      ],
     },
   ];
 
@@ -42,6 +68,9 @@ const PopularCourse = () => {
   ];
 
   const [selectedFilter, setSelectedFilter] = useState("All Programme");
+
+  // State to manage which card's syllabus is expanded
+  const [expandedCard, setExpandedCard] = useState(null);
 
   // Function to handle filtering
   const filteredCourses =
@@ -74,6 +103,11 @@ const PopularCourse = () => {
     }
   };
 
+  // Function to toggle syllabus expansion
+  const toggleSyllabus = (index) => {
+    setExpandedCard((prev) => (prev === index ? null : index));
+  };
+
   return (
     <div className="w-full mt-14">
       {/* Section Title */}
@@ -98,6 +132,7 @@ const PopularCourse = () => {
             onClick={() => {
               setSelectedFilter(filter);
               setCurrentPage(0); // Reset to first page when filter changes
+              setExpandedCard(null); // Collapse any expanded syllabus
             }}
           >
             {filter}
@@ -129,11 +164,15 @@ const PopularCourse = () => {
               {filteredCourses.map((course, index) => (
                 <CourseCard
                   key={index}
+                  index={index}
                   title={course.title}
                   description={course.description}
                   mainImage={course.mainImage}
                   miniImages={course.miniImages}
                   rightText={course.rightText}
+                  syllabus={course.syllabus}
+                  isExpanded={expandedCard === index}
+                  toggleSyllabus={toggleSyllabus}
                 />
               ))}
             </div>
@@ -142,12 +181,16 @@ const PopularCourse = () => {
             <div className="flex md:hidden items-center justify-center">
               {currentCourses.map((course, index) => (
                 <CourseCard
-                  key={index}
+                  key={startIndex + index}
+                  index={startIndex + index}
                   title={course.title}
                   description={course.description}
                   mainImage={course.mainImage}
                   miniImages={course.miniImages}
                   rightText={course.rightText}
+                  syllabus={course.syllabus}
+                  isExpanded={expandedCard === startIndex + index}
+                  toggleSyllabus={toggleSyllabus}
                 />
               ))}
             </div>

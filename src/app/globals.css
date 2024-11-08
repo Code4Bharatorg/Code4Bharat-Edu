@@ -1,8 +1,36 @@
-/* src/styles/globals.css */
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Syne:wght@400;700&display=swap');
+/* styles/globals.css */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* You can add any additional global styles here */
+/* Custom Classes for 3D Flip Animation */
+
+/* Perspective for 3D flip */
+.perspective {
+  perspective: 1000px;
+}
+
+/* Preserve 3D for child elements */
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+/* Hide the back face of the element */
+.backface-hidden {
+  backface-visibility: hidden;
+}
+
+/* Rotate the element 180 degrees along the Y-axis */
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Positioning for the flip effect */
+.perspective > div {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

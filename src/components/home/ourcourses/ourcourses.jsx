@@ -19,7 +19,7 @@ const OurCourses = () => {
       duration: "2-Month",
       description:
         "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
-      imageSrc: "/2MONTH.png", // Ensure this image exists in the public directory
+      imageSrc: "/2months.jpg", // Ensure this image exists in the public directory
       altText: "2-Month MERN Stack Course",
       path: "/courses/2-month",
       syllabus: [
@@ -41,7 +41,7 @@ const OurCourses = () => {
       duration: "4-Month",
       description:
         "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
-      imageSrc: "/4MONTH.png", // Ensure this image exists in the public directory
+      imageSrc: "/4months.jpg", // Ensure this image exists in the public directory
       altText: "4-Month MERN Stack Course",
       path: "/courses/4-month",
       syllabus: [
@@ -87,7 +87,7 @@ const OurCourses = () => {
             key={index}
             className="bg-white shadow-lg rounded-tr-[2rem] rounded-bl-[2rem] p-6 w-full sm:w-[48%] md:w-[35%] lg:w-[35%] xl:w-[28%] 2xl:w-[25%] text-center transition-shadow duration-300 hover:shadow-2xl"
           >
-            <div className="w-full h-52 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
+            <div className="w-full h-72 overflow-hidden rounded-tr-[2rem] rounded-bl-md relative">
               <Image
                 src={course.imageSrc}
                 alt={course.altText}
