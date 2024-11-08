@@ -61,7 +61,7 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full md:translate-x-0"
           } md:flex-row md:items-center flex-col p-8 md:p-0 z-50 overflow-auto`}
         >
-          {["home", "about-us", "courses", "contact-us"].map((page) => (
+          {["home", "about-us", "courses", "contact-us", "verify-certificate"].map((page) => (
             <li
               key={page}
               className={`p-4 text-xl font-semibold md:mx-4 hover:text-blue-600 ${
@@ -70,7 +70,7 @@ const Navbar = () => {
               onClick={() => handleMenuItemClick(page)}
             >
               <a href={page === "home" ? "/" : `/${page}`}>
-                {page.charAt(0).toUpperCase() + page.slice(1)}
+                {page.replace("-", " ").replace(/\b\w/g, (char) => char.toUpperCase())}
               </a>
             </li>
           ))}
