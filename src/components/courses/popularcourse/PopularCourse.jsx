@@ -2,6 +2,7 @@
 import React, { useState } from "react";
 import CourseCard from "@/components/cards/CourseCard";
 import { ArrowBack, ArrowForward } from "@mui/icons-material";
+import { motion, AnimatePresence } from "framer-motion";
 
 const PopularCourse = () => {
   // Updated data for the 2-Month and 4-Month courses
@@ -11,12 +12,7 @@ const PopularCourse = () => {
       description:
         "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
       mainImage: "/2months.jpg",
-      miniImages: [
-        "/harsh.jpg",
-        "/dp4.jpg",
-        "/dp3.jpg",
-        "/dp5.jpg",
-      ],
+      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"],
       rightText: "+40 Students",
       syllabus: [
         "SQL",
@@ -37,12 +33,7 @@ const PopularCourse = () => {
       description:
         "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
       mainImage: "/4months.jpg",
-      miniImages: [
-        "/dp1.jpg",
-        "/dp2.jpg",
-        "/dp3.jpg",
-        "/dp4.jpg",
-      ],
+      miniImages: ["/dp1.jpg", "/dp2.jpg", "/dp3.jpg", "/dp4.jpg"],
       rightText: "+234 Students",
       syllabus: [
         "Advanced SQL",
@@ -61,11 +52,7 @@ const PopularCourse = () => {
   ];
 
   // Updated filter options
-  const courseFilters = [
-    "All Programme",
-    "2-Month Course",
-    "4-Month Course",
-  ];
+  const courseFilters = ["All Programme", "2-Month Course", "4-Month Course"];
 
   const [selectedFilter, setSelectedFilter] = useState("All Programme");
 
@@ -142,12 +129,52 @@ const PopularCourse = () => {
 
       {/* Courses and Navigation */}
       <div className="flex flex-col items-center mt-8">
+        {/* Courses */}
         <div className="flex items-center justify-center gap-4 md:gap-8">
-          {/* Previous Button - Visible on mobile only */}
+          {/* Desktop View - Show all courses */}
+          <div className="hidden md:flex items-center gap-8 justify-center px-10">
+            {filteredCourses.map((course, index) => (
+              <CourseCard
+                key={index}
+                index={index}
+                title={course.title}
+                description={course.description}
+                mainImage={course.mainImage}
+                miniImages={course.miniImages}
+                rightText={course.rightText}
+                syllabus={course.syllabus}
+                isExpanded={expandedCard === index}
+                toggleSyllabus={toggleSyllabus}
+              />
+            ))}
+          </div>
+
+          {/* Mobile View - Show one course at a time with pagination */}
+          <div className="flex md:hidden items-center justify-center">
+            {currentCourses.map((course, index) => (
+              <CourseCard
+                key={startIndex + index}
+                index={startIndex + index}
+                title={course.title}
+                description={course.description}
+                mainImage={course.mainImage}
+                miniImages={course.miniImages}
+                rightText={course.rightText}
+                syllabus={course.syllabus}
+                isExpanded={expandedCard === startIndex + index}
+                toggleSyllabus={toggleSyllabus}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* Previous and Next Buttons - Visible on mobile only */}
+        <div className="flex md:hidden items-center justify-center mt-4 space-x-4">
+          {/* Previous Button */}
           <button
             onClick={handlePrevious}
             disabled={currentPage === 0}
-            className={`md:hidden bg-white shadow-lg p-2 rounded-full transition-all duration-300 ${
+            className={`bg-white shadow-lg p-2 rounded-full transition-all duration-300 ${
               currentPage === 0
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-300"
@@ -157,50 +184,11 @@ const PopularCourse = () => {
             <ArrowBack />
           </button>
 
-          {/* Courses */}
-          <div className="flex items-center justify-center gap-4 md:gap-8">
-            {/* Desktop View - Show all courses */}
-            <div className="hidden md:flex items-center gap-8 justify-center px-10">
-              {filteredCourses.map((course, index) => (
-                <CourseCard
-                  key={index}
-                  index={index}
-                  title={course.title}
-                  description={course.description}
-                  mainImage={course.mainImage}
-                  miniImages={course.miniImages}
-                  rightText={course.rightText}
-                  syllabus={course.syllabus}
-                  isExpanded={expandedCard === index}
-                  toggleSyllabus={toggleSyllabus}
-                />
-              ))}
-            </div>
-
-            {/* Mobile View - Show one course at a time with pagination */}
-            <div className="flex md:hidden items-center justify-center">
-              {currentCourses.map((course, index) => (
-                <CourseCard
-                  key={startIndex + index}
-                  index={startIndex + index}
-                  title={course.title}
-                  description={course.description}
-                  mainImage={course.mainImage}
-                  miniImages={course.miniImages}
-                  rightText={course.rightText}
-                  syllabus={course.syllabus}
-                  isExpanded={expandedCard === startIndex + index}
-                  toggleSyllabus={toggleSyllabus}
-                />
-              ))}
-            </div>
-          </div>
-
-          {/* Next Button - Visible on mobile only */}
+          {/* Next Button */}
           <button
             onClick={handleNext}
             disabled={currentPage >= totalPages - 1}
-            className={`md:hidden bg-white shadow-lg p-2 rounded-full transition-all duration-300 ${
+            className={`bg-white shadow-lg p-2 rounded-full transition-all duration-300 ${
               currentPage >= totalPages - 1
                 ? "opacity-50 cursor-not-allowed"
                 : "hover:bg-gray-300"

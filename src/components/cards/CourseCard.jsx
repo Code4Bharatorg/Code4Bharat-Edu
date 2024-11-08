@@ -93,9 +93,8 @@ const CourseCard = ({
           )}
         </AnimatePresence>
 
-        {/* Enroll Button */}
-        <Link
-        href="/contact-us">
+        {/* Enroll Now Button */}
+        <Link href="/contact-us">
         <button className="mt-4 text-sm md:text-base rounded-md text-white px-4 py-2 bg-[#116EB3] hover:bg-[#0f5a99] transition-colors duration-300">
           Enroll Now
         </button>
