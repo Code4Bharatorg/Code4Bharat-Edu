@@ -1,17 +1,15 @@
-// components/about-us/Hero.jsx
-
 import Image from 'next/image';
 
 const HeroAbout = () => {
   return (
-    <section className="bg-blue-500 text-white py-12 md:py-20 mt-2">
-      <div className="container mx-auto flex flex-col md:flex-row items-center px-6 md:px-12">
+    <section className="bg-blue-500 text-white py-8 md:py-8 mt-2">
+      <div className="container mx-auto flex flex-col md:flex-row items-center px-4 md:px-8">
         {/* Text Content */}
-        <div className="md:w-1/2 mb-8 md:mb-0 text-center md:text-left">
-          <p className="text-xl text-yellow-400 md:text-2xl mb-4 md:mb-6">
+        <div className="md:w-1/2 mb-6 md:mb-0 text-center md:text-left">
+          <p className="text-lg text-yellow-400 md:text-xl mb-3 md:mb-4">
             Welcome to Education.Code4Bharat
           </p>
-          <h1 className="text-3xl md:text-5xl font-semibold mb-6 md:mb-16">
+          <h1 className="text-2xl md:text-4xl font-semibold mb-4 md:mb-8">
             Building Careers with <br />
             Industry-Driven <span className="text-yellow-400">Tech Courses</span>
           </h1>
@@ -22,8 +20,8 @@ const HeroAbout = () => {
           <Image
             src="/hero.png" // Replace with your image path
             alt="Hero Image"
-            width={500} // Increased width
-            height={350} // Increased height
+            width={400} // Reduced width
+            height={300} // Reduced height
             className="rounded-md"
           />
         </div>

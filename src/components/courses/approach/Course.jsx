@@ -8,8 +8,8 @@ const Courses = () => {
     <section className="bg-[#B2D5ED] py-16 px-4 md:px-8 mb-8 mt-2">
       <div className="container mx-auto">
         {/* Section Title */}
-        <h2 className="text-xl md:text-4xl font-semibold text-blue-700 mb-4 ml-2 md:ml-20 font-publicSans text-left">
-          Our Approach
+        <h2 className="text-xl md:text-4xl font-semibold text-black mb-4 ml-2 md:ml-20 font-publicSans text-left">
+          Our <span className="text-[#116EB3]">Approach</span>
         </h2>
         <p className="text-sm md:text-2xl text-[#6D737A] mb-6 md:mb-12 ml-2 md:ml-20 font-publicSans text-left">
           At Education.Code4Bharat, we combine technical training with career

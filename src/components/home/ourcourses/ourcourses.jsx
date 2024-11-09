@@ -108,7 +108,7 @@ const OurCourses = () => {
               onClick={() => toggleSyllabus(index)}
               className="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors duration-300"
             >
-              {expandedCard === index ? "Hide Syllabus" : "Read More"}
+              {expandedCard === index ? "Hide Syllabus" : "Syllabus"}
             </button>
 
             {/* Syllabus Section */}

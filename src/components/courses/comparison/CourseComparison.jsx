@@ -39,33 +39,18 @@ export const CourseComparison = () => {
             <tbody>
               {[
                 {
-                  course: "6-Month Certification",
-                  duration: "6-Month",
-                  certification: "Completion Certificate",
-                  skills: "HTML, CSS, JavaScript, Responsive Design",
+                  course: "2-Month (Fast Track Program) MERN Stack Course",
+                  duration: "2 Months",
+                  certification: "Full Stack Certificate(MERN Stack)",
+                  skills: "SQL, HTML, CSS, JavaScript, React, Redux, Node, Express, MongoDB, Git, Web Development Capstone Project",
                   placement: "100% Placement Support",
                 },
                 {
-                  course: "1-Year Diploma",
-                  duration: "1 Year",
-                  certification: "Diploma from NAAC A++ Certified University",
-                  skills:
-                    "Front-End & Back-End Development, Full-Stack Development, UX/UI Design",
-                  placement: "Placement Support & Internships",
-                },
-                {
-                  course: "2-Year Advanced Diploma",
-                  duration: "2 Year",
-                  certification: "Advanced Diploma from NAAC A++ University",
-                  skills: "Advanced Full-Stack, AI, Mobile Development",
-                  placement: "Career Mentorship & Placement",
-                },
-                {
-                  course: "3-Year Bachelor’s Degree",
-                  duration: "3 Year",
-                  certification: "Bachelor’s Degree from NAAC A++ University",
-                  skills: "Extensive Placement & Career Guidance",
-                  placement: "Extensive Placement",
+                  course: "4-Month (In Depth Program) MERN Stack Course",
+                  duration: "4 Months",
+                  certification: "Full Stack Certificate(MERN Stack)",
+                  skills: "SQL, HTML, CSS, JavaScript, React, Redux, Node, Express, MongoDB, Git, Web Development Capstone Project",
+                  placement: "100% Placement Support",
                 },
               ].map((item, index) => (
                 <tr

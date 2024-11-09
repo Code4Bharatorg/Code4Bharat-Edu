@@ -60,17 +60,24 @@ const CourseCard = ({
           {title}
         </h4>
 
+        {/* Enroll Now Button */}
+        <Link href="/contact-us">
+          <button className="mt-4 w-full text-sm md:text-base rounded-md text-white px-4 py-2 bg-gradient-to-r from-[#0f5a99] to-[#116EB3] hover:from-[#0d4e86] hover:to-[#0e66a8] shadow-lg transform transition duration-300 hover:scale-105">
+            Enroll Now
+          </button>
+        </Link>
+
         {/* Description */}
-        <p className="text-sm md:text-base text-[#4D4D4D] mt-2">
+        <p className="text-sm md:text-base text-[#4D4D4D] mt-4">
           {description}
         </p>
 
-        {/* Read More Button */}
+        {/* Syllabus Button */}
         <button
           onClick={() => toggleSyllabus(index)}
-          className="mt-4 px-4 py-2 bg-[#116EB3] text-white rounded-md hover:bg-[#0f5a99] transition-colors duration-300"
+          className="mt-4 w-full px-4 py-2 bg-gradient-to-r from-[#0f5a99] to-[#116EB3] text-white rounded-md hover:from-[#0d4e86] hover:to-[#0e66a8] shadow-lg transform transition duration-300 hover:scale-105"
         >
-          {isExpanded ? "Hide Syllabus" : "Read More"}
+          {isExpanded ? "Hide Syllabus" : "Syllabus"}
         </button>
 
         {/* Syllabus Section */}
@@ -92,13 +99,6 @@ const CourseCard = ({
             </motion.div>
           )}
         </AnimatePresence>
-
-        {/* Enroll Now Button */}
-        <Link href="/contact-us">
-        <button className="mt-4 text-sm md:text-base rounded-md text-white px-4 py-2 bg-[#116EB3] hover:bg-[#0f5a99] transition-colors duration-300">
-          Enroll Now
-        </button>
-        </Link>
       </div>
     </div>
   );
