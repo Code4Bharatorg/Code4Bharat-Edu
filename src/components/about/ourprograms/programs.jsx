@@ -22,33 +22,17 @@ const Programs = () => {
           {/* Program Card 1 */}
           <ProgramCard
             imageUrl="https://picsum.photos/seed/pic1/200/200"
-            title="6-Month Certification Program"
-            description="For students seeking essential web development skills with immediate employability."
+            title="2-Months (Fast Track) MERN Stack Course"
+            description="An accelerated course for those looking to quickly acquire core MERN stack skills for entry-level roles."
             customMargin="mt-4 md:mt-0 md:ml-36"
           />
 
           {/* Program Card 2 */}
           <ProgramCard
             imageUrl="https://picsum.photos/seed/pic2/200/200"
-            title="1-Year Diploma Program"
-            description="Ideal for building a solid foundation in web development, preparing students for specialized roles."
+            title="4-Months (In-Depth) MERN Stack Course"
+            description="A comprehensive program covering MERN stack in detail, preparing students for advanced roles in web development."
             customMargin="mt-4 md:mt-0 md:ml-4"
-          />
-
-          {/* Program Card 3 */}
-          <ProgramCard
-            imageUrl="https://picsum.photos/seed/pic3/200/200"
-            title="3-Year Bachelor’s Degree"
-            description="A comprehensive program that equips students with end-to-end knowledge and prepares them for leadership roles in web development."
-            customMargin="mt-8 md:mt-0 md:ml-56"
-          />
-
-          {/* Program Card 4 */}
-          <ProgramCard
-            imageUrl="https://picsum.photos/seed/pic4/200/200"
-            title="2-Year Advanced Diploma"
-            description="For those who want to gain deeper expertise in advanced web development techniques."
-            customMargin="mt-8 md:mt-0 md:ml-24"
           />
         </div>
 

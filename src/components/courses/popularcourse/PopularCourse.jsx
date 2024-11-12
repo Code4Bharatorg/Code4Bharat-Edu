@@ -11,7 +11,7 @@ const PopularCourse = () => {
       title: "2-Month Course",
       description:
         "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
-      mainImage: "/2months.jpg",
+      mainImage: "/2months.webp",
       miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"],
       rightText: "+40 Students",
       syllabus: [
@@ -32,7 +32,7 @@ const PopularCourse = () => {
       title: "4-Month Course",
       description:
         "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
-      mainImage: "/4months.jpg",
+      mainImage: "/4months.webp",
       miniImages: ["/dp1.jpg", "/dp2.jpg", "/dp3.jpg", "/dp4.jpg"],
       rightText: "+234 Students",
       syllabus: [
