@@ -5,6 +5,8 @@ import WorkIcon from "@mui/icons-material/Work";
 import SchoolIcon from "@mui/icons-material/School";
 import PeopleIcon from "@mui/icons-material/People";
 import VerifiedIcon from "@mui/icons-material/Verified";
+import AssignmentIndIcon from "@mui/icons-material/AssignmentInd"; // Icon for placement assistance
+import SupportAgentIcon from "@mui/icons-material/SupportAgent"; // New icon for dedicated placement
 import Image from "next/image";
 
 const ChooseUs = () => {
@@ -19,7 +21,7 @@ const ChooseUs = () => {
       image: "/careeer.jpg",
     },
     {
-      icon: <WorkIcon fontSize="large" />,
+      icon: <AssignmentIndIcon fontSize="large" />, // Icon for placement assistance
       title: "100% Placement Assistance",
       description:
         "Our mission is to empower businesses of all sizes by providing affordable and effective digital marketing solutions. We strive to help our clients enhance their online presence, connect with their target audience, and achieve measurable growth through tailored strategies in SEO, web design, social media management, and more.",
@@ -35,13 +37,22 @@ const ChooseUs = () => {
     {
       icon: <PeopleIcon fontSize="large" />,
       title: "Real Industry Connections",
-      description: "Gain access to industry leaders and real-world opportunities.",
+      description:
+        "Gain access to industry leaders and real-world opportunities.",
       image: "/industry.jpg",
     },
     {
       icon: <VerifiedIcon fontSize="large" />,
       title: "Accredited Certifications",
-      description: "Earn certifications from top universities and industry bodies.",
+      description:
+        "Earn certifications from top universities and industry bodies.",
+      image: "/certification.jpg",
+    },
+    {
+      icon: <SupportAgentIcon fontSize="large" />, // Updated icon for dedicated placement
+      title: "Dedicated Placement",
+      description:
+        "Receive personalized support and guidance to secure your dream job.",
       image: "/certification.jpg",
     },
   ];
@@ -52,11 +63,8 @@ const ChooseUs = () => {
 
   return (
     <div className="max-w-full mx-auto mt-0 py-16 text-center px-4">
-      <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
-        Why <span className="text-blue-600">Choose</span> Us
-      </h2>
       <p className="text-xl sm:text-2xl md:text-4xl font-semibold text-black mb-8 md:mb-16">
-        Education.Code4Bharat?
+        Your Path to Guaranteed Success
       </p>
 
       {/* Feature Cards in a Responsive Grid */}

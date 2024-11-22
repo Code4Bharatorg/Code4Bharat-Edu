@@ -25,14 +25,13 @@ const OurVision = () => {
           Our <span className="text-white">Vision</span>
         </p>
         <p className="text-white text-sm sm:text-base md:text-lg mt-4 md:mt-6 leading-relaxed">
-          We envision a future where every Indian student, regardless of
-          financial background, can access top-notch tech education and
-          confidently step into the workforce. Our goal is to be India’s most
-          trusted name in tech education, offering a seamless journey from
-          learning to employment. By staying closely aligned with industry
-          standards and connecting students with real-world challenges, we aim
-          to produce job-ready graduates who are well-prepared to drive
-          innovation in India’s digital economy.
+          We empower India's youth with industry-ready skills and guaranteed
+          career opportunities. Our mission is to bridge the gap between
+          education and employment through innovative, practical learning. We
+          strive to become the leading platform for building a tech-driven,
+          self-reliant Bharat. By nurturing talent that drives future innovation
+          and technological excellence, we aim to create a sustainable impact by
+          transforming learners into leaders in the global IT landscape.
         </p>
       </div>
     </div>

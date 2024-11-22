@@ -39,16 +39,23 @@ export const CourseComparison = () => {
             <tbody>
               {[
                 {
-                  course: "2-Month (Fast Track Program) MERN Stack Course",
-                  duration: "2 Months",
-                  certification: "Full Stack Certificate(MERN Stack)",
+                  course: "Bootcamp",
+                  duration: "2 Days",
+                  certification: "Full Stack Certificate (MERN Stack)",
+                  skills: "SQL, HTML, CSS, JavaScript, React, Redux, Node, Express, MongoDB, Git, Web Development Capstone Project",
+                  placement: "100% Placement Support",
+                },
+                {
+                  course: "45-Days (Fast Track) MERN Stack Course",
+                  duration: "1.5 Months",
+                  certification: "Full Stack Certificate (MERN Stack)",
                   skills: "SQL, HTML, CSS, JavaScript, React, Redux, Node, Express, MongoDB, Git, Web Development Capstone Project",
                   placement: "100% Placement Support",
                 },
                 {
                   course: "4-Month (In Depth Program) MERN Stack Course",
                   duration: "4 Months",
-                  certification: "Full Stack Certificate(MERN Stack)",
+                  certification: "Full Stack Certificate (MERN Stack)",
                   skills: "SQL, HTML, CSS, JavaScript, React, Redux, Node, Express, MongoDB, Git, Web Development Capstone Project",
                   placement: "100% Placement Support",
                 },

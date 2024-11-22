@@ -96,8 +96,8 @@ const WhyChooseUsCards = () => {
     <div className="p-6 mb-12 w-full max-w-8xl bg-white shadow-xl rounded-lg mx-auto">
       {/* Section Title */}
       <h2 className="text-3xl md:text-4xl font-semibold mb-6 text-center">
-        Why <span className="text-blue-500">Choose</span> Us <br />
-        Education.Code4Bharat?
+      
+        Your Path to Guaranteed Success
       </h2>
 
       {/* Navigation and Cards Container */}

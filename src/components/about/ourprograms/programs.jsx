@@ -21,19 +21,30 @@ const Programs = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
           {/* Program Card 1 */}
           <ProgramCard
-            imageUrl="https://picsum.photos/seed/pic1/200/200"
-            title="2-Months (Fast Track) MERN Stack Course"
-            description="An accelerated course for those looking to quickly acquire core MERN stack skills for entry-level roles."
+            imageUrl="https://picsum.photos/seed/bootcamp/200/200"
+            title="Bootcamp"
+            description="An intensive program designed to immerse you in web development, covering all essential skills and technologies."
             customMargin="mt-4 md:mt-0 md:ml-36"
           />
 
           {/* Program Card 2 */}
           <ProgramCard
+            imageUrl="https://picsum.photos/seed/pic1/200/200"
+            title="45-Days (Fast Track) MERN Stack Course"
+            description="An accelerated course for those looking to quickly acquire core MERN stack skills for entry-level roles."
+            customMargin="mt-4 md:mt-0 md:ml-4"
+          />
+
+          {/* Program Card 3 */}
+     
+
+          <ProgramCard
             imageUrl="https://picsum.photos/seed/pic2/200/200"
             title="4-Months (In-Depth) MERN Stack Course"
             description="A comprehensive program covering MERN stack in detail, preparing students for advanced roles in web development."
-            customMargin="mt-4 md:mt-0 md:ml-4"
+            customMargin="mt-4 md:mt-0 md:ml-[65%]"
           />
+         
         </div>
 
         <p className="mt-6 md:mt-12 text-center text-sm md:text-2xl text-[#6D737A] font-publicSans text-left ml-2 md:ml-28">

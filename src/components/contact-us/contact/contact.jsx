@@ -13,9 +13,9 @@ const ContactPage = () => {
         </div>
         <div className="w-full mt-4 md:w-1/2 flex justify-center md:justify-end">
           <Image
-            src="/log.jpg"
+            src="/18.jpg"
             alt="Contact Illustration"
-            width={400}
+            width={300}
             height={400}
             className="object-contain max-w-full h-auto rounded-xl"
           />

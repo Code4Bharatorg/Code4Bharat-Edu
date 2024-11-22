@@ -1,44 +1,57 @@
-import React from 'react';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import WhatsAppIcon from '@mui/icons-material/WhatsApp';
-import Image from 'next/image';
-import Link from 'next/link';
+import React from "react";
+import FacebookIcon from "@mui/icons-material/Facebook";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import WhatsAppIcon from "@mui/icons-material/WhatsApp";
+import Image from "next/image";
+import Link from "next/link";
 
 const Footer = () => {
   return (
-    <div className="bg-blue-200 text-white py-8 shadow-xl"> {/* Updated to shadow-xl */}
+    <div className="bg-blue-200 text-white py-8 shadow-xl">
+      {" "}
+      {/* Updated to shadow-xl */}
       <div className="container mx-auto px-4">
         {/* Main Content Grid */}
         <div className="flex flex-col md:flex-row justify-start items-start space-y-8 md:space-y-0 md:space-x-8">
           {/* First Column: Contact Us */}
           <div className="flex-1">
             <Image
-              src="/logo.png"
+              src="/footer-log.png"
               alt="Logo"
               width={224}
               height={96}
-              className="mb-4 h-20 w-48 md:h-24 md:w-56"
+              className="mb-4 h-20 w-48 md:h-24 md:w-56 object-cover"
             />
-            <h3 className="font-semibold text-left text-black mb-2">Contact Us</h3>
+            <h3 className="font-semibold text-left text-black mb-2">
+              Contact Us
+            </h3>
             <p className="font-semibold text-left text-gray-500 mb-2 text-sm md:text-base">
-              Call: <a href="tel:+919594402916" className="hover:underline">+91 959 440 2916</a>
+              Call:{" "}
+              <a href="tel:+919594430295" className="hover:underline">
+                +91 9594430295
+              </a>
             </p>
             <p className="font-semibold text-left text-black mb-2 text-sm md:text-base">
-              Email: <a href="mailto:code4bharat@gmail.com" className="hover:underline">code4bharat@gmail.com</a>
+              Email:{" "}
+              <a
+                href="mailto:code4bharat@gmail.com"
+                className="hover:underline"
+              >
+                code4bharat@gmail.com
+              </a>
             </p>
             <p className="font-semibold text-left text-black mb-4 text-sm md:text-base">
-  Address: <br />
-  <a 
-    href="https://www.google.com/maps?q=Off+BKC,+Mumbai,+India+400070" 
-    target="_blank" 
-    rel="noopener noreferrer" 
-    className="text-gray-600 hover:text-blue-500"
-  >
-     Off BKC, Mumbai, India 400070
-  </a>
-</p>
+              Address: <br />
+              <a
+                href="https://www.google.com/maps/place/Code4Bharat/@19.0726493,72.8758,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9598ad468b5:0xa355e25756e9a44f!8m2!3d19.0726494!4d72.8804081!16s%2Fg%2F11vyp7wnp7?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-600 hover:text-blue-500"
+              >
+                Off BKC Kurla, Mumbai, India 400070
+              </a>
+            </p>
 
             <div className="flex justify-start space-x-4">
               <a
@@ -77,39 +90,15 @@ const Footer = () => {
             <ul className="text-left space-y-2 text-sm md:text-base">
               <li>
                 <Link href="/" className="text-gray-500 hover:underline">
-                  Home
+                  EduPortal
                 </Link>
               </li>
               <li>
-                <Link href="/about-us" className="text-gray-500 hover:underline">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/courses" className="text-gray-500 hover:underline">
-                  Courses
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact-us" className="text-gray-500 hover:underline">
-                  Contact
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Third Column: Category */}
-          <div className="flex-1">
-            <h3 className="font-semibold text-left text-black mb-4">Category</h3>
-            <ul className="text-left space-y-2 text-sm md:text-base">
-              <li>
-                <Link href="/payafterplacement" className="text-gray-500 hover:underline">
-                  Pay After Placement
-                </Link>
-              </li>
-              <li>
-                <Link href="/student-experience" className="text-gray-500 hover:underline">
-                  Student Experience and Support
+                <Link
+                  href="/our-story"
+                  className="text-gray-500 hover:underline"
+                >
+                  Our Story
                 </Link>
               </li>
               <li>
@@ -118,7 +107,51 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href="/contact-us" className="text-gray-500 hover:underline">
+                <Link
+                  href="/support-center"
+                  className="text-gray-500 hover:underline"
+                >
+                  Support Center
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Third Column: Category */}
+          <div className="flex-1">
+            <h3 className="font-semibold text-left text-black mb-4">
+              Category
+            </h3>
+            <ul className="text-left space-y-2 text-sm md:text-base">
+              <li>
+                <Link
+                  href="/payafterplacement"
+                  className="text-gray-500 hover:underline"
+                >
+                  Pay After Placement
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/student-experience"
+                  className="text-gray-500 hover:underline"
+                >
+                  Student Experience and Support
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/our-programs"
+                  className="text-gray-500 hover:underline"
+                >
+                  Our Programs
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact-us"
+                  className="text-gray-500 hover:underline"
+                >
                   Join Education.Code4Bharat
                 </Link>
               </li>
@@ -127,15 +160,17 @@ const Footer = () => {
 
           {/* Fourth Column: Get In Touch */}
           <div className="flex-1">
-            <h3 className="font-semibold text-left text-black mb-4">Get In Touch</h3>
+            <h3 className="font-semibold text-left text-black mb-4">
+              Get In Touch
+            </h3>
             <form className="flex flex-col">
-            <input
-  type="tel"
-  placeholder="Mobile Number"
-  pattern="[0-9]{10}" // Ensures only numbers with 10 digits (adjust as needed)
-  className="p-2 rounded-md text-gray-700 mb-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
-  required
-/>
+              <input
+                type="tel"
+                placeholder="Mobile Number"
+                pattern="[0-9]{10}" // Ensures only numbers with 10 digits (adjust as needed)
+                className="p-2 rounded-md text-gray-700 mb-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
+              />
 
               <button
                 type="submit"
@@ -150,7 +185,7 @@ const Footer = () => {
         {/* Footer Bottom: Copyright */}
         <div className="mt-8 text-center">
           <p className="text-xs md:text-sm text-gray-700">
-            © {new Date().getFullYear()} Code4Bharat. All rights reserved.
+            © 2011 - {new Date().getFullYear()} Code4Bharat. All rights reserved.
           </p>
         </div>
 

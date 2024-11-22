@@ -5,14 +5,33 @@ import { ArrowBack, ArrowForward } from "@mui/icons-material";
 import { motion, AnimatePresence } from "framer-motion";
 
 const PopularCourse = () => {
-  // Updated data for the 2-Month and 4-Month courses
+  // Updated data for the Bootcamp, 45 Days, and 4-Month courses
   const courses = [
     {
-      title: "2-Month Course",
+      title: "Bootcamp",
       description:
         "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
-      mainImage: "/2months.webp",
-      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"],
+      mainImage: "/2months.webp", // Same image as 45 Days Course
+      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"], // Same images as 45 Days Course
+      rightText: "+100 Students",
+      syllabus: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node",
+        "Express",
+        "MongoDB",
+        "Git",
+        "Web Development Capstone Project",
+      ],
+    },
+    {
+      title: "45 Days Course",
+      description:
+        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
+      mainImage: "/2months.webp", // Same image
+      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"], // Same images
       rightText: "+40 Students",
       syllabus: [
         "SQL",
@@ -52,7 +71,7 @@ const PopularCourse = () => {
   ];
 
   // Updated filter options
-  const courseFilters = ["All Programme", "2-Month Course", "4-Month Course"];
+  const courseFilters = ["All Programme", "Bootcamp", "45 Days Course", "4-Month Course"];
 
   const [selectedFilter, setSelectedFilter] = useState("All Programme");
 
@@ -145,6 +164,7 @@ const PopularCourse = () => {
                 syllabus={course.syllabus}
                 isExpanded={expandedCard === index}
                 toggleSyllabus={toggleSyllabus}
+                className="h-[400px] w-[300px]" // Ensure equal height and width
               />
             ))}
           </div>
@@ -163,6 +183,7 @@ const PopularCourse = () => {
                 syllabus={course.syllabus}
                 isExpanded={expandedCard === startIndex + index}
                 toggleSyllabus={toggleSyllabus}
+                className="h-[400px] w-[300px]" // Ensure equal height and width
               />
             ))}
           </div>

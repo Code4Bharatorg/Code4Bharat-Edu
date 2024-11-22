@@ -8,7 +8,7 @@ import SchoolIcon from '@mui/icons-material/School'; // Replacing FaUserGraduate
 
 const ViewAbout = () => {
   const stats = [
-    { icon: <PersonIcon className="text-white" />, number: '300', label: 'Instructors', bgColor: 'bg-green-500' },
+    { icon: <PersonIcon className="text-white" />, number: '7+', label: 'Renowned Instructors', bgColor: 'bg-green-500' },
     { icon: <PeopleIcon className="text-white" />, number: '20,000+', label: 'Students', bgColor: 'bg-purple-500' },
     { icon: <VideoLibraryIcon className="text-white" />, number: '10,000+', label: 'Videos', bgColor: 'bg-red-500' },
     { icon: <SchoolIcon className="text-white" />, number: '100,000+', label: 'Users', bgColor: 'bg-blue-500' },

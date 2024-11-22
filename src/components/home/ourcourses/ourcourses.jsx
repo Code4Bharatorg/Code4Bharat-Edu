@@ -12,16 +12,36 @@ const OurCourses = () => {
     router.push(coursePath);
   };
 
-  // Updated courses data with only 2-Month and 4-Month MERN Stack courses
+  // Updated courses data with Bootcamp, 45 days, and 4 months courses
   const courses = [
     {
+      title: "Bootcamp",
+      duration: "8 weeks",
+      description:
+        "An intensive program designed to immerse you in web development, covering all essential skills and technologies. This bootcamp includes hands-on projects, mentorship, and job placement support to ensure you are job-ready.",
+      imageSrc: "/2months.webp", // Ensure this image exists in the public directory
+      altText: "Bootcamp Course",
+      path: "/courses/bootcamp",
+      syllabus: [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "React",
+        "Node",
+        "Express",
+        "MongoDB",
+        "Git",
+        "Web Development Capstone Project",
+      ],
+    },
+    {
       title: "MERN Stack",
-      duration: "2-Month",
+      duration: "45 days",
       description:
         "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
       imageSrc: "/2months.webp", // Ensure this image exists in the public directory
-      altText: "2-Month MERN Stack Course",
-      path: "/courses/2-month",
+      altText: "45 days MERN Stack Course",
+      path: "/courses/45-days",
       syllabus: [
         "SQL",
         "HTML",
@@ -38,12 +58,12 @@ const OurCourses = () => {
     },
     {
       title: "MERN Stack",
-      duration: "4-Month",
+      duration: "4 months",
       description:
         "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
       imageSrc: "/4months.webp", // Ensure this image exists in the public directory
-      altText: "4-Month MERN Stack Course",
-      path: "/courses/4-month",
+      altText: "4 months MERN Stack Course",
+      path: "/courses/4-months",
       syllabus: [
         "SQL",
         "HTML",
