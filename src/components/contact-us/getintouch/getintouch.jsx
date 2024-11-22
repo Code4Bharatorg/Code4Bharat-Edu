@@ -66,7 +66,7 @@ const Getintouch = () => {
           </li>
           <li className="font-montserrat text-gray-700">
             <span className="font-bold">
-              Awarded "Best IT Education Platform" 2023:
+              Awarded Best IT Education Platform 2023:
             </span>
             Recognized for excellence in bridging education and employment.
           </li>

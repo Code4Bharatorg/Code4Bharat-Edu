@@ -25,7 +25,7 @@ const OurVision = () => {
           Our <span className="text-white">Vision</span>
         </p>
         <p className="text-white text-sm sm:text-base md:text-lg mt-4 md:mt-6 leading-relaxed">
-          We empower India's youth with industry-ready skills and guaranteed
+          We empower India&apos;s youth with industry-ready skills and guaranteed
           career opportunities. Our mission is to bridge the gap between
           education and employment through innovative, practical learning. We
           strive to become the leading platform for building a tech-driven,

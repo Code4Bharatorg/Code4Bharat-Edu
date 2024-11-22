@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { useRouter } from "next/navigation";
-
+import Image from "next/image";
 const Placement = () => {
   const router = useRouter();
 
@@ -35,9 +35,12 @@ const Placement = () => {
       {/* Right Column (Image) */}
       <div className="w-full md:w-1/2 flex justify-center items-center">
         <div className="w-4/5 sm:w-3/4 md:w-4/5 lg:w-3/5 h-auto">
-          <img
+          <Image
             src="/payafter3.jpg"
             alt="Placement"
+            layout="responsive"
+            width={500} // Set a suitable width in pixels
+            height={300} // Set a suitable height in pixels
             className="w-full h-full object-cover rounded-lg shadow-md"
           />
         </div>

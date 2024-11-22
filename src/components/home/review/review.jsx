@@ -1,7 +1,7 @@
 "use client";
 import React, { useState } from 'react';
 import { ArrowBack, ArrowForward } from '@mui/icons-material';
-
+import Image from 'next/image';
 const Review = () => {
   // Array to hold card data
   const cards = [
@@ -68,7 +68,7 @@ const Review = () => {
               className="bg-white shadow-lg rounded-lg p-4 sm:p-6 md:p-8 w-full max-w-xs sm:max-w-sm md:max-w-md relative transition-transform transform hover:scale-105 hover:shadow-2xl hover:bg-blue-100"
             >
               <div className="flex items-center mb-4">
-                <img src={card.image} alt={card.title} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover mr-4" />
+                <Image src={card.image} alt={card.title} width={48} height={48} className="w-8 h-8 sm:w-10 sm:h-10 md:w-12 md:h-12 rounded-full object-cover mr-4" />
                 <h3 className="font-semibold text-sm sm:text-base md:text-lg">{card.title}</h3>
               </div>
               <p className="text-xs sm:text-sm md:text-base text-gray-600">{card.description}</p>
