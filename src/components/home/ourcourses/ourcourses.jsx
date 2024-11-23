@@ -102,9 +102,9 @@ const OurCourses = () => {
                 <Image
                   src={course.imageSrc}
                   alt={course.altText}
-                  layout="fill"
+                  width={300} // Adjust width as needed
+                  height={200} // Adjust height as needed
                   className="w-full h-full object-cover"
-                  objectFit="cover"
                 />
               </div>
             </div>
