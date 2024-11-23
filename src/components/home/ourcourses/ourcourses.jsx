@@ -15,7 +15,7 @@ const OurCourses = () => {
       title: "Bootcamp - 2 Days",
       description:
         "An intensive program designed to immerse you in web development, covering all essential skills and technologies. This bootcamp includes hands-on projects, mentorship, and job placement support to ensure you are job-ready.",
-      imageSrc: "/2months.webp",
+      imageSrc: "/courses/bootcamp.jpg",
       altText: "Bootcamp Course",
       syllabus: [
         "HTML",
@@ -32,8 +32,8 @@ const OurCourses = () => {
     {
       title: "MERN Stack 45 Days",
       description:
-        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
-      imageSrc: "/2months.webp",
+        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and comprehensive placement assistance to help you secure your first job.",
+      imageSrc: "/courses/1.jpg",
       altText: "45 days MERN Stack Course",
       syllabus: [
         "SQL",
@@ -52,8 +52,8 @@ const OurCourses = () => {
     {
       title: "MERN Stack - 4 Months",
       description:
-        "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
-      imageSrc: "/2months.webp",
+        "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance and guaranteed placement for long-term career success.",
+      imageSrc: "/courses/2nd.jpg",
       altText: "4 months MERN Stack Course",
       syllabus: [
         "SQL",
@@ -103,7 +103,7 @@ const OurCourses = () => {
                   src={course.imageSrc}
                   alt={course.altText}
                   width={300} // Adjust width as needed
-                  height={200} // Adjust height as needed
+                  height={500} // Adjust height as needed
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -111,10 +111,10 @@ const OurCourses = () => {
 
             {/* Description Section */}
             <div className="w-full flex flex-col gap-3 text-center mt-4">
-              <h1 className="text-lg sm:text-xl md:text-[1.8rem] font-medium text-[#2563EB]">
+              <h1 className="text-lg sm:text-xl md:text-[1.4rem] font-medium text-[#2563EB]">
                 {course.title}
               </h1>
-              <p className="text-sm sm:text-base md:text-[1rem] font-medium leading-none text-gray-700">
+              <p className="text-sm sm:text-base md:text-[.8rem] font-medium leading-none text-gray-700">
                 {course.description}
               </p>
             </div>
