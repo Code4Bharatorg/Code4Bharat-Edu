@@ -99,7 +99,7 @@ const HeroHome = () => {
                             sm:space-x-4 sm:space-y-0"
             >
               <Link
-                href="/courses"
+                href="/learn&grow"
                 className="inline-block rounded-2xl bg-blue-600 px-12 py-3 text-base font-semibold 
                            duration-300 ease-in-out hover:bg-black/90 
                            text-white 

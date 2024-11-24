@@ -1,4 +1,7 @@
 'use client'
+import ChooseUs from '@/components/about/chooseus/chooseus';
+import Programs from '@/components/about/ourprograms/programs';
+import ViewAbout from '@/components/about/view/view';
 import IntroCard from '@/components/cards/introcards';
 import WhyChooseUsCards from '@/components/cards/whychooseuscards';
 import Footer from '@/components/footer/footer';
@@ -17,9 +20,11 @@ const page = () => {
       <Navbar/>
       <HeroHome/>
       <IntroCard/>
+      <ViewAbout/>
       <OurMission/>
-      <WhyChooseUsCards/>
+      <ChooseUs/>
       <Ourcourses/>
+      <Programs/>
       <PayAfterPlacement/>
       <Review/>
       <Brands/>

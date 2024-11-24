@@ -26,7 +26,7 @@ const IntroCard = () => {
         </span>
         <div className="hidden sm:block border-l h-4 md:h-6 border-blue-300"></div>
         <span className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-center">
-          400+ Global Hiring Partners
+          40+ Hiring Partners
         </span>
         <div className="hidden sm:block border-l h-4 md:h-6 border-blue-300"></div>
         <span className="text-blue-600 text-sm sm:text-base md:text-lg lg:text-xl font-medium text-center">

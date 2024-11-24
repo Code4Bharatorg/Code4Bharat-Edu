@@ -17,6 +17,16 @@ const Review = () => {
     { id: 10, title: "Personalized Learning Paths", description: "Tailor your learning experience with personalized paths that suit your career goals.", image: "/review profiles/10.jpg" },
     { id: 11, title: "Access to Exclusive Resources", description: "Gain access to a wealth of resources, including e-books, webinars, and more.", image: "/review profiles/11.jpg" },
     { id: 12, title: "Feedback and Improvement", description: "Receive constructive feedback to help you improve and excel in your learning journey.", image: "/review profiles/12.jpg" },
+    { id: 13, title: "Collaborative Learning", description: "Engage with peers to exchange ideas and enhance your learning experience.", image: "/review profiles/1.jpg" },
+    { id: 14, title: "Modern Tools", description: "Get hands-on experience with the latest tools and technologies in your field.", image: "/juned.jpg" },
+    { id: 15, title: "Custom Curriculum", description: "Enjoy a curriculum tailored to meet current industry demands.", image: "/sanad.jpg" },
+    { id: 16, title: "Practical Exposure", description: "Gain practical exposure through real-world scenarios and case studies.", image: "/harsh.jpg" },
+    { id: 17, title: "Career-Oriented Training", description: "Prepare for your dream job with our career-focused curriculum.", image: "/juned.jpg" },
+    { id: 18, title: "Global Community", description: "Connect with a diverse group of learners and expand your professional network.", image: "/review profiles/1.jpg" },
+    // { id: 17, title: "Continuous Updates", description: "Stay ahead with continuously updated course content.", image: "/review profiles/5.jpg" },
+    // { id: 18, title: "Expert Panels", description: "Learn from expert panels with extensive industry experience.", image: "/juned.jpg" },
+    { id: 19, title: "Skill Assessments", description: "Evaluate your skills with regular assessments and progress tracking.", image: "/review profiles/7.jpg" },
+    { id: 20, title: "Diverse Courses", description: "Choose from a wide range of courses designed for various career paths.", image: "/review profiles/8.jpg" },
   ];
 
   const [currentPage, setCurrentPage] = useState(0);

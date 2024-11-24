@@ -159,7 +159,7 @@ const Footer = () => {
           </div>
 
           {/* Fourth Column: Get In Touch */}
-          <div className="flex-1">
+          {/* <div className="flex-1">
             <h3 className="font-semibold text-left text-black mb-4">
               Get In Touch
             </h3>
@@ -179,7 +179,7 @@ const Footer = () => {
                 Submit
               </button>
             </form>
-          </div>
+          </div> */}
         </div>
 
         {/* Footer Bottom: Copyright */}

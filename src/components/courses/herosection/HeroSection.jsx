@@ -80,7 +80,7 @@ const HeroSection = () => {
               </div>
               <div className="leading-tight">
                 <p className="text-[1.5vw] lg:text-[1.2vw] font-medium">
-                  250k
+                  1000+
                 </p>
                 <p className="text-[1.2vw] lg:text-[1vw] font-medium">
                   Assisted Students

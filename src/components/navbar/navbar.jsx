@@ -32,7 +32,7 @@ const Navbar = () => {
 
   const handleWhatsAppRedirect = () => {
     // Redirect to WhatsApp
-    window.open("https://wa.me/+919594402916", "_blank"); // Replace with your WhatsApp number
+    window.open("https://wa.me/+919594430295", "_blank"); // Replace with your WhatsApp number
   };
 
   return (
@@ -73,7 +73,6 @@ const Navbar = () => {
         >
           {[
             "eduportal",
-            "our-story",
             "learn&grow",
             "support-center",
             "verify-certificate",
