@@ -114,7 +114,7 @@ const HeroHome = () => {
                            text-white 
                            mx-auto md:mx-0 mt-12"
               >
-                Let's Connect
+                Explore
               </button>
             </div>
           </div>
