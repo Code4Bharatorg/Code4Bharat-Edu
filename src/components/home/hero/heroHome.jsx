@@ -34,6 +34,15 @@ const HeroHome = () => {
     }),
   };
 
+  // WhatsApp Link Generator
+  const openWhatsApp = () => {
+    const whatsappNumber = "9594430295";
+    const message = "Hello, I am interested in learning more about your courses!";
+    const encodedMessage = encodeURIComponent(message);
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <section
       id="home"
@@ -98,15 +107,15 @@ const HeroHome = () => {
               className="flex flex-col items-center md:items-start justify-start space-y-4 sm:flex-row 
                             sm:space-x-4 sm:space-y-0"
             >
-              <Link
-                href="/learn&grow"
+              <button
+                onClick={openWhatsApp}
                 className="inline-block rounded-2xl bg-blue-600 px-12 py-3 text-base font-semibold 
                            duration-300 ease-in-out hover:bg-black/90 
                            text-white 
                            mx-auto md:mx-0 mt-12"
               >
-                Explore
-              </Link>
+                Let's Connect
+              </button>
             </div>
           </div>
         </div>

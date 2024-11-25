@@ -18,7 +18,7 @@ const HeroSection = () => {
       <div className="w-full md:w-1/2 h-auto md:h-full flex flex-col p-5 md:p-10 justify-center">
         {/* Tagline */}
         <div className="w-full mb-3 md:mb-5">
-          <span className="text-[6vw] md:text-[1.2vw] font-medium bg-white px-3 py-1 rounded-xl inline-block">
+          <span className="text-[6vw] md:text-[1.2vw] font-medium bg-blue-200 px-3 py-1 rounded-xl inline-block">
             Never stop learning
           </span>
         </div>
@@ -34,9 +34,9 @@ const HeroSection = () => {
           <div className="hidden md:block w-[18vw] h-2 bg-yellow-400 absolute top-[100%] md:right-[16%] transform rotate-3"></div>
         </div>
         {/* Button */}
-        <button className="w-[60%] md:w-[30%] lg:w-[24%] h-12 md:h-10 rounded-md bg-white text-black font-semibold">
+        {/* <button className="w-[60%] md:w-[30%] lg:w-[24%] h-12 md:h-10 rounded-md bg-white text-black font-semibold">
           Explore Path
-        </button>
+        </button> */}
         {/* Courses Hero Image on Small Screens */}
         <div className="block md:hidden w-full h-auto mt-5">
           <div className="relative w-full h-64">

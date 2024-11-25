@@ -27,14 +27,14 @@ const WhyChooseUsCards = () => {
       id: 3,
       title: "Flexible Learning Paths",
       content:
-        "Choose from 6 months, 1-year, 2-year, or 3-year courses tailored to fit different career objectives.",
+        "Choose from 2 days bootcamp, 45 Days Fast Track and 4 Months courses tailored to fit different career objectives.",
       image: "/learning.jpg",
     },
     {
       id: 4,
-      title: "Accredited Certifications and Degrees",
+      title: "Accredited Certifications",
       content:
-        "Our programs offer diplomas, advanced diplomas, and full degrees in partnership with top NAAC A++ certified universities.",
+        "Our programs offer Verify Certificates.",
       image: "/certification.jpg",
     },
     {

@@ -4,6 +4,7 @@ import Image from "next/image"; // Import Next.js Image component
 import MenuIcon from "@mui/icons-material/Menu";
 import CloseIcon from "@mui/icons-material/Close";
 import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
+import Link from "next/link"; // Import Next.js Link for navigation
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -12,7 +13,7 @@ const Navbar = () => {
   useEffect(() => {
     // Set the active page based on the current URL path
     const currentPath = window.location.pathname;
-    const page = currentPath === "/" ? "home" : currentPath.slice(1);
+    const page = currentPath === "/" ? "our story" : currentPath.slice(1);
     setActivePage(page);
   }, []);
 
@@ -23,11 +24,6 @@ const Navbar = () => {
   const handleMenuItemClick = (page) => {
     setActivePage(page);
     setIsOpen(false); // Close the menu on selection
-  };
-
-  const handleLogoClick = () => {
-    // Redirect to the homepage
-    window.location.href = "/"; // Update this path to your homepage URL
   };
 
   const handleWhatsAppRedirect = () => {
@@ -41,10 +37,8 @@ const Navbar = () => {
         {/* Logo */}
         <button
           className="focus:outline-none flex-shrink-0"
-          onClick={handleLogoClick}
         >
           <div className="relative w-48 h-16 md:w-96 md:h-28">
-           
             {/* Increased size on mobile */}
             <Image
               src="/18.jpg"
@@ -71,8 +65,16 @@ const Navbar = () => {
             isOpen ? "translate-x-0" : "translate-x-full md:translate-x-0"
           } md:flex-row md:items-center flex-col p-8 md:p-0 z-40`}
         >
+          <li
+            className={`text-lg font-semibold md:text-[1.2vw] md:mx-4 hover:text-blue-600 ${
+              activePage === "our story" ? "text-blue-600" : "text-gray-500"
+            } my-4 md:my-0`}
+            onClick={() => handleMenuItemClick("our story")}
+          >
+            <Link href="/">Our Story</Link>
+          </li>
+
           {[
-            "eduportal",
             "learn&grow",
             "support-center",
             "verify-certificate",
@@ -84,7 +86,7 @@ const Navbar = () => {
               } my-4 md:my-0`}
               onClick={() => handleMenuItemClick(page)}
             >
-              <a href={page === "eduportal" ? "/" : `/${page}`}>
+              <a href={`/${page}`}>
                 {page
                   .replace("-", " ")
                   .replace(/\b\w/g, (char) => char.toUpperCase())}

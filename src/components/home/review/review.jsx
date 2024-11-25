@@ -53,7 +53,7 @@ const Review = () => {
       {/* Section Title */}
       <div className="text-center mb-8">
         <h2 className="text-2xl sm:text-3xl md:text-5xl font-semibold text-gray-800">
-          Student <span className="text-blue-500">Experience</span> and Support
+          Student <span className="text-blue-500">Experience</span>
         </h2>
       </div>
 

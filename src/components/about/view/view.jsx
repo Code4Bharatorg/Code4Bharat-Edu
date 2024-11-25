@@ -1,5 +1,3 @@
-// src/components/aboutus/View.jsx
-
 import { motion } from 'framer-motion';
 import PersonIcon from '@mui/icons-material/Person'; // Replacing FaUserTie
 import PeopleIcon from '@mui/icons-material/People'; // Replacing FaUsers
@@ -8,11 +6,28 @@ import SchoolIcon from '@mui/icons-material/School'; // Replacing FaUserGraduate
 
 const ViewAbout = () => {
   const stats = [
-    { icon: <PersonIcon className="text-white" />, number: '100%', label: 'Job-oriented Cources', bgColor: 'bg-green-500' },
+    { icon: <PersonIcon className="text-white" />, number: '100%', label: 'Job-oriented Courses', bgColor: 'bg-green-500' },
     { icon: <PeopleIcon className="text-white" />, number: '10+', label: 'In-Demand Certifications', bgColor: 'bg-purple-500' },
-    { icon: <VideoLibraryIcon className="text-white" />, number: '120+', label: 'Offline Sessions', bgColor: 'bg-red-500' },
-    { icon: <SchoolIcon className="text-white" />, number: 'Free 1-1', label: 'Mentoring Sessions', bgColor: 'bg-blue-500' },
+    { icon: <VideoLibraryIcon className="text-white" />, number: '480 hr+', label: 'Offline Sessions', bgColor: 'bg-red-500' },
+    { 
+      icon: <SchoolIcon className="text-white" />, 
+      number: 'Free 1-1', 
+      label: 'Mentoring Sessions', 
+      bgColor: 'bg-blue-500',
+      action: 'mentoringSessions'
+    },
   ];
+
+  const handleClick = (action) => {
+    if (action === 'mentoringSessions') {
+      // Predefined message for mentoring sessions
+      const whatsappNumber = '9594430295'; // Replace with your WhatsApp number
+      const message = 'Hello, I am interested in the free 1-1 mentoring sessions.';
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+      window.open(whatsappUrl, '_blank');
+    }
+  };
 
   return (
     <div className="bg-gray-100 py-8 px-4 md:px-8">
@@ -20,10 +35,11 @@ const ViewAbout = () => {
         {stats.map((stat, index) => (
           <motion.div
             key={index}
-            className="flex items-center space-x-3 bg-white rounded-lg p-4 shadow-md w-full max-w-xs md:max-w-sm hover:bg-blue-200 transition-colors duration-300" // Added hover effect
+            className="flex items-center space-x-3 bg-white rounded-lg p-4 shadow-md w-full max-w-xs md:max-w-sm hover:bg-blue-200 transition-colors duration-300 cursor-pointer" // Added hover effect
             initial={{ opacity: 0, y: 50 }} // Initial animation state
             animate={{ opacity: 1, y: 0 }} // Animation on mount
             transition={{ duration: 0.5, delay: index * 0.2 }} // Animation timing
+            onClick={() => handleClick(stat.action)} // Handle click
           >
             <div className={`w-12 h-12 rounded-full flex items-center justify-center ${stat.bgColor}`}>
               {stat.icon}

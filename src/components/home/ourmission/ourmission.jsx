@@ -1,9 +1,20 @@
 "use client";
 import React from "react";
 import Image from "next/image"; // Import Next.js Image component
-import Link from "next/link";
+import Link from "next/link"; // Import Next.js Link for navigation
 
 const OurMission = () => {
+  const handleLearnMoreClick = () => {
+    // WhatsApp link with a predefined message
+    const whatsappNumber = "9594430295"; // Replace with your WhatsApp number
+    const message = "Hello, I am interested in learning more about your mission and courses!";
+    const encodedMessage = encodeURIComponent(message); // Encode the message to handle spaces and special characters
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
+    
+    // Open WhatsApp chat with the message ready to be sent
+    window.open(whatsappUrl, "_blank");
+  };
+
   return (
     <div className="max-w-full mx-4 sm:mx-6 mb-8 sm:mb-12 bg-blue-200 rounded-tl-none rounded-br-none rounded-tr-[2rem] sm:rounded-tr-[4rem] rounded-bl-[2rem] sm:rounded-bl-[4rem] flex flex-col md:flex-row items-start md:items-center justify-between p-4 sm:p-6 md:p-8">
       {/* Left Text */}
@@ -21,9 +32,11 @@ const OurMission = () => {
         </p>
 
         {/* Learn More Button */}
-        <button className="mt-4 sm:mt-6 px-3 sm:px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-black transition duration-200 text-base sm:text-lg md:text-xl">
-          <Link href="/about-us">Learn More</Link>
-          
+        <button
+          onClick={handleLearnMoreClick}
+          className="mt-4 sm:mt-6 px-3 sm:px-4 py-2 bg-blue-500 text-white font-semibold rounded-lg hover:bg-black transition duration-200 text-base sm:text-lg md:text-xl"
+        >
+          Learn More
         </button>
       </div>
 
