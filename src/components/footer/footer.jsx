@@ -24,30 +24,30 @@ const Footer = () => {
               className="mb-4 h-20 w-48 md:h-24 md:w-56 object-cover"
             />
             <h3 className="font-semibold text-left text-black mb-2">
-              Contact Us
+             Contact Us
             </h3>
-            <p className="font-semibold text-left text-gray-500 mb-2 text-sm md:text-base">
-              Call:{" "}
-              <a href="tel:+919594430295" className="hover:underline">
-                +91 9594430295
+            <p className="font-semibold text-left text-black mb-2 text-sm md:text-base">
+            📞 Call:{" "} <br/>
+              <a href="tel:+919594430295" className="hover:text-blue-500">
+               +91 9594430295
               </a>
             </p>
             <p className="font-semibold text-left text-black mb-2 text-sm md:text-base">
-              Email:{" "}
+            📧 Email:{" "} <br/>
               <a
                 href="mailto:code4bharat@gmail.com"
-                className="hover:underline"
+                className="hover:text-blue-500"
               >
                 code4bharat@gmail.com
               </a>
             </p>
             <p className="font-semibold text-left text-black mb-4 text-sm md:text-base">
-              Address: <br />
+            ✈️ Address: <br />
               <a
-                href="https://www.google.com/maps/place/Code4Bharat/@19.0726493,72.8758,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9598ad468b5:0xa355e25756e9a44f!8m2!3d19.0726494!4d72.8804081!16s%2Fg%2F11vyp7wnp7?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"
+                href=" https://www.google.com/maps/place/Code4Bharat/@19.0726493,72.8758,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9598ad468b5:0xa355e25756e9a44f!8m2!3d19.0726494!4d72.8804081!16s%2Fg%2F11vyp7wnp7?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-600 hover:text-blue-500"
+                className="text-black hover:text-blue-500"
               >
                 Off BKC Kurla, Mumbai, India 400070
               </a>
@@ -90,28 +90,28 @@ const Footer = () => {
             <ul className="text-left space-y-2 text-sm md:text-base">
               <li>
                 <Link href="/" className="text-gray-500 hover:underline">
-                  EduPortal
+                  Our Story
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link
                   href="/our-story"
                   className="text-gray-500 hover:underline"
                 >
                   Our Story
                 </Link>
-              </li>
+              </li> */}
               <li>
-                <Link href="/our-programs" className="text-gray-500 hover:underline">
-                  Our Programs
+                <Link href="/learn&grow" className="text-gray-500 hover:underline">
+                  Learn&Grow
                 </Link>
               </li>
               <li>
                 <Link
-                  href="/support-center"
+                  href="/verify-certificate"
                   className="text-gray-500 hover:underline"
                 >
-                  Support Center
+                  Verify Certificate
                 </Link>
               </li>
             </ul>

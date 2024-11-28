@@ -13,7 +13,7 @@ const PopularCourse = () => {
       mainImage: "/2months.webp", 
       miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"], 
       rightText: "+5497 Students",
-      syllabusPdf: "/syllabus/Bootcamp.pdf", // Link to syllabus PDF
+      // syllabusPdf: "/syllabus/Bootcamp.pdf", // Link to syllabus PDF
     },
     {
       title: "45 Days Course",
@@ -22,7 +22,7 @@ const PopularCourse = () => {
       mainImage: "/2months.webp",
       miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"], 
       rightText: "+234 Students",
-      syllabusPdf: "/syllabus/45 days.pdf", // Link to syllabus PDF
+      // syllabusPdf: "/syllabus/45 days.pdf", // Link to syllabus PDF
     },
     {
       title: "4-Month Course",
@@ -31,7 +31,7 @@ const PopularCourse = () => {
       mainImage: "/4months.webp",
       miniImages: ["/dp1.jpg", "/dp2.jpg", "/dp3.jpg", "/dp4.jpg"],
       rightText: "+839 Students",
-      syllabusPdf: "/syllabus/4 months.pdf", // Link to syllabus PDF
+      // syllabusPdf: "/syllabus/4 months.pdf", // Link to syllabus PDF
     },
   ];
 

@@ -76,7 +76,6 @@ const Navbar = () => {
 
           {[
             "learn&grow",
-            "support-center",
             "verify-certificate",
           ].map((page) => (
             <li

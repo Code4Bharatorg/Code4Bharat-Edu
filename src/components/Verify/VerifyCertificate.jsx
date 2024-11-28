@@ -16,21 +16,6 @@ const VerifyCertificate = () => {
 
     // Simulate an API call to verify the certificate
     setTimeout(() => {
-      // Placeholder for backend logic
-      // Uncomment when backend is available:
-      /*
-      try {
-        const response = await axios.post("/api/verify-certificate", { authCode: certificateId });
-        const { type, name, awardedOn, description, authCode } = response.data;
-        setCertificateData(response.data);
-        setIsVerified(true);
-        setVerificationStatus("Certificate Verified Successfully!");
-      } catch (error) {
-        setIsVerified(false);
-        setVerificationStatus("Verification Failed. Please check the certificate number.");
-      }
-      */
-      
       // Mocked verification
       if (certificateId === "12345") {
         setIsVerified(true);
@@ -44,12 +29,12 @@ const VerifyCertificate = () => {
   };
 
   return (
-    <section className="verify-section w-full h-[calc(80vh-10vh)] flex items-center justify-center bg-[#f4f6f9]">
-      <div className="w-[90%] max-w-4xl h-[70%] bg-white rounded-3xl flex flex-col items-center p-8 shadow-lg">
+    <section className="verify-section w-full min-h-[calc(80vh-10vh)] flex items-center justify-center bg-[#f4f6f9]">
+      <div className="w-[90%] max-w-4xl h-auto bg-white rounded-3xl flex flex-col items-center p-6 md:p-8 shadow-lg">
         {/* Title and Description */}
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 md:mb-8">
           <motion.h1
-            className="text-3xl font-bold text-[#106EB5]"
+            className="text-2xl md:text-3xl font-bold text-[#106EB5]"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut" }}
@@ -57,7 +42,7 @@ const VerifyCertificate = () => {
             Certificate Verification
           </motion.h1>
           <motion.p
-            className="text-lg mt-4 text-gray-700"
+            className="text-sm md:text-lg mt-2 md:mt-4 text-gray-700"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
@@ -84,16 +69,16 @@ const VerifyCertificate = () => {
               value={certificateId}
               onChange={(e) => setCertificateId(e.target.value)}
               required
-              className="w-full px-4 py-2 border rounded-md mt-2"
+              className="w-full px-4 py-2 border rounded-md mt-2 focus:outline-none focus:ring-2 focus:ring-[#106EB5]"
               placeholder="Enter the certificate number"
             />
           </div>
 
           <motion.button
             type="submit"
-            className="w-full py-3 text-white bg-[#106EB5] rounded-md mt-6"
+            className="w-full py-3 text-white bg-[#106EB5] rounded-md mt-4 md:mt-6 disabled:opacity-50 disabled:cursor-not-allowed"
             disabled={loading}
-            whileHover={{ scale: 1.03 }}
+            whileHover={!loading ? { scale: 1.03 } : {}}
           >
             {loading ? "Verifying..." : "Verify Certificate"}
           </motion.button>
@@ -102,7 +87,7 @@ const VerifyCertificate = () => {
         {/* Verification Status */}
         {verificationStatus && (
           <motion.div
-            className={`mt-4 text-center text-xl font-semibold ${
+            className={`mt-4 text-center text-sm md:text-xl font-semibold ${
               isVerified ? "text-green-500" : "text-red-500"
             }`}
             initial={{ opacity: 0, y: 30 }}
@@ -116,7 +101,7 @@ const VerifyCertificate = () => {
         {/* Download Button (conditional rendering if verified) */}
         {isVerified && (
           <motion.div
-            className="mt-8"
+            className="mt-6"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
@@ -125,7 +110,7 @@ const VerifyCertificate = () => {
             {/* Uncomment when backend provides actual certificate data */}
             {/* <Link href="/path-to-certificate-download">
               <motion.button
-                className="py-3 px-8 bg-green-500 text-white rounded-md"
+                className="py-3 px-6 md:px-8 bg-green-500 text-white rounded-md"
                 whileHover={{ scale: 1.05 }}
               >
                 Download Certificate
