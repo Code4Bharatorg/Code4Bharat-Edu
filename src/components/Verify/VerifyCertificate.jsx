@@ -61,7 +61,7 @@ const VerifyCertificate = () => {
         >
           <div>
             <label htmlFor="certificateId" className="block text-sm font-medium text-gray-600">
-              Certificate Number
+              Credential ID
             </label>
             <input
               type="text"
@@ -70,7 +70,7 @@ const VerifyCertificate = () => {
               onChange={(e) => setCertificateId(e.target.value)}
               required
               className="w-full px-4 py-2 border rounded-md mt-2 focus:outline-none focus:ring-2 focus:ring-[#106EB5]"
-              placeholder="Enter the certificate number"
+              placeholder="Enter the Credential ID"
             />
           </div>
 

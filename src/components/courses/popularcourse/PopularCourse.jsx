@@ -8,30 +8,42 @@ const PopularCourse = () => {
   const courses = [
     {
       title: "Bootcamp",
-      description:
-        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
-      mainImage: "/2months.webp", 
-      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"], 
+      description: [
+        "Learn core web development fundamentals in just 2 days.",
+        "Gain essential skills to start your tech journey.",
+        "Hands-on, project-based learning for rapid progress.",
+        "Ideal for beginners seeking quick results."
+      ],
+      mainImage: "/2days.webp",
+      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"],
       rightText: "+5497 Students",
       // syllabusPdf: "/syllabus/Bootcamp.pdf", // Link to syllabus PDF
     },
     {
       title: "45 Days Course",
-      description:
-        "A fast-track program designed to introduce the fundamentals of web development, providing you with essential skills to get started in the industry. Perfect for those seeking rapid learning and immediate job entry, this program includes project-based learning and full placement support.",
+      description: [
+        "Master web development fundamentals in 45 days.",
+        "Gain industry-ready skills for rapid career growth.",
+        "Includes hands-on, project-based learning.",
+        "Offers full placement support for job readiness."
+      ],
       mainImage: "/2months.webp",
-      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"], 
+      miniImages: ["/harsh.jpg", "/dp4.jpg", "/dp3.jpg", "/dp5.jpg"],
       rightText: "+234 Students",
-      // syllabusPdf: "/syllabus/45 days.pdf", // Link to syllabus PDF
+      // syllabusPdf: "/syllabus/45_days.pdf", // Link to syllabus PDF
     },
     {
       title: "4-Month Course",
-      description:
-        "A comprehensive program that builds on foundational skills and covers intermediate-level web development concepts, ensuring you’re fully prepared to meet industry demands. This course combines extensive hands-on training with complete placement assistance for long-term career success.",
+      description: [
+        "Learn intermediate-level web development concepts.",
+        "Build on foundational skills for advanced proficiency.",
+        "Extensive hands-on training for practical experience.",
+        "Complete placement assistance for career success."
+      ],
       mainImage: "/4months.webp",
       miniImages: ["/dp1.jpg", "/dp2.jpg", "/dp3.jpg", "/dp4.jpg"],
       rightText: "+839 Students",
-      // syllabusPdf: "/syllabus/4 months.pdf", // Link to syllabus PDF
+      // syllabusPdf: "/syllabus/4_months.pdf", // Link to syllabus PDF
     },
   ];
 
@@ -121,8 +133,12 @@ const PopularCourse = () => {
                 </a>
               </div>
 
-              {/* Description */}
-              <p className="text-sm text-gray-600 mt-4">{course.description}</p>
+              {/* Description with bullet points */}
+              <ul className="list-disc pl-5 mt-4 text-sm text-gray-600">
+                {course.description.map((point, index) => (
+                  <li key={index}>{point}</li>
+                ))}
+              </ul>
             </div>
           </div>
         ))}

@@ -26,7 +26,7 @@ const Journey = () => {
         <Image
           src="/herocourses.jpg" // Ensure the image path is correct
           alt="Journey Image"
-          className="w-3/4 md:w-4/5 h-auto object-cover rounded-lg shadow-lg"
+          className="w-3/4 md:w-4/5 h-auto object-cover rounded-lg"
           width={400} // Adjust as needed
           height={300} // Adjust as needed
         />

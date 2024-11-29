@@ -22,14 +22,15 @@ const OurMission = () => {
         <h2 className="text-3xl text-black sm:text-4xl md:text-5xl font-semibold leading-tight">
           Our <br /> <span className="text-blue-600">Mission</span>
         </h2>
-        <p className="text-base text-black sm:text-lg md:text-xl mt-3 sm:mt-4 leading-relaxed">
-          Our mission is to empower students with <br />
-          the skills, certifications, and confidence <br />
-          to excel in the tech industry. We believe <br />
-          that with the right training and guidance, <br />
-          every student can build a successful <br />
-          career in web development.
-        </p>
+        <ul className="list-none pl-6 text-base text-black sm:text-lg md:text-xl mt-3 sm:mt-4 leading-relaxed">
+  <li className="before:content-['→'] before:mr-2 before:font-bold">Empower students with the skills, certifications, and confidence to excel in the tech industry.</li>
+  <li className="before:content-['→'] before:mr-2 before:font-bold">Provide the right training and guidance for success.</li>
+  <li className="before:content-['→'] before:mr-2 before:font-bold">Help every student build a successful career in web development.</li>
+</ul>
+
+
+
+
 
         {/* Learn More Button */}
         <button

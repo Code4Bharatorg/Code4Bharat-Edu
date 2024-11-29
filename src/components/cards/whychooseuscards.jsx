@@ -117,7 +117,7 @@ const WhyChooseUsCards = () => {
             {currentCards.map((card, index) => (
               <div
                 key={`${card.id}-${index}`}
-                className="bg-white shadow-md rounded-lg p-6 transition-transform transform hover:scale-105 hover:bg-blue-200 min-h-[400px] w-full sm:w-64 lg:w-72 flex flex-col"
+                className="bg-white shadow-md rounded-lg p-6 transition-transform transform hover:scale-105 hover:bg-blue-200 min-h-[400px] w-full sm:w-64 lg:w-76 flex flex-col"
               >
                 <div className="relative w-full h-48 mb-4">
                   <Image
@@ -128,7 +128,7 @@ const WhyChooseUsCards = () => {
                     className="rounded-md"
                   />
                 </div>
-                <h2 className="text-xl text-center font-semibold text-blue-500">
+                <h2 className="text-2xl text-center font-semibold text-blue-500">
                   {card.title}
                 </h2>
                 {/* Grey Line Under the Title */}
