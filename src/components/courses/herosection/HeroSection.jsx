@@ -1,16 +1,20 @@
-"use client"
+"use client";
 import React, { useEffect, useState } from "react";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
+import PlayCircleIcon from "@mui/icons-material/PlayCircle";
 import Image from "next/image";
 
 const HeroSection = () => {
   const [currentDate, setCurrentDate] = useState("");
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
   useEffect(() => {
     // Set current date only on the client
     const date = new Date().toLocaleDateString();
     setCurrentDate(date);
   }, []);
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
 
   return (
     <section className="w-full h-auto md:h-[60vh] flex flex-col md:flex-row bg-[#116EB3] rounded-bl-2xl rounded-br-2xl overflow-hidden relative mt-2">
@@ -34,9 +38,13 @@ const HeroSection = () => {
           <div className="hidden md:block w-[18vw] h-2 bg-yellow-400 absolute top-[100%] md:right-[16%] transform rotate-3"></div>
         </div>
         {/* Button */}
-        {/* <button className="w-[60%] md:w-[30%] lg:w-[24%] h-12 md:h-10 rounded-md bg-white text-black font-semibold">
-          Explore Path
-        </button> */}
+        <button
+          onClick={toggleModal}
+          className="w-[60%] md:w-[30%] lg:w-[24%] h-12 md:h-10 rounded-md bg-white hover:bg-red-400 text-black font-semibold flex items-center justify-center"
+        >
+          <PlayCircleIcon className="text-[#116EB3] mr-2" />
+          PLAY
+        </button>
         {/* Courses Hero Image on Small Screens */}
         <div className="block md:hidden w-full h-auto mt-5">
           <div className="relative w-full h-64">
@@ -92,6 +100,28 @@ const HeroSection = () => {
       </div>
       {/* Decorative Circle */}
       <div className="w-20 h-20 md:w-32 md:h-32 rounded-full bg-[#D2E6E4] absolute top-full left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div>
+
+      {/* Modal for Video */}
+      {isModalOpen && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 px-4">
+          <div className="bg-white rounded-lg overflow-hidden max-w-[90%] w-full md:max-w-4xl">
+            <div className="relative">
+              <button
+                onClick={toggleModal}
+                className="absolute top-2 right-2 text-red-500 text-2xl bg-white rounded-full p-2"
+              >
+                &times;
+              </button>
+              <video
+                src="/1.mp4"
+                controls
+                autoPlay
+                className="w-[87%] h-auto max-h-[80vh]"
+              />
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };
