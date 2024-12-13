@@ -7,22 +7,42 @@ const VerifyCertificate = () => {
   const [verificationStatus, setVerificationStatus] = useState(null);
   const [isVerified, setIsVerified] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [pdfPath, setPdfPath] = useState("");
+
+  // Map certificate words to PDF files
+  const certificateMap = {
+    E785641: "/PDFS/E785641.pdf",
+    TB45683: "/PDFS/TB45683.pdf",
+    ER78569: "/PDFS/ER78569.pdf",
+    GT45868: "/PDFS/GT45868.pdf",
+    SER4586: "/PDFS/SER4586.pdf",
+    SER7898: "/PDFS/SER7898.pdf",
+    KE7858: "/PDFS/KE7858.pdf",
+    GHE96823: "/PDFS/GHE96823.pdf",
+    AE9864: "/PDFS/AE9864.pdf",
+    TTI4367: "/PDFS/TTI4367.pdf",
+  };
 
   // Handle verification logic
   const handleVerification = async (e) => {
     e.preventDefault();
     setLoading(true);
     setVerificationStatus(null);
+    setPdfPath("");
 
     // Simulate an API call to verify the certificate
     setTimeout(() => {
-      // Mocked verification
-      if (certificateId === "12345") {
+      // Ensure case insensitivity by converting both input and keys to uppercase
+      const certificateKey = certificateId.toUpperCase();
+      if (certificateMap[certificateKey]) {
         setIsVerified(true);
         setVerificationStatus("Certificate Verified Successfully!");
+        setPdfPath(certificateMap[certificateKey]);
       } else {
         setIsVerified(false);
-        setVerificationStatus("Verification Failed. Please check the certificate number.");
+        setVerificationStatus(
+          "Verification Failed. Please check the certificate number."
+        );
       }
       setLoading(false);
     }, 2000);
@@ -47,7 +67,8 @@ const VerifyCertificate = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           >
-            Please enter the unique certificate number to verify its authenticity.
+            Please enter the unique certificate number to verify its
+            authenticity.
           </motion.p>
         </div>
 
@@ -60,7 +81,10 @@ const VerifyCertificate = () => {
           transition={{ duration: 0.5, ease: "easeOut", delay: 0.4 }}
         >
           <div>
-            <label htmlFor="certificateId" className="block text-sm font-medium text-gray-600">
+            <label
+              htmlFor="certificateId"
+              className="block text-sm font-medium text-gray-600"
+            >
               Credential ID
             </label>
             <input
@@ -70,7 +94,7 @@ const VerifyCertificate = () => {
               onChange={(e) => setCertificateId(e.target.value)}
               required
               className="w-full px-4 py-2 border rounded-md mt-2 focus:outline-none focus:ring-2 focus:ring-[#106EB5]"
-              placeholder="Enter the Credential ID"
+              placeholder="Enter the Credential ID (e.g., 'E785641')"
             />
           </div>
 
@@ -98,24 +122,19 @@ const VerifyCertificate = () => {
           </motion.div>
         )}
 
-        {/* Download Button (conditional rendering if verified) */}
-        {isVerified && (
+        {/* Render PDF Inline if Verified */}
+        {isVerified && pdfPath && (
           <motion.div
-            className="mt-6"
+            className="mt-6 w-full"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
           >
-            {/* Link to download certificate */}
-            {/* Uncomment when backend provides actual certificate data */}
-            {/* <Link href="/path-to-certificate-download">
-              <motion.button
-                className="py-3 px-6 md:px-8 bg-green-500 text-white rounded-md"
-                whileHover={{ scale: 1.05 }}
-              >
-                Download Certificate
-              </motion.button>
-            </Link> */}
+            <iframe
+              src={pdfPath}
+              className="w-full h-[500px] border rounded-md"
+              title="Certificate"
+            />
           </motion.div>
         )}
       </div>
