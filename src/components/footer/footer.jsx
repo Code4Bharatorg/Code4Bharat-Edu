@@ -9,8 +9,6 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <div className="bg-blue-200 text-white py-8 shadow-xl">
-      {" "}
-      {/* Updated to shadow-xl */}
       <div className="container mx-auto px-4">
         {/* Main Content Grid */}
         <div className="flex flex-col md:flex-row justify-start items-start space-y-8 md:space-y-0 md:space-x-8">
@@ -23,17 +21,15 @@ const Footer = () => {
               height={96}
               className="mb-4 h-20 w-48 md:h-24 md:w-56 object-cover"
             />
-            <h3 className="font-semibold text-left text-black mb-2">
-             Contact Us
-            </h3>
+            <h3 className="font-semibold text-left text-black mb-2">Contact Us</h3>
             <p className="font-semibold text-left text-black mb-2 text-sm md:text-base">
-            📞 Call:{" "} <br/>
+              📞 Call: <br />
               <a href="tel:+919594430295" className="hover:text-blue-500">
-               +91 9594430295
+                +91 9594430295
               </a>
             </p>
             <p className="font-semibold text-left text-black mb-2 text-sm md:text-base">
-            📧 Email:{" "} <br/>
+              📧 Email: <br />
               <a
                 href="mailto:code4bharat@gmail.com"
                 className="hover:text-blue-500"
@@ -42,9 +38,9 @@ const Footer = () => {
               </a>
             </p>
             <p className="font-semibold text-left text-black mb-4 text-sm md:text-base">
-            ✈️ Address: <br />
+              ✈️ Address: <br />
               <a
-                href=" https://www.google.com/maps/place/Code4Bharat/@19.0726493,72.8758,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9598ad468b5:0xa355e25756e9a44f!8m2!3d19.0726494!4d72.8804081!16s%2Fg%2F11vyp7wnp7?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"
+                href="https://www.google.com/maps/place/Code4Bharat/@19.0726493,72.8758,17z/data=!3m1!4b1!4m6!3m5!1s0x3be7c9598ad468b5:0xa355e25756e9a44f!8m2!3d19.0726494!4d72.8804081!16s%2Fg%2F11vyp7wnp7?entry=ttu&g_ep=EgoyMDI0MTExOS4yIKXMDSoASAFQAw%3D%3D"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-black hover:text-blue-500"
@@ -93,14 +89,6 @@ const Footer = () => {
                   Our Story
                 </Link>
               </li>
-              {/* <li>
-                <Link
-                  href="/our-story"
-                  className="text-gray-500 hover:underline"
-                >
-                  Our Story
-                </Link>
-              </li> */}
               <li>
                 <Link href="/learn&grow" className="text-gray-500 hover:underline">
                   Learn&Grow
@@ -119,9 +107,7 @@ const Footer = () => {
 
           {/* Third Column: Category */}
           <div className="flex-1">
-            <h3 className="font-semibold text-left text-black mb-4">
-              Category
-            </h3>
+            <h3 className="font-semibold text-left text-black mb-4">Category</h3>
             <ul className="text-left space-y-2 text-sm md:text-base">
               <li>
                 <Link
@@ -158,28 +144,47 @@ const Footer = () => {
             </ul>
           </div>
 
-          {/* Fourth Column: Get In Touch */}
-          {/* <div className="flex-1">
-            <h3 className="font-semibold text-left text-black mb-4">
-              Get In Touch
-            </h3>
-            <form className="flex flex-col">
-              <input
-                type="tel"
-                placeholder="Mobile Number"
-                pattern="[0-9]{10}" // Ensures only numbers with 10 digits (adjust as needed)
-                className="p-2 rounded-md text-gray-700 mb-4 text-sm md:text-base focus:outline-none focus:ring-2 focus:ring-blue-500"
-                required
-              />
-
-              <button
-                type="submit"
-                className="bg-blue-500 text-white rounded-md p-2 text-sm md:text-base w-full hover:bg-blue-700 transition-colors duration-300"
-              >
-                Submit
-              </button>
-            </form>
-          </div> */}
+          {/* Fourth Column: Policies */}
+          <div className="flex-1">
+            <h3 className="font-semibold text-left text-black mb-4">Policies</h3>
+            <ul className="text-left space-y-2 text-sm md:text-base">
+              <li>
+                <Link href="/policies/about" className="text-gray-500 hover:underline">
+                  About
+                </Link>
+              </li>
+              <li>
+                <Link href="/policies/contact" className="text-gray-500 hover:underline">
+                  Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/policies/privacy" className="text-gray-500 hover:underline">
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link href="/policies/TermsAndCondition" className="text-gray-500 hover:underline">
+                  Terms and Conditions
+                </Link>
+              </li>
+              <li>
+                <Link href="/policies/product-pricing" className="text-gray-500 hover:underline">
+                  Product Pricing
+                </Link>
+              </li>
+              <li>
+                <Link href="/policies/refund-policy" className="text-gray-500 hover:underline">
+                  Refund Policies
+                </Link>
+              </li>
+              <li>
+                <Link href="/policies/delivery-policy" className="text-gray-500 hover:underline">
+                  Shipping and Delivery Policy
+                </Link>
+              </li>
+            </ul>
+          </div>
         </div>
 
         {/* Footer Bottom: Copyright */}
