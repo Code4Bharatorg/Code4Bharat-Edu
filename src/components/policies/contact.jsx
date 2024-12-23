@@ -8,7 +8,7 @@ export default function ContactUs() {
           Contact Us
         </h1>
         <div className="space-y-6 text-gray-700 text-lg">
-          <p>We're here to assist you! If you have any questions or need support, feel free to reach out through any of the following methods:</p>
+          <p>We&apos;re here to assist you! If you have any questions or need support, feel free to reach out through any of the following methods:</p>
           <ul className="list-disc list-inside space-y-4">
             <li>
               <strong>Email:</strong> <a href="mailto:nexcorealliance@gmail.com" className="text-blue-500 hover:underline">
