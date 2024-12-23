@@ -9,7 +9,7 @@ export default function ShippingPolicy() {
         </h1>
         <div className="space-y-6 text-gray-700 text-lg">
           <p>
-            At <strong>Code4Bharat</strong>, we ensure a seamless shipping and delivery process for any physical materials or certificates (if applicable). Our shipping policy is as follows:
+            At <strong>Education.Code4Bharat</strong>, we ensure a seamless shipping and delivery process for any physical materials or certificates (if applicable). Our shipping policy is as follows:
           </p>
           <ol className="list-decimal list-inside space-y-4">
             <li>

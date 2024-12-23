@@ -71,7 +71,7 @@ export default function PrivacyPolicy() {
             <li>
               <strong>Policy Updates:</strong>
               <p>
-                <strong>Code4Bharat</strong> reserves the right to update this privacy policy to reflect changes in our
+                <strong>Education.Code4Bharat</strong> reserves the right to update this privacy policy to reflect changes in our
                 practices or legal requirements.
               </p>
               <ul className="list-disc list-inside ml-4">

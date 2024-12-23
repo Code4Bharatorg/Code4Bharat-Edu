@@ -26,11 +26,11 @@ export default function TermsAndConditions() {
             </li>
             <li>
               <strong>Intellectual Property:</strong> All content, materials, and courses on our platform are owned
-              by <strong>Code4Bharat</strong> and protected by copyright laws. Unauthorized sharing, duplication, 
+              by <strong>Education.Code4Bharat</strong> and protected by copyright laws. Unauthorized sharing, duplication, 
               or distribution is strictly prohibited and may lead to legal action.
             </li>
             <li>
-              <strong>Service Modifications:</strong> <strong>Code4Bharat</strong> reserves the right to modify, suspend, 
+              <strong>Service Modifications:</strong> <strong>Education.Code4Bharat</strong> reserves the right to modify, suspend, 
               or discontinue any service or course without prior notice.
             </li>
             <li>

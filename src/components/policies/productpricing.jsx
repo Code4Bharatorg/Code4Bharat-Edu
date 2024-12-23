@@ -9,7 +9,7 @@ export default function ProductPricing() {
         </h1>
         <div className="space-y-6 text-gray-700 text-lg">
           <p>
-            At <strong>Code4Bharat</strong>, our courses are designed to deliver maximum value at competitive prices.
+            At <strong>Education.Code4Bharat</strong>, our courses are designed to deliver maximum value at competitive prices.
           </p>
           <ol className="list-decimal list-inside space-y-4">
             <li>
