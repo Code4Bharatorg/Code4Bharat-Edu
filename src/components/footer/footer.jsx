@@ -179,6 +179,11 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
+                <Link href="/policies/cancellation-policy" className="text-gray-500 hover:underline">
+                  Cancellation Policy
+                </Link>
+              </li>
+              <li>
                 <Link href="/policies/delivery-policy" className="text-gray-500 hover:underline">
                   Shipping and Delivery Policy
                 </Link>
