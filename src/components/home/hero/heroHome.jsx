@@ -1,10 +1,21 @@
 "use client";
 import React from "react";
+import { useState } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image"; // Import Image for optimized image handling
 
 const HeroHome = () => {
+  const [isPdfModalOpen, setPdfModalOpen] = useState(false);
+
+
+
+  const openPdfModal = () => setPdfModalOpen(true);
+  const closePdfModal = (e) => {
+    e.stopPropagation();
+    setPdfModalOpen(false);
+  };
+
   // Variants for the entire right section
   const rightSectionVariants = {
     initial: {
@@ -19,6 +30,7 @@ const HeroHome = () => {
       },
     },
   };
+
 
   // Variants for individual content divs
   const itemVariants = {
@@ -107,15 +119,61 @@ const HeroHome = () => {
               className="flex flex-col items-center md:items-start justify-start space-y-4 sm:flex-row 
                             sm:space-x-4 sm:space-y-0"
             >
-              <button
-                onClick={openWhatsApp}
-                className="inline-block rounded-2xl bg-blue-600 px-12 py-3 text-base font-semibold 
-                           duration-300 ease-in-out hover:bg-black/90 
-                           text-white 
-                           mx-auto md:mx-0 mt-12"
-              >
-                Explore
-              </button>
+                          <button
+  onClick={() => {
+    if (typeof window !== "undefined" && window.innerWidth <= 768) {
+      // Open in a new tab for mobile devices
+      window.open("/brochure/b.pdf", "_blank");
+    } else {
+      // Open the modal for larger screens
+      openPdfModal();
+    }
+  }}
+  className="bg-blue-500 text-white border border-white px-4 py-2 md:px-6 md:py-3 shadow-lg rounded-md hover:bg-black hover:text-white hover:border-white transition z-20"
+>
+  Our Brochure
+</button>
+{isPdfModalOpen && (
+  <div
+    className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center h-[100%] z-50"
+    onClick={closePdfModal}
+  >
+    <div
+      className="relative w-[100%] h-[85%] max-w-3xl bg-white p-2 md:p-6 lg:p-2"
+      onClick={(e) => e.stopPropagation()}
+    >
+      <button
+        onClick={closePdfModal}
+        className="absolute top-2 right-2 text-red-500 bg-white p-2 rounded-full shadow hover:bg-gray-100 transition"
+        aria-label="Close PDF Modal"
+      >
+        X
+      </button>
+      {/* Detect device size */}
+      {typeof window !== "undefined" && window.innerWidth <= 768 ? (
+        // Open in a new tab for mobile devices
+        <p className="text-center text-sm">
+          The PDF cannot be viewed directly on mobile.{' '}
+          <a
+            href="/brochure/b.pdf" // Replace with your actual PDF file link
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-blue-500 underline"
+          >
+            Click here to view the PDF in a new tab
+          </a>
+        </p>
+      ) : (
+        // Embed the PDF for larger devices
+        <iframe
+          src="/brochure/b.pdf" // Replace with your actual PDF file link
+          className="w-full h-[90%] md:h-[80vh] rounded-lg"
+          title="PDF Viewer"
+        ></iframe>
+      )}
+    </div>
+  </div>
+)}
             </div>
           </div>
         </div>
