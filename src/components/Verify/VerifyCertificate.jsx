@@ -26,6 +26,18 @@ const VerifyCertificate = () => {
     GHE96823: "/PDFS/GHE96823.pdf",
     AE9864: "/PDFS/AE9864.pdf",
     TTI4367: "/PDFS/TTI4367.pdf",
+    AE9864KK: "/PDFS/AE9864KK.pdf",
+    AE9864OL: "/PDFS/AE9864OL.pdf",
+    AE9864XX: "/PDFS/AE9864XX.pdf",
+    AE9864AT: "/PDFS/AE9864AT.pdf",
+    AE986422: "/PDFS/AE986422.pdf",
+    AE9864SH: "/PDFS/AE9864SH.pdf",
+    AE9864N4: "/PDFS/AE9864N4.pdf",
+    AE9864L3: "/PDFS/AE9864L3.pdf",
+    AE9864WQ: "/PDFS/AE9864WQ.pdf",
+    AE9864XD: "/PDFS/AE9864XD.pdf",
+    AE9864V3: "/PDFS/AE9864V3.pdf",
+    AE98640T: "/PDFS/AE98640T.pdf",
   };
 
   // Handle verification logic
