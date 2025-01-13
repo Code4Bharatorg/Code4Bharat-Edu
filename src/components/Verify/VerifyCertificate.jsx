@@ -38,6 +38,37 @@ const VerifyCertificate = () => {
     AE9864XD: "/PDFS/AE9864XD.pdf",
     AE9864V3: "/PDFS/AE9864V3.pdf",
     AE98640T: "/PDFS/AE98640T.pdf",
+    C4B127: "/PDFS/C4B127.pdf",
+    C4B736: "/PDFS/C4B736.pdf",
+    C4B492: "/PDFS/C4B492.pdf",
+    C4B815: "/PDFS/C4B815.pdf",
+    C4B209: "/PDFS/C4B209.pdf",
+    C4B364: "/PDFS/C4B364.pdf",
+    C4B981: "/PDFS/C4B981.pdf",
+    C4B546: "/PDFS/C4B546.pdf",
+    C4B723: "/PDFS/C4B723.pdf",
+    C4B348: "/PDFS/C4B348.pdf",
+    C4B157: "/PDFS/C4B157.pdf",
+    C4B869: "/PDFS/C4B869.pdf",
+    C4B402: "/PDFS/C4B402.pdf",
+    C4B615: "/PDFS/C4B615.pdf",
+    C4B931: "/PDFS/C4B931.pdf",
+    C4B278: "/PDFS/C4B278.pdf",
+    C4B564: "/PDFS/C4B564.pdf",
+    C4B823: "/PDFS/C4B823.pdf",
+    C4B471: "/PDFS/C4B471.pdf",
+    C4B306: "/PDFS/C4B306.pdf",
+    C4B752: "/PDFS/C4B752.pdf",
+    C4B184: "/PDFS/C4B184.pdf",
+    C4B627: "/PDFS/C4B627.pdf",
+    C4B903: "/PDFS/C4B903.pdf",
+    C4B318: "/PDFS/C4B318.pdf",
+    C4B472: "/PDFS/C4B472.pdf",
+    C4B695: "/PDFS/C4B695.pdf",
+    C4B829: "/PDFS/C4B829.pdf",
+    C4B104: "/PDFS/C4B104.pdf",
+    C4B562: "/PDFS/C4B562.pdf",
+    C4B738: "/PDFS/C4B738.pdf",
   };
 
   // Handle verification logic
@@ -96,7 +127,11 @@ const VerifyCertificate = () => {
       } catch (error) {
         console.error("Verification Error:", error);
         setIsVerified(false);
-        if (error.response && error.response.data && error.response.data.message) {
+        if (
+          error.response &&
+          error.response.data &&
+          error.response.data.message
+        ) {
           setVerificationStatus(`Error: ${error.response.data.message}`);
         } else {
           setVerificationStatus(
@@ -127,7 +162,8 @@ const VerifyCertificate = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, ease: "easeOut", delay: 0.2 }}
           >
-            Please enter the unique certificate number to verify its authenticity.
+            Please enter the unique certificate number to verify its
+            authenticity.
           </motion.p>
         </div>
 
@@ -182,20 +218,21 @@ const VerifyCertificate = () => {
         {isVerified && certificateDetails && (
           <>
             {/* Render Static PDF */}
-            {certificateDetails.type === "Static" && certificateDetails.pdfPath && (
-              <motion.div
-                className="mt-6 w-full"
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
-              >
-                <iframe
-                  src={certificateDetails.pdfPath}
-                  className="w-full h-[500px] border rounded-md"
-                  title="Certificate"
-                />
-              </motion.div>
-            )}
+            {certificateDetails.type === "Static" &&
+              certificateDetails.pdfPath && (
+                <motion.div
+                  className="mt-6 w-full"
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, ease: "easeOut", delay: 0.8 }}
+                >
+                  <iframe
+                    src={certificateDetails.pdfPath}
+                    className="w-full h-[500px] border rounded-md"
+                    title="Certificate"
+                  />
+                </motion.div>
+              )}
 
             {/* Render Dynamic PDF */}
             {certificateDetails.type !== "Static" && (
@@ -263,7 +300,8 @@ const VerifyCertificate = () => {
                 Auth Code: {certificateDetails.authCode}
               </p>
               <p className="text-sm text-gray-600">
-                Date: {certificateDetails.date
+                Date:{" "}
+                {certificateDetails.date
                   ? new Date(certificateDetails.date).toLocaleDateString()
                   : "N/A"}
               </p>
